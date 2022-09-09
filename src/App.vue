@@ -1,10 +1,35 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
+      <Header />
+      <router-view/>
+    </div>
 </template>
+<script>
+import { mapGetters } from 'vuex';
+import Header from './components/includes/Header.vue';
+export default {
+  components: { Header },
+  name: "App",
+  computed: {
+    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
+  },
+  created() {
+      this.$store.commit('computeWindow')
+      this.$store.commit('getDarkMode')
+      window.addEventListener('resize', this.windowSize)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.windowSize)
+  },
+  methods: {
+    windowSize() {
+      setTimeout(()=> {
+        this.$store.commit('computeWindow')
+      }, 100)
+    }
+  }
+}
+</script>
 
 <style lang="scss">
   * {
@@ -13,10 +38,11 @@
   box-sizing: border-box;
 }
 body {
+  transition: $transition-time linear background-color, $transition-time linear color;
+  // transition: $transition-time linear color;
   font-family: $myFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $dark;
   font-size: 18px;
   margin: 0 ;
   overflow-x: hidden;
