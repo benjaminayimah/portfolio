@@ -1,3 +1,127 @@
-$primary-color: #4AD991;
-$dark: #000000;
+$primary-color: #3FD68A;
+$hover-color: rgb(116, 116, 116);
+$black: #000;
+$white: #fff;
+$light: #F5F5F5;
+$light-txt: #BABABA;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
+$transition-time: 0.6s;
+
+button {
+    border-style: none;
+    cursor: pointer;
+    &:active {
+        transform: scale(0.94);
+    }
+}
+.icon-fill, .icon-stroke  {
+    transition: $transition-time linear fill, $transition-time linear stroke;
+}
+.fx{
+    display: flex;
+}
+.jc-c{
+    justify-content: center;
+}
+.ai-c{
+    align-items: center;
+}
+.fx-js{
+    justify-content: space-between;
+}
+.fx-end{
+    justify-content: flex-end;
+}
+.gap-8{
+    gap: 8px;
+}
+.gap-16{
+    gap: 16px;
+}
+.gap-32{
+    gap: 32px;
+}
+.h1{
+    font-size: 5rem;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fixed-body{
+    overflow: hidden; overscroll-behavior-y: none;
+}
+p{
+    line-height: 1.5;
+}
+
+.light-mode {
+    color: $black;
+    header{
+        background-color: $white;
+    }
+    .txt, nav a{
+        color: $black;
+    }
+    .icon-fill {
+        fill: $black;
+    }
+    .icon-stroke {
+        stroke: $black;
+    }
+    .bg-primary {
+        background-color: #F5F5F5;
+    }
+    .bg-secondary {
+        background-color: $white;
+    }
+    background-color: $light;
+
+}
+
+.dark-mode {
+    background-color: $black;
+    color: $light-txt;
+    .txt, nav a{
+        color: $light-txt;
+    }
+    .icon-fill {
+        fill: $light-txt;
+    }
+    .icon-stroke {
+        stroke: $light-txt;
+    }
+    .bg-primary {
+        background-color: $black;
+    }
+    .bg-secondary {
+        background-color: #393939;
+    }
+}
+.main-row{
+    display: flex;
+    justify-content: center;
+}
+//Desktop
+.desk-view {
+    .top-hold, .section-wrapper{
+        width: 70%;
+    }
+}
+//Tablet
+.tab-view {
+    .top-hold, .section-wrapper{
+        width: 90%;
+    }
+}
+//Mobile
+.mob-view {
+    button {
+        cursor: unset;
+    }
+    .top-hold, .section-wrapper{
+        width: 96%;
+    }
+}
