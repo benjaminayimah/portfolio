@@ -25,6 +25,7 @@ import { mapGetters } from 'vuex';
 export default {
     name: "Header",
     computed: mapGetters(['getMobile']),
+    components: { ToggleSwitch, HamburgerMenu },
     data() {
         return {
             menus: [
@@ -32,8 +33,7 @@ export default {
                 { id: 2, url: "/about", name: "About" },
             ]
         };
-    },
-    components: { ToggleSwitch, HamburgerMenu }
+    }
 }
 </script>
 <style lang="scss" scoped>
