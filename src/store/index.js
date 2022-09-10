@@ -9,6 +9,12 @@ export default createStore({
     windowWidth: '',
     darkMode: localStorage.getItem('darkMode') || false,
     showMenu: false,
+    dynamicFloatingDiv: { left: 0, top: 0, bottom: 0},
+    menus: [
+      { id: 1, url: "/", name: "Home" },
+      { id: 2, url: "/about", name: "About" },
+      { id: 3, url: "https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing", name: "Resume", external: true},
+    ]
   },
   mutations: {
     computeWindow(state) {
@@ -67,6 +73,22 @@ export default createStore({
     toggleMenu: (state) => {
       state.showMenu = !state.showMenu
     },
+    setDynamicFloatingDiv(state, payload) {
+      const rect = payload.getBoundingClientRect()
+      let top = rect.top
+      let left = rect.left
+      let bottom = rect.bottom
+      state.dynamicFloatingDiv.left = left
+      state.dynamicFloatingDiv.top = top
+      state.dynamicFloatingDiv.bottom = bottom
+      document.body.classList.add('fixed-body')
+    },
+    reSetDynamicFloatingDiv(state) {
+      state.dynamicFloatingDiv.left = 0
+      state.dynamicFloatingDiv.top = 0
+      state.dynamicFloatingDiv.bottom = 0
+      document.body.classList.remove('fixed-body')
+    },
   },
   getters: {
     getWindowHeight: (state) => state.windowHeight,
@@ -75,7 +97,9 @@ export default createStore({
     getTablet: (state) => state.tablet,
     getDesktop: (state) => state.desktop,
     getDarkMode: (state) => state.darkMode,
-    getShowMobMenu: (state) => state.showMenu
+    getShowMobMenu: (state) => state.showMenu,
+    getMenus: (state) => state.menus,
+    getFloatingDiv: (state) => state.dynamicFloatingDiv,
   },
   actions: {
   },

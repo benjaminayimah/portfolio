@@ -7,6 +7,7 @@ $light-txt: #BABABA;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
 
+
 button {
     border-style: none;
     cursor: pointer;
@@ -66,7 +67,7 @@ p{
 .mt-0{
     margin-top: 0;
 }
-.bg-primary, .bg-secondary{
+.bg-primary, .bg-secondary, .opaque{
     transition: $transition-time linear background-color
 
 }
@@ -77,12 +78,14 @@ p{
         transition: 0.3s all;
     }
 }
-
 .light-mode {
     color: $black;
     background-color: $light;
     header{
         background-color: rgba(255, 255, 255, 0.8);
+    }
+    .bg-plain, .opaque{
+        background-color: #fff !important;
     }
     .txt, nav a{
         color: $black;
@@ -120,6 +123,9 @@ p{
     color: $light-txt;
     header{
         background-color: rgba(0,0,0,0.7);
+    }
+    .bg-plain, .opaque{
+        background-color: #000 !important;
     }
     .txt, nav a{
         color: $light-txt;

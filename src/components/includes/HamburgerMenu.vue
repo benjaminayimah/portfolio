@@ -1,5 +1,5 @@
 <template>
-    <button id="hamburger_menu" @click.prevent="$store.commit('toggleMenu')" :class="{'collapse': getShowMobMenu }">
+    <button id="hamburger_menu" @click.prevent="doMenu" :class="{'collapse': getShowMobMenu }">
         <div class="txt"></div>
         <div class="txt"></div>
     </button>
@@ -9,7 +9,17 @@ import { mapGetters } from 'vuex';
 export default {
     name: 'HamburgerMenu',
     computed: mapGetters(['getShowMobMenu']),
-
+    methods: {
+        doMenu() {
+            const elem = document.getElementById('header')
+            if(this.getShowMobMenu === true) {
+                this.$store.commit('reSetDynamicFloatingDiv')
+            }else {
+                this.$store.commit('setDynamicFloatingDiv', elem)
+            }
+            this.$store.commit('toggleMenu')
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -22,7 +32,7 @@ export default {
     width: 25px;
     border-bottom: 2px solid;
     display: block;
-    transition: 0.5s all cubic-bezier(0.7, 0.11, 0.2, 1) 0s;
+    transition: $transition-time all cubic-bezier(0.7, 0.11, 0.2, 1) 0s;
     position: absolute;
 }
 #hamburger_menu div:first-child{
