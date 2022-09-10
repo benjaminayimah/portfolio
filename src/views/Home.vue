@@ -6,6 +6,7 @@
       <nav class="fx gap-16 tabs">
         <li v-for="tab in tabs" :key="tab.id"><router-link class="fw-500" :to="tab.url">{{ tab.name}}</router-link></li>
       </nav>
+      <router-view />
     </div>
   </div>
 </template>
