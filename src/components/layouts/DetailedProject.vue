@@ -11,7 +11,7 @@
                     </svg>
                 </button>
                 <div class="project-body">
-                    <div class="project-banner bg-img" style="background-image: url('../../assets/images/instagram-shots.jpg')">
+                    <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+img+')'}">
 
                     </div>
                     <div class="project-content">
@@ -54,6 +54,11 @@ export default {
             }
         }
     },
+    data() {
+        return {
+            img: require('@/assets/images/behance_shots.jpg')
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
