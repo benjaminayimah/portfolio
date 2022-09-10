@@ -1,9 +1,17 @@
 <template>
     <div class="grid">
-        <div class="grid-item bg-secondary"></div>
-        <div class="grid-item bg-secondary"></div>
-        <div class="grid-item bg-secondary"></div>
-        <div class="grid-item bg-secondary"></div>
+        <div class="">
+            <img src="../../assets/images/behance_shots.jpg" class="br-18" alt="">
+        </div>
+        <div class="">
+            <img src="../../assets/images/instagram-shots.jpg" class="br-18" alt="">
+        </div>
+        <div class="">
+            <img src="../../assets/images/behance_shots.jpg" class="br-18" alt="">
+        </div>
+        <div class="">
+            <img src="../../assets/images/instagram-shots.jpg" class="br-18" alt="">
+        </div>
     </div>
 </template>
 <script>
@@ -16,8 +24,8 @@ export default {
     gap: 30px;
     grid-template-columns: 1fr 1fr;
 }
-.grid-item{
-    height: 600px;
-    border-radius: 18px;
+img{
+    width: 100%;
+    height: 100%;
 }
 </style>
