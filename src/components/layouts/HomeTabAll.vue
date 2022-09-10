@@ -1,16 +1,24 @@
 <template>
-    <div class="grid">
-        <div class="">
-            <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-18" alt="">
+    <div class="grid project-grid">
+        <div>
+            <a href="#" @click.prevent="$store.commit('showProject')">
+                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
+            </a>
         </div>
-        <div class="">
-            <img src="../../assets/images/instagram-shots.jpg" loading="lazy" class="br-18" alt="">
+        <div>
+            <a href="#" @click.prevent="$store.commit('showProject')">
+                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
+            </a>
         </div>
-        <div class="">
-            <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-18" alt="">
+        <div>
+            <a href="#" @click.prevent="$store.commit('showProject')">
+                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
+            </a>
         </div>
-        <div class="">
-            <img src="../../assets/images/instagram-shots.jpg" loading="lazy" class="br-18" alt="">
+        <div>
+            <a href="#" @click.prevent="$store.commit('showProject')">
+                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
+            </a>
         </div>
     </div>
 </template>
