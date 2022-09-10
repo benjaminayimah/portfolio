@@ -4,6 +4,7 @@
       <router-view/>
       <Footer />
       <mobile-menu />
+      <detailed-project />
     </div>
 </template>
 <script>
@@ -11,8 +12,9 @@ import { mapGetters } from 'vuex';
 import Header from './components/includes/Header.vue';
 import Footer from './components/includes/Footer.vue';
 import MobileMenu from './components/includes/MobileMenu.vue';
+import DetailedProject from './components/layouts/DetailedProject.vue';
 export default {
-  components: { Header, Footer, MobileMenu },
+  components: { Header, Footer, MobileMenu, DetailedProject },
   name: "App",
   computed: {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])

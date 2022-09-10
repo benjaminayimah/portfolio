@@ -9,6 +9,7 @@ export default createStore({
     windowWidth: '',
     darkMode: localStorage.getItem('darkMode') || false,
     showMenu: false,
+    project: { active: false },
     menus: [
       { id: 1, url: "/", name: "Home" },
       { id: 2, url: "/about", name: "About" },
@@ -16,6 +17,14 @@ export default createStore({
     ]
   },
   mutations: {
+    showProject(state) {
+      document.body.classList.add('fixed-body')
+      state.project.active = true
+    },
+    closeProject(state) {
+      document.body.classList.remove('fixed-body')
+      state.project.active = false
+    },
     computeWindow(state) {
       let appWidth = 990
       let winWidth = window.innerWidth
@@ -89,6 +98,7 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
+    getProject: (state) => state.project
   },
   actions: {
   },
