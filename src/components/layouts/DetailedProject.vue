@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <primary-backdrop v-if="getProject.active" />
+        <primary-backdrop v-if="getProject.active" @click="$store.commit('closeProject')" />
     </transition>
     <transition name="fade">
         <div v-if="getProject.active" id="project_hero_modal" class="bg-secondary" :class="computeWidth ? 'width-active': 'width-inactive'" :style="{height: (getWindowHeight-40)+'px'}">
@@ -11,10 +11,10 @@
                     </svg>
                 </button>
                 <div class="project-body">
-                    <div class="banner bg-img" style="background-image: url('../../assets/images/instagram-shots.jpg')">
+                    <div class="project-banner bg-img" style="background-image: url('../../assets/images/instagram-shots.jpg')">
 
                     </div>
-                    <div class="body p-30">
+                    <div class="project-content">
                         <h1>Lorem ipsum dolor sit amet consectetur</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
@@ -45,7 +45,7 @@ export default {
     name: 'DetailedProject',
     components: { PrimaryBackdrop },
     computed: {
-        ...mapGetters(['getProject', 'getWindowWidth', 'getWindowHeight']),
+        ...mapGetters(['getProject', 'getWindowWidth', 'getWindowHeight', 'getMobile']),
         computeWidth() {
             if(this.getWindowWidth <= 800) {
                 return true
@@ -92,13 +92,10 @@ export default {
     .project-body{
         border-radius: 16px;
     }
-    .banner {
+    .project-banner {
         border-top-right-radius: 16px;
         border-top-left-radius: 16px;
     }
 
-}
-.banner{
-    height: 400px;
 }
 </style>
