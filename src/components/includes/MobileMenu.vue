@@ -1,12 +1,12 @@
 <template>
-    <div v-show="getMobile" id="mobile_menu" class="bg-plain" :class="{ 'show': getShowMobMenu }" :style="{ height: getWindowHeight-(getFloatingDiv.top) + 'px' }">
+    <div v-show="getMobile" id="mobile_menu" class="bg-plain" :class="{ 'show': getShowMobMenu }" :style="{ height: getWindowHeight-75 + 'px' }">
         <div class="mob-menu-wrapper fx-js fx-col">
             <nav>
                 <mobile-nav-list v-for="menu in getMenus" :key="menu.id"  v-bind:menu="menu"/>
             </nav>
             <div class="fx gap-8">
-                <!-- <a href="appHostname">Login</a>
-                <a href="appHostname">Get Started</a> -->
+                <a href="appHostname">Login</a>
+                <a href="appHostname">Get Started</a>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@ import { mapGetters } from 'vuex'
 import MobileNavList from './MobileNavList.vue';
 export default {
     name: "MobileMenu",
-    computed: mapGetters(["getFloatingDiv", "getWindowHeight", "getShowMobMenu", "getMenus", "getMobile"]),
+    computed: mapGetters(["getWindowHeight", "getShowMobMenu", "getMenus", "getMobile"]),
     components: { MobileNavList }
 }
 </script>
@@ -33,7 +33,7 @@ export default {
 }
 .mob-menu-wrapper{
     height: 100%;
-    padding: 20px
+    padding: 20px 30px
 }
 .show{
     visibility: visible !important;
