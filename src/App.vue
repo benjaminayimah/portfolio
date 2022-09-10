@@ -2,13 +2,15 @@
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <Header />
       <router-view/>
+      <Footer />
     </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import Header from './components/includes/Header.vue';
+import Footer from './components/includes/Footer.vue';
 export default {
-  components: { Header },
+  components: { Header, Footer },
   name: "App",
   computed: {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
