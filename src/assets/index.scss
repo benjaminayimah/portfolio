@@ -40,6 +40,10 @@ button {
 .fx-end{
     justify-content: flex-end;
 }
+.fx-col {
+    display: flex;
+    flex-direction: column;
+}
 .gap-8{
     gap: 8px;
 }

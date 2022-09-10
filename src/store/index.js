@@ -9,7 +9,6 @@ export default createStore({
     windowWidth: '',
     darkMode: localStorage.getItem('darkMode') || false,
     showMenu: false,
-    dynamicFloatingDiv: { left: 0, top: 0, bottom: 0},
     menus: [
       { id: 1, url: "/", name: "Home" },
       { id: 2, url: "/about", name: "About" },
@@ -71,24 +70,15 @@ export default createStore({
       document.body.classList.add('light-mode')
     },
     toggleMenu: (state) => {
-      state.showMenu = !state.showMenu
-    },
-    setDynamicFloatingDiv(state, payload) {
-      const rect = payload.getBoundingClientRect()
-      let top = rect.top
-      let left = rect.left
-      let bottom = rect.bottom
-      state.dynamicFloatingDiv.left = left
-      state.dynamicFloatingDiv.top = top
-      state.dynamicFloatingDiv.bottom = bottom
-      document.body.classList.add('fixed-body')
-    },
-    reSetDynamicFloatingDiv(state) {
-      state.dynamicFloatingDiv.left = 0
-      state.dynamicFloatingDiv.top = 0
-      state.dynamicFloatingDiv.bottom = 0
-      document.body.classList.remove('fixed-body')
-    },
+      if(state.showMenu){
+        state.showMenu = false
+        document.body.classList.remove('fixed-body')
+      }else {
+        state.showMenu = true
+        document.body.classList.add('fixed-body')
+
+      }
+    }
   },
   getters: {
     getWindowHeight: (state) => state.windowHeight,
@@ -99,7 +89,6 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
-    getFloatingDiv: (state) => state.dynamicFloatingDiv,
   },
   actions: {
   },
