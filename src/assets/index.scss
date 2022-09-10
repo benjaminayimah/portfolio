@@ -70,16 +70,18 @@ p{
     transition: $transition-time linear background-color
 
 }
-.tabs a {
-    transition: 0.3s all;
-
+.tabs{
+    top: 110px;
+    a {
+        transition: 0.3s all;
+    }
 }
 
 .light-mode {
     color: $black;
     background-color: $light;
     header{
-        background-color: $white;
+        background-color: rgba(255, 255, 255, 0.8);
     }
     .txt, nav a{
         color: $black;
@@ -99,6 +101,7 @@ p{
     .tabs {
         a {
             background-color: $white;
+            border-color: $light;
             &:hover {
                 border-color: $black;
             }
@@ -115,7 +118,7 @@ p{
     background-color: $black;
     color: $light-txt;
     header{
-        background-color: $black;
+        background-color: rgba(0,0,0,0.7);
     }
     .txt, nav a{
         color: $light-txt;
@@ -135,6 +138,7 @@ p{
     .tabs {
         a {
             background-color: #393939;
+            border-color: $black;
             &:hover {
                 border-color: $white;
             }

@@ -3,7 +3,7 @@
     <div class="section-wrapper">
       <intro />
       <h3 class="mt-0">Here are some of my work</h3>
-      <nav class="fx gap-16 tabs">
+      <nav class="fx gap-16 tabs sticky-top">
         <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
       </nav>
       <router-view />
@@ -51,7 +51,7 @@ nav{
       text-decoration: none;
       padding: 8px 12px;
       border-radius: 30px;
-      border: 1px solid transparent;
+      border: 1px solid;
     }
   }
 }
