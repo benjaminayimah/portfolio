@@ -72,6 +72,7 @@ p{
 }
 .tabs{
     top: 110px;
+    gap: 16px;
     a {
         transition: 0.3s all;
     }
@@ -182,5 +183,9 @@ p{
     .grid{
         display: flex;
         flex-direction: column;
+    }
+    .tabs{
+        top: 85px;
+        gap: 12px;
     }
 }
