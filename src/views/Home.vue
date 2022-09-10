@@ -4,7 +4,7 @@
       <intro />
       <h3 class="mt-0">Here are some of my work</h3>
       <nav class="fx gap-16 tabs">
-        <li v-for="tab in tabs" :key="tab.id"><router-link class="fw-500" :to="tab.url">{{ tab.name}}</router-link></li>
+        <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
       </nav>
       <router-view />
     </div>
