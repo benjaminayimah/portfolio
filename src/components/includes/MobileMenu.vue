@@ -5,8 +5,8 @@
                 <mobile-nav-list v-for="menu in getMenus" :key="menu.id"  v-bind:menu="menu"/>
             </nav>
             <div class="fx gap-8">
-                <a href="appHostname">Login</a>
-                <a href="appHostname">Get Started</a>
+                <!-- <a href="appHostname">Login</a>
+                <a href="appHostname">Get Started</a> -->
             </div>
         </div>
     </div>

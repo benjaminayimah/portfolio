@@ -21,11 +21,8 @@ export default {
 <style lang="scss" scoped>
 li{
     display: flex;
-    transition: 0.5s all;
-    flex-grow: 1;
     height: 75px;
     a {
-        display: flex;
         font-size: 1.8rem;
         flex-grow: 1;
         height: inherit;

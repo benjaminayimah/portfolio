@@ -8,7 +8,7 @@ $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
 
 
-button {
+button{
     border-style: none;
     cursor: pointer;
     &:active {
@@ -181,6 +181,9 @@ p{
 }
 //Mobile
 .mob-view {
+    a{
+        cursor: none;
+    }
     header {
         height: 75px;
     }
