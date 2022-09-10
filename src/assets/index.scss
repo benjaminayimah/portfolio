@@ -181,6 +181,12 @@ p{
     display: flex;
     justify-content: center;
 }
+.project-banner{
+    height: 400px;
+}
+.project-content{
+    padding: 30px;
+}
 //Desktop
 .desk-view {
     .top-hold, .section-wrapper{
@@ -217,6 +223,12 @@ p{
     .tabs{
         top: 85px;
         gap: 12px;
+    }
+    .project-banner{
+        height: 300px;
+    }
+    .project-content{
+        padding: 16px;
     }
 }
 .fade-enter-active,
