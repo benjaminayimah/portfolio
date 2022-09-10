@@ -1,5 +1,5 @@
 <template>
-    <li v-if="menu.external">
+    <li v-if="menu.external" @click="$store.commit('toggleMenu')">
         <a class="fx gap-8 ai-c" :href="menu.url" target="_blank">
             {{ menu.name }}
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12.447 12.447">
@@ -7,7 +7,7 @@
             </svg>
         </a>
     </li>
-    <li v-else>
+    <li v-else @click="$store.commit('toggleMenu')">
         <router-link :to="menu.url">{{ menu.name }}</router-link>
     </li>
 </template>
