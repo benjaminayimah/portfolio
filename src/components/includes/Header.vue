@@ -51,7 +51,7 @@ nav {
         transition: 0.3s color;
         &.router-link-active {
             color: $primary-color !important;
-            font-weight: 500;
+            // font-weight: 500;
         }
         &:hover {
             color: $hover-color;
