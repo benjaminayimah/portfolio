@@ -1,16 +1,16 @@
 <template>
     <div class="grid">
         <div class="">
-            <img src="../../assets/images/behance_shots.jpg" class="br-18" alt="">
+            <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-18" alt="">
         </div>
         <div class="">
-            <img src="../../assets/images/instagram-shots.jpg" class="br-18" alt="">
+            <img src="../../assets/images/instagram-shots.jpg" loading="lazy" class="br-18" alt="">
         </div>
         <div class="">
-            <img src="../../assets/images/behance_shots.jpg" class="br-18" alt="">
+            <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-18" alt="">
         </div>
         <div class="">
-            <img src="../../assets/images/instagram-shots.jpg" class="br-18" alt="">
+            <img src="../../assets/images/instagram-shots.jpg" loading="lazy" class="br-18" alt="">
         </div>
     </div>
 </template>
