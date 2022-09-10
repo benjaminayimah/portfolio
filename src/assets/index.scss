@@ -225,10 +225,15 @@ p{
         gap: 12px;
     }
     .project-banner{
-        height: 300px;
+        height: 280px;
     }
     .project-content{
         padding: 16px;
+    }
+    .backdrop{
+        -webkit-backdrop-filter: unset;
+        backdrop-filter: unset;
+        background-color: unset;
     }
 }
 .fade-enter-active,
