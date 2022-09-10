@@ -3,14 +3,16 @@
       <Header />
       <router-view/>
       <Footer />
+      <mobile-menu />
     </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import Header from './components/includes/Header.vue';
 import Footer from './components/includes/Footer.vue';
+import MobileMenu from './components/includes/MobileMenu.vue';
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, MobileMenu },
   name: "App",
   computed: {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])

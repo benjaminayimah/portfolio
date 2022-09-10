@@ -8,6 +8,7 @@ footer{
     margin-top: 50px;
     height: 80px;
     font-size: 13px;
+    padding: 0 20px;
     span {
         font-weight: 500;
     }
