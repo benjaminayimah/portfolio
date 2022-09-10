@@ -17,6 +17,13 @@ button {
 .icon-fill, .icon-stroke  {
     transition: $transition-time linear fill, $transition-time linear stroke;
 }
+.grid{
+    display: grid;
+}
+.sticky-top{
+    position: sticky;
+    -webkit-position: sticky;
+}
 .fx{
     display: flex;
 }
@@ -107,6 +114,9 @@ p{
 .dark-mode {
     background-color: $black;
     color: $light-txt;
+    header{
+        background-color: $black;
+    }
     .txt, nav a{
         color: $light-txt;
     }
@@ -153,10 +163,20 @@ p{
 }
 //Mobile
 .mob-view {
+    header {
+        height: 75px;
+    }
+    #logo[data-v-142c33de] {
+        font-size: 18px;
+    }
     button {
         cursor: unset;
     }
     .top-hold, .section-wrapper{
         width: 90%;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
     }
 }

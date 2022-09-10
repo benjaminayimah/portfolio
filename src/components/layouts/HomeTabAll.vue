@@ -1,5 +1,10 @@
 <template>
-    <h1>All</h1>
+    <div class="grid">
+        <div class="grid-item bg-secondary"></div>
+        <div class="grid-item bg-secondary"></div>
+        <div class="grid-item bg-secondary"></div>
+        <div class="grid-item bg-secondary"></div>
+    </div>
 </template>
 <script>
 export default {
@@ -7,5 +12,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.grid {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-item{
+    height: 600px;
+    border-radius: 18px;
+}
 </style>
