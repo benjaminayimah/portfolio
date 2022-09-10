@@ -20,7 +20,7 @@ export default {
 }
 #hamburger_menu div{
     width: 25px;
-    border-bottom: 1.5px solid;
+    border-bottom: 2px solid;
     display: block;
     transition: 0.5s all cubic-bezier(0.7, 0.11, 0.2, 1) 0s;
     position: absolute;
