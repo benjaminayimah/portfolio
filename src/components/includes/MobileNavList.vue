@@ -8,7 +8,7 @@
         </a>
     </li>
     <li v-else @click="$store.commit('toggleMenu')">
-        <router-link :to="menu.url">{{ menu.name }}</router-link>
+        <router-link class="fx ai-c" :to="menu.url">{{ menu.name }}</router-link>
     </li>
 </template>
 <script>
