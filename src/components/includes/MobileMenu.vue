@@ -33,7 +33,9 @@ export default {
 }
 .mob-menu-wrapper{
     height: 100%;
-    padding: 20px 30px
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
 }
 .show{
     visibility: visible !important;
