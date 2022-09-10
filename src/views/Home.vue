@@ -43,6 +43,7 @@ h3{
   }
 }
 nav{
+  margin-bottom: 30px;
   li {
     display: flex;
     list-style-type: none;

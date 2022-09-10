@@ -61,6 +61,7 @@ nav {
 header {
     height: 100px;
     transition: $transition-time linear background-color;
+    z-index: 10;
 }
 .sticky-top{
   top: 0;
