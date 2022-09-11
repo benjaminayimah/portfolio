@@ -1,24 +1,24 @@
 <template>
     <div class="grid project-grid">
-        <div>
-            <a href="#" @click.prevent="$store.commit('showProject')">
+        <div class="project-hold">
+            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
                 <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </a>
+            </div>
         </div>
-        <div>
-            <a href="#" @click.prevent="$store.commit('showProject')">
+        <div class="project-hold">
+            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
                 <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </a>
+            </div>
         </div>
-        <div>
-            <a href="#" @click.prevent="$store.commit('showProject')">
+        <div class="project-hold">
+            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
                 <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </a>
+            </div>
         </div>
-        <div>
-            <a href="#" @click.prevent="$store.commit('showProject')">
+        <div class="project-hold">
+            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
                 <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </a>
+            </div>
         </div>
     </div>
 </template>
