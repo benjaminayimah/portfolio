@@ -192,28 +192,33 @@ p{
 }
 //Desktop
 .desk-view {
+    #project_hero_modal{
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .top-hold, .section-wrapper{
         width: 70%;
     }
 }
 //Tablet
 .tab-view {
+    #project_hero_modal{
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .top-hold, .section-wrapper{
         width: 90%;
     }
 }
 //Mobile
 .mob-view {
-    a{
-        cursor: unset;
-    }
     header {
         height: 75px;
     }
     #logo{
         font-size: 18px;
     }
-    button {
+    button, a {
         cursor: unset;
     }
     .top-hold, .section-wrapper{
@@ -239,6 +244,10 @@ p{
         background-color: unset;
     }
 }
+.slide-enter-active, .slide-leave-active {
+    transition: all 0.4s;
+}
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.3s ease;
