@@ -2,7 +2,7 @@
     <transition name="fade">
         <primary-backdrop v-if="getProject.active" @click="$store.commit('closeProject')" />
     </transition>
-    <transition name="fade">
+    <transition :name="getMobile? 'slide' : 'fade'">
         <div v-if="getProject.active" id="project_hero_modal" class="bg-secondary" :class="computeWidth ? 'width-active': 'width-inactive'" :style="{height: (getWindowHeight-40)+'px'}">
             <div class="wrapper">
                 <button class="br-50 fx ai-c jc-c" @click="$store.commit('closeProject')">
@@ -65,9 +65,6 @@ export default {
 #project_hero_modal{
     position: fixed;
     z-index: 202;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
 }
 .wrapper{
     height: 100%;
@@ -79,6 +76,9 @@ export default {
         background-color: rgba(255, 255, 255, 0.8);
         right: 20px;
         top: 20px;
+        &:hover {
+            background-color: #fff;
+        }
     }
 }
 .project-body{
@@ -102,5 +102,9 @@ export default {
         border-top-left-radius: 16px;
     }
 
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(900px);
 }
 </style>
