@@ -5,11 +5,18 @@
     <transition :name="getMobile? 'slide' : 'fade'">
         <div v-if="getProject.active" id="project_hero_modal" class="bg-secondary" :class="computeWidth ? 'width-active': 'width-inactive'" :style="{height: (getWindowHeight-40)+'px'}">
             <div class="wrapper">
-                <button class="br-50 fx ai-c jc-c close-proj-btn" @click="$store.commit('closeProject')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16.106 16.147">
-                        <path d="M-7584.7-2858.224l-6.36-6.389-6.33,6.317a1,1,0,0,1-.708.292,1,1,0,0,1-.708-.294,1,1,0,0,1,0-1.415l6.333-6.317-6.31-6.339a1,1,0,0,1,0-1.415,1,1,0,0,1,1.415,0l6.308,6.338,6.354-6.338a1,1,0,0,1,1.413,0,1,1,0,0,1,0,1.413l-6.354,6.34,6.362,6.392a1,1,0,0,1,0,1.413,1,1,0,0,1-.706.292A1,1,0,0,1-7584.7-2858.224Z" transform="translate(7599.096 2874.075)"/>
-                    </svg>
-                </button>
+                <div class="buttons-holdr fx fx-js w-100">
+                    <div class="fx gap-16">
+                        <control-button-left />
+                        <control-button-right />
+                    </div>
+                    <button class="br-50 fx ai-c jc-c close-proj-btn" @click="$store.commit('closeProject')" title="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16.106 16.147">
+                            <path d="M-7584.7-2858.224l-6.36-6.389-6.33,6.317a1,1,0,0,1-.708.292,1,1,0,0,1-.708-.294,1,1,0,0,1,0-1.415l6.333-6.317-6.31-6.339a1,1,0,0,1,0-1.415,1,1,0,0,1,1.415,0l6.308,6.338,6.354-6.338a1,1,0,0,1,1.413,0,1,1,0,0,1,0,1.413l-6.354,6.34,6.362,6.392a1,1,0,0,1,0,1.413,1,1,0,0,1-.706.292A1,1,0,0,1-7584.7-2858.224Z" transform="translate(7599.096 2874.075)"/>
+                        </svg>
+                    </button>
+                </div>
+                
                 <div class="project-body">
                     <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.image+')'}"></div>
                     <div class="project-content">
@@ -33,10 +40,10 @@
             </div>
         </div>
     </transition>
-    <div v-if="getProject.active">
+    <!-- <div v-if="getProject.active">
         <control-button-left />
         <control-button-right />
-    </div>
+    </div> -->
     
 </template>
 <script>
@@ -65,14 +72,18 @@ export default {
     position: fixed;
     z-index: 202;
 }
+.buttons-holdr{
+    position: absolute;
+    padding: 20px;
+}
 .wrapper{
     height: 100%;
     button{
-        position: absolute;
+        // position: absolute;
         height: 45px;
         width: 45px;
-        right: 20px;
-        top: 20px;
+        // right: 20px;
+        // top: 20px;
     }
 }
 .project-body{
