@@ -1,39 +1,20 @@
 <template>
     <div class="grid project-grid">
-        <div class="project-hold">
-            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
-                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </div>
-        </div>
-        <div class="project-hold">
-            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
-                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </div>
-        </div>
-        <div class="project-hold">
-            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
-                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </div>
-        </div>
-        <div class="project-hold">
-            <div class="project-main-wrapper" @click.prevent="$store.commit('showProject')">
-                <img src="../../assets/images/behance_shots.jpg" loading="lazy" class="br-16" alt="">
-            </div>
-        </div>
+        <project-list v-for="project in getProjects" :key="project.id" v-bind:project="project" />
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex';
+import ProjectList from '../includes/ProjectList.vue';
 export default {
-    name: 'AllWork'
+  components: { ProjectList },
+    name: 'AllWork',
+    computed: mapGetters(['getProjects'])
 }
 </script>
 <style lang="scss" scoped>
 .grid {
     gap: 30px;
     grid-template-columns: 1fr 1fr;
-}
-img{
-    width: 100%;
-    height: 100%;
 }
 </style>

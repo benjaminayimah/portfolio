@@ -9,21 +9,59 @@ export default createStore({
     windowWidth: '',
     darkMode: localStorage.getItem('darkMode') || false,
     showMenu: false,
-    project: { active: false },
+    project: { active: false, project: {}},
     menus: [
       { id: 1, url: "/", name: "Home" },
       { id: 2, url: "/about", name: "About" },
       { id: 3, url: "https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing", name: "Resume", external: true},
+    ],
+    projects: [
+      { id: 1, type: 'case-study', title: ' Voluptate possimus voluptas', image: require('@/assets/images/behance_shots.jpg')},
+      { id: 2, type: 'project', title: 'Doloribus officiis neque', image: require('@/assets/images/instagram-shots.jpg')},
+      { id: 3, type: 'case-study', title: 'Lorem ipsum consectetur amet', image: require('@/assets/images/behance_shots.jpg')},
+      { id: 4, type: 'project', title: 'Amet adipisicing Mollitia', image: require('@/assets/images/instagram-shots.jpg')}
     ]
   },
   mutations: {
-    showProject(state) {
+    showProject(state, payload) {
       document.body.classList.add('fixed-body')
-      state.project.active = true
+      const thisProject = state.projects.find(p => p.id === payload)
+      state.project.project = thisProject
+      // setTimeout(()=> {
+        state.project.active = true
+      // }, 5)
+    },
+    findIndex(state, payload) {
+      const prod = state.projects[payload]
+      console.log(prod)
+      state.project.project = prod
+    },
+    showNext(state) {
+      const length = state.projects.length -1
+      const id = state.project.project.id
+      const i = state.projects.findIndex(x => x.id === id)
+      console.log(i)
+      if(i < length) {
+        this.commit('findIndex', i+1)
+      }else {
+        this.commit('findIndex', 0)
+      }
+
+    },
+    showPrevious(state) {
+      const length = state.projects.length
+      const id = state.project.project.id
+      const i = state.projects.findIndex(x => x.id === id)
+      if(i > 0) {
+        this.commit('findIndex', i-1)
+      }else {
+        this.commit('findIndex', length-1)
+      }
     },
     closeProject(state) {
       document.body.classList.remove('fixed-body')
       state.project.active = false
+      state.project.project = {}
     },
     computeWindow(state) {
       let appWidth = 990
@@ -98,7 +136,10 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
-    getProject: (state) => state.project
+    getProject: (state) => state.project,
+    getProjects: (state) => state.projects,
+
+
   },
   actions: {
   },

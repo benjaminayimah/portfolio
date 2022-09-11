@@ -102,6 +102,20 @@ p{
         transition: 0.3s all;
     }
 }
+.control-btn-wrapper{
+    position: fixed;
+    z-index: 203;
+    top: 50%;
+    .control-btn {
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+    }
+    label {
+        color: $light;
+        font-size: 0.96rem;
+    }
+}
 .light-mode {
     color: $black;
     background-color: $light;
@@ -270,7 +284,7 @@ p{
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
