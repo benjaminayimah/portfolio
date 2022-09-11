@@ -13,6 +13,9 @@ button{
         transform: scale(0.94);
     }
 }
+.project-hold img{
+    cursor: pointer;
+}
 .project-grid img:active{
     transform: scale(0.99);
 }
@@ -218,8 +221,8 @@ p{
     #logo{
         font-size: 18px;
     }
-    button, a {
-        cursor: unset;
+    button, .project-hold img, nav a{
+        cursor: none;
     }
     .top-hold, .section-wrapper{
         width: 90%;
