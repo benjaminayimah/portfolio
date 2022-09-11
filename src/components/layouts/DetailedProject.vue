@@ -5,7 +5,7 @@
     <transition :name="getMobile? 'slide' : 'fade'">
         <div v-if="getProject.active" id="project_hero_modal" class="bg-secondary" :class="computeWidth ? 'width-active': 'width-inactive'" :style="{height: (getWindowHeight-40)+'px'}">
             <div class="wrapper">
-                <button class="br-50 fx ai-c jc-c" @click="$store.commit('closeProject')">
+                <button class="br-50 fx ai-c jc-c close-proj-btn" @click="$store.commit('closeProject')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16.106 16.147">
                         <path d="M-7584.7-2858.224l-6.36-6.389-6.33,6.317a1,1,0,0,1-.708.292,1,1,0,0,1-.708-.294,1,1,0,0,1,0-1.415l6.333-6.317-6.31-6.339a1,1,0,0,1,0-1.415,1,1,0,0,1,1.415,0l6.308,6.338,6.354-6.338a1,1,0,0,1,1.413,0,1,1,0,0,1,0,1.413l-6.354,6.34,6.362,6.392a1,1,0,0,1,0,1.413,1,1,0,0,1-.706.292A1,1,0,0,1-7584.7-2858.224Z" transform="translate(7599.096 2874.075)"/>
                     </svg>
@@ -72,13 +72,8 @@ export default {
         position: absolute;
         height: 50px;
         width: 50px;
-        border: 1px solid rgb(239, 239, 239);
-        background-color: rgba(255, 255, 255, 0.8);
         right: 20px;
         top: 20px;
-        &:hover {
-            background-color: #fff;
-        }
     }
 }
 .project-body{
