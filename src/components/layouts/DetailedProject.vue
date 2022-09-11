@@ -70,8 +70,8 @@ export default {
     height: 100%;
     button{
         position: absolute;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         right: 20px;
         top: 20px;
     }
