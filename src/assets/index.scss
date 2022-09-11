@@ -17,7 +17,7 @@ button{
     cursor: pointer;
 }
 .project-grid img:active{
-    transform: scale(0.99);
+    transform: scale(0.98);
 }
 .icon-fill, .icon-stroke  {
     transition: $transition-time linear fill, $transition-time linear stroke;
