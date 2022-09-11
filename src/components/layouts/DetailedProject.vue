@@ -11,11 +11,9 @@
                     </svg>
                 </button>
                 <div class="project-body">
-                    <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+img+')'}">
-
-                    </div>
+                    <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.image+')'}"></div>
                     <div class="project-content">
-                        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        <h1>{{ getProject.project.title }}</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
@@ -35,15 +33,20 @@
             </div>
         </div>
     </transition>
+    <div v-if="getProject.active">
+        <control-button-left />
+        <control-button-right />
+    </div>
     
-
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import PrimaryBackdrop from '../includes/PrimaryBackdrop.vue'
+import ControlButtonLeft from '../includes/ControlButtonLeft.vue'
+import ControlButtonRight from '../includes/ControlButtonRight.vue'
 export default {
     name: 'DetailedProject',
-    components: { PrimaryBackdrop },
+    components: { PrimaryBackdrop, ControlButtonLeft, ControlButtonRight },
     computed: {
         ...mapGetters(['getProject', 'getWindowWidth', 'getWindowHeight', 'getMobile']),
         computeWidth() {
@@ -54,11 +57,7 @@ export default {
             }
         }
     },
-    data() {
-        return {
-            img: require('@/assets/images/behance_shots.jpg')
-        }
-    }
+    
 }
 </script>
 <style lang="scss" scoped>

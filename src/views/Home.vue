@@ -23,7 +23,6 @@ export default {
         { id: 1, name: 'All', url: '/'},
         { id: 2, name: 'Case studies', url: 'case-studies'},
         { id: 3, name: 'Projects', url: 'projects'},
-        // { id: 4, name: 'Social media', url: 'social'},
       ]
     }
   }
