@@ -5,8 +5,8 @@
 </template>
 <style lang="scss" scoped>
 footer{
-    margin-top: 50px;
-    height: 80px;
+    margin-top: 30px;
+    height: 100px;
     font-size: 13px;
     padding: 0 20px;
     span {

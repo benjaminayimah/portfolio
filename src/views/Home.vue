@@ -42,6 +42,7 @@ h3{
   }
 }
 nav{
+  z-index: 2;
   margin-bottom: 30px;
   li {
     display: flex;

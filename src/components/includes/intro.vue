@@ -12,9 +12,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-section{
-    margin: 60px 0;
-}
 p{
     max-width: 700px;
     margin: 14px 0;
