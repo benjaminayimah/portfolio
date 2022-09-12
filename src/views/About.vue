@@ -46,6 +46,9 @@ h1{
   font-size: 40px;
 
 }
+.h1{
+  margin-bottom: 25px;
+}
 .grid {
     gap: 30px;
     grid-template-columns: 1fr 1fr;
