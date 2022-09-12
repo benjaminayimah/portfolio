@@ -62,4 +62,9 @@ h1{
 p{
     margin: 22px 0;
 }
+.mob-view {
+  section{
+    margin-top: 30px;
+  }
+}
 </style>
