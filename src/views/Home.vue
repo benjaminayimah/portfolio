@@ -30,18 +30,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-h3{
-  position: relative;
-  margin-bottom: 30px;
-  &::before {
-    position: absolute;
-    content: "";
-    border-bottom: 2px solid;
-    border-color: $primary-color;
-    width: 46px;
-    bottom: -5px;
-  }
-}
 nav{
   z-index: 2;
   margin-bottom: 30px;
