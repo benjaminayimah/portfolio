@@ -77,7 +77,6 @@ export default createStore({
       }else {
         state.showMenu = true
         document.body.classList.add('fixed-body')
-
       }
     }
   },
@@ -90,8 +89,6 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
-    
-
 
   },
   actions: {
