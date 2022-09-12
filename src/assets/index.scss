@@ -1,9 +1,11 @@
 $primary-color: #3FD68A;
+$primary-hover: #25c977;
 $hover-color: rgb(116, 116, 116);
 $black: #000;
 $white: #fff;
 $light: #F5F5F5;
 $light-txt: #d3d3d3;
+$gray: rgb(112, 113, 115);
 $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
 button{
@@ -13,6 +15,70 @@ button{
         transform: scale(0.94);
     }
 }
+.clic:active {
+    transform: scale(0.94);
+}
+a {
+    text-decoration: none;
+}
+h3{
+    position: relative;
+    margin-bottom: 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      border-bottom: 2px solid;
+      border-color: $primary-color;
+      width: 46px;
+      bottom: -5px;
+    }
+  }
+.button-primary {
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: $black;
+    background-color: $primary-color;
+    font-weight: 500;
+    transition: 0.3s linear background-color;
+    &:hover {
+        background-color: $primary-hover;
+    }
+    &:active{
+        transform: scale(0.94);   
+    }
+}
+.a-link{
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s all;
+    font-weight: 500;
+    &::before {
+        content: '';
+        height: 1px;
+        background-color: rgb(203, 205, 211);
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+    }
+    &::after {
+        content: '';
+        height: 1px;
+        background-color: $primary-hover;
+        width: 0%;
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transition: 0.3s all;
+    }
+    &:hover {
+        &::after {
+            content: '';
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
 .project-main-wrapper{
     cursor: pointer;
 }
@@ -56,6 +122,12 @@ section{
 .fx-col {
     display: flex;
     flex-direction: column;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+.mb-32{
+    margin-bottom: 32px;
 }
 .gap-8{
     gap: 8px;
@@ -222,6 +294,16 @@ p{
         &:hover {
             background-color: rgba(255, 255, 255, 0.9);
         }
+    }
+    .social-hold{
+        path{
+            fill: $light-txt;
+        }
+        a:hover path{
+            fill: $black;
+
+        }
+       
     }
 }
 .main-row{
