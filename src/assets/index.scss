@@ -34,12 +34,13 @@ h3{
     }
   }
 .button-primary {
-    padding: 12px 20px;
+    padding: 13px 20px;
     border-radius: 30px;
     color: $black;
     background-color: $primary-color;
     font-weight: 500;
     transition: 0.3s linear background-color;
+    line-height: 50px;
     &:hover {
         background-color: $primary-hover;
     }
