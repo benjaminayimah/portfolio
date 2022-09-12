@@ -32,7 +32,7 @@ export default {
     color: unset;
 }
 header {
-    height: 100px;
+    height: 90px;
     transition: $transition-time linear background-color;
     z-index: 10;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
