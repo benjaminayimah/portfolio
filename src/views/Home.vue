@@ -13,10 +13,11 @@
 
 <script>
 import intro from '../components/includes/intro.vue'
-
+import scrollTopMixin from '../mixins/scrollTopMixin'
 export default {
   components: { intro },
   name: 'Home',
+  mixins: [scrollTopMixin],
   data() {
     return {
       tabs: [

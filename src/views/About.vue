@@ -19,9 +19,10 @@
   </section>
 </template>
 <script>
-  
+import scrollTopMixin from '../mixins/scrollTopMixin';
 export default {
   name: 'About',
+  mixins: [scrollTopMixin],
   data() {
     return {
         img: 'ben.png',
