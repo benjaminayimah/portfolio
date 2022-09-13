@@ -230,7 +230,7 @@ p{
             background-color: $white;
             border-color: $light;
             &:hover {
-                border-color: $black;
+                border-color: #b8b8b8;
             }
             &.router-link-exact-active {
                 background-color: $black !important;
@@ -275,14 +275,14 @@ p{
         background-color: $black;
     }
     .bg-secondary {
-        background-color: #353637;
+        background-color: #292A2D;
     }
     .tabs {
         a {
-            background-color: #353637;
-            border-color: #545454;
+            background-color: #292A2D;
+            border-color: #4a4b4f;
             &:hover {
-                border-color: $white;
+                border-color: #787d84;
             }
             &.router-link-exact-active {
                 background-color: $white !important;
