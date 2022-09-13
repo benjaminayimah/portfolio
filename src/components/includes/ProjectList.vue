@@ -2,7 +2,7 @@
     <div class="project-hold relative">
         <div class="project-main-wrapper" @click.prevent="$store.commit('showProject', project.id)">
             <img :src="project.image" loading="lazy" class="br-16" alt="">
-            <div class="absolute thumbnail-overlay fx ai-c">
+            <div class="absolute thumbnail-overlay">
                 <div class="caption">
                     <div class="caption-header">{{ project.typename.toString().toUpperCase()}}:</div>
                     <div class="title">{{ project.title }}</div>
@@ -41,9 +41,10 @@ img{
     visibility: hidden;
     opacity: 0;
     transition: 0.4s;
+    align-items: center;
 }
 .caption{
-    padding: 0 40px;
+    padding: 40px;
 }
 .caption div{
     color: #ffffff;

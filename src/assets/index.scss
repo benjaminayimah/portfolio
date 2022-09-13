@@ -371,6 +371,9 @@ p{
         backdrop-filter: unset;
         background-color: unset;
     }
+    .thumbnail-overlay{
+        align-items: flex-end;
+    }
 }
 .slide-enter-active, .slide-leave-active {
     transition: all 0.4s;
