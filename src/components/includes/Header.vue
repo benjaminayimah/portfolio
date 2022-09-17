@@ -33,7 +33,7 @@ export default {
 }
 header {
     height: 90px;
-    transition: $transition-time linear background-color;
+    transition: $transition-time ease background-color;
     z-index: 10;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);

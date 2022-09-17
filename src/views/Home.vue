@@ -2,11 +2,13 @@
   <div id="home" class="main-row">
     <div class="section-wrapper">
       <intro />
-      <h3 class="mt-0">Here are some of my work</h3>
       <nav class="fx tabs sticky-top">
         <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
       </nav>
       <router-view />
+      <div class="mt-50">
+        <router-link to="/about" class="upper-case a-link fw-600">Get in touch</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -43,5 +45,8 @@ nav{
       border: 1px solid;
     }
   }
+}
+.a-link{
+  color: unset;
 }
 </style>

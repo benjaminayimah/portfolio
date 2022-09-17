@@ -63,12 +63,14 @@ export default createStore({
       state.darkMode ? this.commit('darkMode') : this.commit('lightMode')
     },
     darkMode() {
+      document.getElementsByTagName( 'html' )[0].setAttribute('class', 'dark-mode')
       document.body.classList.remove('light-mode')
       document.body.classList.add('dark-mode')
     },
     lightMode() {
       document.body.classList.remove('dark-mode')
       document.body.classList.add('light-mode')
+      document.getElementsByTagName( 'html' )[0].setAttribute('class', 'light-mode')
     },
     toggleMenu: (state) => {
       if(state.showMenu){
@@ -78,6 +80,9 @@ export default createStore({
         state.showMenu = true
         document.body.classList.add('fixed-body')
       }
+    },
+    getHtml() {
+      return document.getElementsByTagName( 'html' )[0]
     }
   },
   getters: {

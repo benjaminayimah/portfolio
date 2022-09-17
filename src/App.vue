@@ -44,7 +44,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  transition: $transition-time linear background-color, $transition-time linear color;
+  transition: $transition-time ease background-color, $transition-time linear color;
   // transition: $transition-time linear color;
   font-family: $myFont;
   -webkit-font-smoothing: antialiased;
