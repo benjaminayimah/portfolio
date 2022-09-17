@@ -31,13 +31,13 @@ button {
     height: 38px;
     border-radius: 25px;
     width: 65px;
-    transition: $transition-time linear background-color, $transition-time linear border-color;
+    transition: $transition-time ease background-color, $transition-time ease border-color;
     div{
         border-radius: 50%;
         height: 30px;
         width: 30px;
         box-shadow: 0 1px 6px 0 rgb(14 20 44 / 18%);
-        transition: $transition-time all linear;
+        transition: $transition-time all ease;
         svg {
             transform: rotate(130deg);
         }

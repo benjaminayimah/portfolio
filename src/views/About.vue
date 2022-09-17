@@ -94,7 +94,7 @@ p{
 }
 .social-hold{
   a {
-    transition: 0.3s linear background-color;
+    transition: 0.3s ease background-color;
     height: 50px;
     width: 50px;
     border: 1px solid $primary-color;
@@ -102,7 +102,7 @@ p{
       background-color: $primary-color;
     }
     path{
-      transition: 0.3s fill;
+      transition: 0.3s fill ease;
     }
   }
 }
