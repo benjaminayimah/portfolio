@@ -65,6 +65,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section{
+  margin: 60px 0;
+}
 img{
   width: 100%;
   border-radius: 20px;

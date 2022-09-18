@@ -16,4 +16,9 @@ p{
     max-width: 600px;
     margin: 14px 0;
 }
+section {
+    margin-bottom: 50px;
+    margin-top: 60px;
+
+}
 </style>
