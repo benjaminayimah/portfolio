@@ -2,12 +2,6 @@
     <div class="project-hold relative">
         <div class="project-main-wrapper bg-secondary br-16" @click.prevent="$store.commit('showProject', project.id)">
             <img :src="project.image" loading="lazy" alt="">
-            <!-- <div class="absolute thumbnail-overlay">
-                <div class="caption">
-                    <div class="caption-header">{{ project.typename.toString().toUpperCase()}}:</div>
-                    <div class="title">{{ project.title }}</div>
-                </div>
-            </div>  -->
             <div class="caption">
                 <div class="title">Project name</div>
                 <div class="description">I’m a UI/UX Designer who focuses on crafting a delightful digital experience for users. </div>
