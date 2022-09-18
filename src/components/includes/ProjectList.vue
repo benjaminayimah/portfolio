@@ -1,13 +1,17 @@
 <template>
     <div class="project-hold relative">
-        <div class="project-main-wrapper" @click.prevent="$store.commit('showProject', project.id)">
-            <img :src="project.image" loading="lazy" class="br-16" alt="">
-            <div class="absolute thumbnail-overlay">
+        <div class="project-main-wrapper bg-secondary br-16" @click.prevent="$store.commit('showProject', project.id)">
+            <img :src="project.image" loading="lazy" alt="">
+            <!-- <div class="absolute thumbnail-overlay">
                 <div class="caption">
                     <div class="caption-header">{{ project.typename.toString().toUpperCase()}}:</div>
                     <div class="title">{{ project.title }}</div>
                 </div>
-            </div> 
+            </div>  -->
+            <div class="caption">
+                <div class="title">Project name</div>
+                <div class="description">I’m a UI/UX Designer who focuses on crafting a delightful digital experience for users. </div>
+            </div>
         </div>
     </div>
 </template>
@@ -24,38 +28,22 @@ img{
     display: block;
 }
 .project-main-wrapper{
-    &:hover {
-        .thumbnail-overlay{
-            visibility: visible;
-            opacity: 1;
-        }
+    img {
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
     }
 }
-.thumbnail-overlay{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, 0.5);
-    bottom: 0;
-    border-radius: 16px;
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.4s;
-    align-items: center;
-}
 .caption{
-    padding: 40px;
-}
-.caption div{
-    color: #ffffff;
+    padding: 24px;
 }
 .caption-header{
    font-size: 20px; 
 }
 .title{
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 15px 0;
-    line-height: 40px;
+}
+.description{
+    font-size: 1rem;
 }
 </style>

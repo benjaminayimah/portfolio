@@ -13,7 +13,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 p{
-    max-width: 700px;
+    max-width: 600px;
     margin: 14px 0;
 }
 </style>

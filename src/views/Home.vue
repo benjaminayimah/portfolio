@@ -2,7 +2,7 @@
   <div id="home" class="main-row">
     <div class="section-wrapper">
       <intro />
-      <nav class="fx tabs sticky-top">
+      <nav class="fx tabs sticky-top" id="projects">
         <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
       </nav>
       <router-view />
