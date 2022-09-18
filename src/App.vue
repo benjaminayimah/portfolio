@@ -1,4 +1,5 @@
 <template>
+  <a href="#projects" class="skip">Skip to project</a>
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <Header />
       <router-view/>
@@ -53,5 +54,20 @@ body {
   margin: 0 ;
   overflow-x: hidden;
   line-height: 1.4;
+}
+.skip{
+  position: fixed;
+  top: 0;
+  z-index: 300;
+  padding:0 16px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  translate: 0 -100%;
+  transition: 0.4s ease-in-out all;
+  &:focus {
+    translate: 0 0;
+    padding: 16px;
+  }
 }
 </style>

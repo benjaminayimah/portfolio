@@ -60,7 +60,7 @@ h3{
         background-color: rgb(203, 205, 211);
         width: 100%;
         position: absolute;
-        bottom: -1px;
+        bottom: -2px;
     }
     &::after {
         content: '';
@@ -68,7 +68,7 @@ h3{
         background-color: $primary-hover;
         width: 0%;
         position: absolute;
-        bottom: -1px;
+        bottom: -2px;
         left: 50%;
         transition: 0.3s all;
     }
