@@ -5,7 +5,7 @@ $black: #000;
 $white: #fff;
 $light: #F5F5F5;
 $light-txt: #d3d3d3;
-$gray: rgb(112, 113, 115);
+$gray: #707173;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
 button{
@@ -20,6 +20,12 @@ button{
 }
 a {
     text-decoration: none;
+}
+nav a {
+    transition: 0.3s color;
+    path {
+        transition: 0.3s fill;
+    }
 }
 h3{
     position: relative;
@@ -44,9 +50,6 @@ h3{
     display: inline-block;
     &:hover {
         background-color: $primary-hover;
-    }
-    &:active{
-        transform: scale(0.94);   
     }
 }
 .a-link{
@@ -80,15 +83,20 @@ h3{
         }
     }
 }
+.grid {
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
 
 .project-main-wrapper{
     cursor: pointer;
 }
-.project-main-wrapper:active{
-    transform: scale(0.98);
-}
+
 .icon-fill, .icon-stroke  {
     transition: $transition-time ease fill, $transition-time ease stroke;
+}
+section{
+    margin: 60px 0;
 }
 .absolute{
     position: absolute;
@@ -211,8 +219,27 @@ p{
     .bg-plain, .opaque{
         background-color: #fff !important;
     }
-    .txt, nav a{
+    nav a{
+        color: $gray;
+        &.router-link-active  {
+            color: $black;
+            font-weight: 500;
+        }
+        &:hover {
+            color: $black;
+            path {
+                fill: $black;
+            }
+        }
+    }
+    nav a path{
+        fill: $gray;
+    }
+    .txt{
         color: $black;
+    }
+    .icon-fill {
+        fill: $black;
     }
     .icon-fill {
         fill: $black;
@@ -263,8 +290,27 @@ p{
     .bg-plain, .opaque{
         background-color: #000 !important;
     }
-    .txt, nav a{
+    .txt {
         color: $light-txt;
+    }
+    nav a{
+        color: #838587;
+        &:hover {
+            color: $white;
+            path {
+                fill: $white;
+            }
+        }
+        &.router-link-active {
+            color: $light-txt;
+            font-weight: 500;
+        }
+    }
+    nav a path{
+        fill: #838587;
+    }
+    #logo span{
+        background-color: #55565a;
     }
     .icon-fill {
         fill: $light-txt;

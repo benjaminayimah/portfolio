@@ -18,8 +18,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.grid {
-    gap: 30px;
-    grid-template-columns: 1fr 1fr;
-}
+
 </style>
