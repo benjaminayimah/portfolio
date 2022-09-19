@@ -1,6 +1,6 @@
 <template>
-    <div class="project-hold relative">
-        <div class="project-main-wrapper bg-secondary br-16" @click.prevent="$store.commit('showProject', project.id)">
+    <div class="project-hold relative" @click.prevent="$store.commit('showProject', project.id)">
+        <div class="project-main-wrapper bg-secondary br-16" >
             <img :src="project.image" loading="lazy" alt="">
             <div class="caption fx-col gap-8">
                 <div class="title">Project name</div>
@@ -22,9 +22,14 @@ img{
     display: block;
 }
 .project-main-wrapper{
+    transition: 0.3s ease;
     img {
         border-top-right-radius: 16px;
         border-top-left-radius: 16px;
+    }
+    &:hover {
+        transform: scale(1.04);
+        box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.12);
     }
 }
 .caption{

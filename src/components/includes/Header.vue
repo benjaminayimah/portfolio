@@ -1,7 +1,7 @@
 <template>
     <header class="fx jc-c sticky-top" id="header" :class="{ 'opaque': getShowMobMenu }" >
         <div class="fx ai-c fx-js top-hold">
-            <router-link to="/" id="logo">Benjamin Ayimah</router-link>
+            <router-link to="/" id="logo">Benjamin Ayimah<span></span></router-link>
             <div class="fx gap-16 ai-c">
                 <nav v-if="!getMobile" class="fx">
                     <nav-list v-for="menu in getMenus" :key="menu.id" v-bind:menu="menu" />
@@ -25,11 +25,22 @@ export default {
 </script>
 <style lang="scss" scoped>
 #logo{
-    font-weight: 500;
-    font-size: 21px;
+    font-weight: 600;
+    font-size: 22px;
     white-space: nowrap;
     text-decoration: none;
     color: unset;
+    position: relative;
+    span {
+        height: 12px;
+        background-color: #8DFA9A;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        z-index: -1;
+        left: 0;
+
+    }
 }
 header {
     height: 90px;
