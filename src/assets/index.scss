@@ -4,7 +4,7 @@ $hover-color: rgb(116, 116, 116);
 $black: #000;
 $white: #fff;
 $light: #F5F5F5;
-$light-txt: #d3d3d3;
+$light-txt: #fff;
 $gray: #707173;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
@@ -97,6 +97,9 @@ h3{
 }
 section{
     margin: 60px 0;
+}
+.fixed{
+    position: fixed;
 }
 .absolute{
     position: absolute;
@@ -191,11 +194,9 @@ p{
     transition: $transition-time ease background-color
 }
 .tabs{
-    top: 100px;
     gap: 8px;
     a {
         transition: 0.3s all;
-        font-weight: 400 !important;
     }
 }
 .control-btn-wrapper{
@@ -366,7 +367,7 @@ p{
     justify-content: center;
 }
 .project-banner{
-    height: 400px;
+    height: 450px;
 }
 .project-content{
     padding: 0 30px;
@@ -410,7 +411,6 @@ p{
         flex-direction: column;
     }
     .tabs{
-        top: 85px;
         gap: 12px;
     }
     .project-banner{
@@ -419,7 +419,7 @@ p{
     .project-content{
         padding: 0 16px;
     }
-    nav{
+    .tabs{
         li {
           &:last-child {
               margin-right: 16px;
