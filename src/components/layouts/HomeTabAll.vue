@@ -1,5 +1,5 @@
 <template>
-    <div class="grid project-grid">
+    <div class="grid project-grid" id="projects">
         <project-list v-for="project in getProjects" :key="project.id" v-bind:project="project" />
     </div>
 </template>
