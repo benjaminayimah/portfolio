@@ -16,11 +16,10 @@
                         </svg>
                     </button>
                 </div>
-                
                 <div class="project-body">
                     <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.image+')'}"></div>
                     <nav class="fx tabs sticky-top">
-                        <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
+                        <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url" class="fw-500">{{ tab.name}}</router-link></li>
                     </nav>
                     <div class="project-content">
                         <div class="section" id="overview">
@@ -135,10 +134,11 @@ export default {
 h1{
     margin: 0 0 8px 0;
 }
-nav{
+.tabs{
   z-index: 2;
   margin-top: 30px;
   overflow-x: auto;
+  top: 85px;
   li {
     display: flex;
     list-style-type: none;
@@ -148,6 +148,7 @@ nav{
       border-radius: 30px;
       border: 1px solid;
       white-space: nowrap;
+      font-size: 16px;
     }
     &:last-child {
         margin-right: 30px;

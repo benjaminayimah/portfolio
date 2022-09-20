@@ -1,6 +1,16 @@
 <template>
   <a href="#projects" class="skip">Skip to project</a>
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
+      <div class="absolute floats do-rotate" id="floats" @mouseenter="pauseRotate" @mouseleave="resumeRotate">
+        <div class="relative">
+          <div class="float-holder">
+            <img :src="ui">
+          </div>
+          <div class="float-holder">
+            <img :src="ux">
+          </div>
+        </div>
+      </div>
       <Header />
       <router-view/>
       <Footer />
@@ -20,6 +30,12 @@ export default {
   computed: {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
   },
+  data() {
+    return {
+      ui: require('@/assets/images/ui.svg'),
+      ux: require('@/assets/images/ux.svg')
+    }
+  },
   created() {
       this.$store.commit('computeWindow')
       this.$store.commit('getDarkMode')
@@ -33,6 +49,16 @@ export default {
       setTimeout(()=> {
         this.$store.commit('computeWindow')
       }, 100)
+    },
+    $_(x) {
+        return document.getElementById(x)
+    },
+    pauseRotate() {
+      this.$_('floats').classList.remove('do-rotate')
+      this.$_('floats').classList.add('do-pause')
+    },
+    resumeRotate() {
+      this.$_('floats').classList.add('do-rotate')
     }
   }
 }
@@ -69,5 +95,33 @@ body {
     translate: 0 0;
     padding: 16px;
   }
+}
+.floats{
+  width: 250px;
+  top: 250px;
+  right: 12%;
+  .float-holder {
+    display: flex;
+    &:last-child{
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  img {
+    transform: rotate(165deg)
+  }
+}
+@keyframes rotate-floats {
+  0%   {transform: rotate(0)}
+  100% {transform: rotate(360deg)}
+}
+.do-rotate .float-holder{
+  animation-name: rotate-floats;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.do-pause .float-holder{
+  transform: rotate(270deg);
 }
 </style>
