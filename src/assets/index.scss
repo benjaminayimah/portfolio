@@ -192,9 +192,10 @@ p{
 }
 .tabs{
     top: 100px;
-    gap: 16px;
+    gap: 8px;
     a {
         transition: 0.3s all;
+        font-weight: 400 !important;
     }
 }
 .control-btn-wrapper{
@@ -255,14 +256,16 @@ p{
     }
     .tabs {
         a {
-            background-color: $white;
-            border-color: $light;
+            background-color: $light;
+            border-color: #dcdcdc;
+            color: $black;
             &:hover {
                 border-color: #b8b8b8;
             }
             &.router-link-exact-active {
                 background-color: $black !important;
                 color: $white;
+                border-color: $black;
             }
         }
     }
@@ -282,13 +285,13 @@ p{
 }
 
 .dark-mode {
-    background-color: $black;
+    background-color: #111112;
     color: $light-txt;
     header{
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(17,17,18,0.7);
     }
     .bg-plain, .opaque{
-        background-color: #000 !important;
+        background-color: #111112 !important;
     }
     .txt {
         color: $light-txt;
@@ -326,14 +329,17 @@ p{
     }
     .tabs {
         a {
-            background-color: #292A2D;
-            border-color: #4a4b4f;
+            background-color: #4f5156;
+            border-color: #74757a;
+            color: $white;
             &:hover {
-                border-color: #787d84;
+                border-color: #979ca2;
             }
             &.router-link-exact-active {
                 background-color: $white !important;
                 color: $black;
+                border-color: $white;
+
             }
         }
     }
@@ -363,7 +369,7 @@ p{
     height: 400px;
 }
 .project-content{
-    padding: 30px;
+    padding: 0 30px;
 }
 //Desktop
 .desk-view {
@@ -411,6 +417,18 @@ p{
         height: 280px;
     }
     .project-content{
+        padding: 0 16px;
+    }
+    nav{
+        li {
+          &:last-child {
+              margin-right: 16px;
+          }&:first-child{
+              margin-left: 16px;
+          }
+        }
+    }
+    .buttons-holdr{
         padding: 16px;
     }
     .backdrop{

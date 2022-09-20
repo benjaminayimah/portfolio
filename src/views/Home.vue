@@ -32,20 +32,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-nav{
-  z-index: 2;
-  margin-bottom: 30px;
-  li {
-    display: flex;
-    list-style-type: none;
-    a {
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 30px;
-      border: 1px solid;
-    }
-  }
-}
 .a-link{
   color: unset;
 }

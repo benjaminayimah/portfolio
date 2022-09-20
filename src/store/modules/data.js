@@ -2,7 +2,7 @@ export default {
     state: {
         project: { active: false, project: {}},
         projects: [
-        { id: 1, type: 'case-study', typename: 'case study', title: ' Voluptate possimus voluptas', image: require('@/assets/images/behance_shots.jpg')},
+        { id: 1, type: 'case-study', typename: 'case study', title: 'Overview', image: require('@/assets/images/behance_shots.jpg')},
         { id: 2, type: 'project', typename: 'project', title: 'Doloribus officiis neque', image: require('@/assets/images/instagram-shots.jpg')},
         { id: 3, type: 'case-study', typename: 'case study', title: 'Lorem ipsum consectetur amet', image: require('@/assets/images/behance_shots.jpg')},
         { id: 4, type: 'project', typename: 'project', title: 'Amet adipisicing Mollitia', image: require('@/assets/images/instagram-shots.jpg')}
