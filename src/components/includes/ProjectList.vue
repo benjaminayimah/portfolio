@@ -3,8 +3,8 @@
         <div class="project-main-wrapper bg-secondary br-16" >
             <img :src="project.image" loading="lazy" alt="">
             <div class="caption fx-col gap-8">
-                <div class="title">Project name</div>
-                <div class="description">I’m a UI/UX Designer who focuses on crafting a delightful digital experience for users. </div>
+                <div class="title text-ellipsis">{{ project.title }}</div>
+                <div class="description">{{ project.description }}</div>
             </div>
         </div>
     </div>
@@ -34,6 +34,7 @@ img{
 }
 .caption{
     padding: 24px;
+    min-height: 130px;
 }
 .caption-header{
    font-size: 20px; 

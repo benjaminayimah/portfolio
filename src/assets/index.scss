@@ -178,6 +178,11 @@ section{
 .fixed-body{
     overflow: hidden; overscroll-behavior-y: none;
 }
+.text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 p{
     line-height: 1.5;
 }
@@ -250,7 +255,7 @@ p{
         stroke: $black;
     }
     .bg-primary {
-        background-color: #F5F5F5;
+        background-color: $white;
     }
     .bg-secondary {
         background-color: $white;
@@ -342,6 +347,14 @@ p{
                 border-color: $white;
 
             }
+        }
+    }
+    .prod-delight{
+        circle {
+            fill: #262626 ;
+        }
+        path {
+            fill: $light;
         }
     }
     .close-proj-btn, .control-btn{
@@ -438,6 +451,16 @@ p{
     }
     .thumbnail-overlay{
         align-items: flex-end;
+    }
+    .floats{
+        height: 180px;
+        width: 180px;
+        top: 90px;
+        right: 5%;
+        img, svg {
+            height: 90px;
+            width: 90px;
+        }
     }
 }
 .slide-enter-active, .slide-leave-active {
