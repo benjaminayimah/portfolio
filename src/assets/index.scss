@@ -461,6 +461,9 @@ p{
             height: 90px;
             width: 90px;
         }
+        svg {
+            transform: scale(1.01) rotate(165deg);
+        }
     }
 }
 .slide-enter-active, .slide-leave-active {
