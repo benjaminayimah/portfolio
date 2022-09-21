@@ -23,21 +23,39 @@
                     </nav>
                     <div class="project-content">
                         <div class="section" id="overview">
-                            <h1>{{ getProject.project.title }}</h1>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                            </p>
+                            <h1>OVERVIEW</h1>
+                            <div>
+                                <div class="inner-row">
+                                    <h2>The problem</h2>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
+                                    </div>
+                                </div>
+                                <div class="inner-row">
+                                    <h2>The product</h2>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
+                                    </div>
+                                </div>
+                                <div class="inner-row">
+                                    <h2>Goal</h2>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
+                                    </div>
+                                </div>
+                                <div class="inner-row">
+                                    <h2>My role</h2>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
+                                    </div>
+                                </div>
+                                <div class="inner-row">
+                                    <h2>Project duration</h2>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,6 +151,14 @@ export default {
 }
 h1{
     margin: 0 0 8px 0;
+    color: $primary-color;
+    font-size: 1.8rem;
+}
+h2{
+    margin: 16px 0 12px 0;
+}
+.inner-row{
+    margin-bottom: 24px;
 }
 .tabs{
   z-index: 2;

@@ -5,7 +5,7 @@
       <!-- <nav class="fx tabs sticky-top" id="projects">
         <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
       </nav> -->
-      <router-view />
+      <home-tab-all />
       <div class="mt-50">
         <router-link to="/about" class="upper-case a-link fw-600">Get in touch</router-link>
       </div>
@@ -15,9 +15,10 @@
 
 <script>
 import intro from '../components/includes/intro.vue'
+import HomeTabAll from '../components/layouts/HomeTabAll.vue'
 import scrollTopMixin from '../mixins/scrollTopMixin'
 export default {
-  components: { intro },
+  components: { intro, HomeTabAll },
   name: 'Home',
   mixins: [scrollTopMixin],
   data() {
