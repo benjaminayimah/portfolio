@@ -14,7 +14,6 @@ export default createStore({
       { id: 2, url: "/about", name: "About" },
       { id: 3, url: "https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing", name: "Resume", external: true},
     ],
-    
   },
   mutations: {
     computeWindow(state) {
@@ -60,7 +59,14 @@ export default createStore({
       }
     },
     getDarkMode(state) {
-      state.darkMode ? this.commit('darkMode') : this.commit('lightMode')
+      // if(new Date().getHours() > 19) {
+      //   localStorage.setItem('darkMode', true)
+      //   this.commit('darkMode') 
+      //   state.darkMode = true
+      // }else {
+        state.darkMode ? this.commit('darkMode') : this.commit('lightMode')
+      // }
+
     },
     darkMode() {
       document.getElementsByTagName( 'html' )[0].setAttribute('class', 'dark-mode')

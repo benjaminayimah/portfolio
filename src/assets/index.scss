@@ -21,13 +21,16 @@ button{
 a {
     text-decoration: none;
 }
+li{
+    list-style-type: none;
+}
 nav a {
     transition: 0.3s color;
     path {
         transition: 0.3s fill;
     }
 }
-h3{
+#about h3{
     position: relative;
     margin-bottom: 30px;
     &::before {
@@ -57,6 +60,7 @@ h3{
     text-decoration: none;
     transition: 0.3s all;
     font-weight: 500;
+    color: unset;
     &::before {
         content: '';
         height: 2px;
@@ -83,11 +87,6 @@ h3{
         }
     }
 }
-.grid {
-    gap: 40px;
-    grid-template-columns: 1fr 1fr;
-}
-
 .project-main-wrapper{
     cursor: pointer;
 }
@@ -113,6 +112,11 @@ section{
 .sticky-top{
     position: sticky;
     -webkit-position: sticky;
+}
+hr{
+    border-top: unset;
+    border-right: unset;
+    border-left: unset;
 }
 .fx{
     display: flex;
@@ -168,6 +172,9 @@ section{
 }
 .w-100{
     width: 100%;
+}
+.translate {
+    transform: translate(0, -50%);
 }
 .bg-img{
     background-repeat: no-repeat;
@@ -244,6 +251,9 @@ p{
     }
     .txt{
         color: $black;
+    }
+    hr{
+        border-color: #e9eaec;
     }
     .icon-fill {
         fill: $black;
@@ -333,6 +343,9 @@ p{
     .bg-secondary {
         background-color: #292A2D;
     }
+    hr{
+        border-color: #4f5156;
+    }
     .tabs {
         a {
             background-color: #4f5156;
@@ -419,9 +432,12 @@ p{
     .top-hold, .section-wrapper{
         width: 90%;
     }
-    .grid{
+    .project-grid{
         display: flex;
         flex-direction: column;
+    }
+    .detailed-footer-grid{
+        gap: 10px;
     }
     .tabs{
         gap: 12px;
