@@ -33,7 +33,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.a-link{
-  color: unset;
-}
+
 </style>

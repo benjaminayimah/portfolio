@@ -23,9 +23,11 @@ export default {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
   },
   created() {
+      // this.autoDark()
       this.$store.commit('computeWindow')
       this.$store.commit('getDarkMode')
       window.addEventListener('resize', this.windowSize)
+      // console.log(new Date().getHours())
   },
   unmounted() {
     window.removeEventListener('resize', this.windowSize)
@@ -35,6 +37,12 @@ export default {
       setTimeout(()=> {
         this.$store.commit('computeWindow')
       }, 100)
+    },
+    autoDark() {
+      if(new Date().getHours() > 19) {
+        localStorage.setItem('darkMode', true)
+
+      }
     }
   }
 }

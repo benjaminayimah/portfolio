@@ -57,25 +57,22 @@
                                 </div>
                             </div>
                         </div>
+                        <detail-project-footer v-bind:id="getProject.project.id" />
                     </div>
                 </div>
             </div>
         </div>
     </transition>
-    <!-- <div v-if="getProject.active">
-        <control-button-left />
-        <control-button-right />
-    </div> -->
-    
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import PrimaryBackdrop from '../includes/PrimaryBackdrop.vue'
 import ControlButtonLeft from '../includes/ControlButtonLeft.vue'
 import ControlButtonRight from '../includes/ControlButtonRight.vue'
+import DetailProjectFooter from '../includes/DetailProjectFooter.vue';
 export default {
     name: 'DetailedProject',
-    components: { PrimaryBackdrop, ControlButtonLeft, ControlButtonRight },
+    components: { PrimaryBackdrop, ControlButtonLeft, ControlButtonRight, DetailProjectFooter },
     computed: {
         ...mapGetters(['getProject', 'getWindowWidth', 'getWindowHeight', 'getMobile']),
         computeWidth() {

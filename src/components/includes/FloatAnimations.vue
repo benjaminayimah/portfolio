@@ -77,7 +77,7 @@ export default {
   width: 250px;
   height: 250px;
   top: 250px;
-  right: 12%;
+  right: 10%;
   .float-holder {
     display: flex;
     &:last-child{
