@@ -87,7 +87,7 @@ export default {
         return {
             tabs: [
                 { id: 1, name: 'Overview', url: '/'},
-                { id: 2, name: 'Empathy', url: 'Empathy'},
+                { id: 2, name: 'Empathize with users', url: 'Empathy'},
                 { id: 3, name: 'Starting the design', url: 'starting-the-design'},
                 { id: 4, name: 'Refining the design', url: 'refining-the-design'},
                 { id: 5, name: 'Final design', url: 'final-design'},
