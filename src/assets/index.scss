@@ -436,17 +436,23 @@ p{
         display: flex;
         flex-direction: column;
     }
-    .detailed-footer-grid{
-        gap: 10px;
-    }
     .tabs{
         gap: 12px;
     }
     .project-banner{
         height: 280px;
     }
-    .project-content{
+    .project-content, .p-30{
         padding: 0 16px;
+    }
+    .detailed-footer-grid{
+        li {
+            &:last-child {
+                margin-right: 16px;
+            }&:first-child{
+                margin-left: 16px;
+            }
+        }
     }
     .tabs{
         li {
