@@ -2,7 +2,7 @@
   <section>
     <div id="about" class="main-row">
     <div class="section-wrapper">
-      <div class="grid">
+      <div class="grid about-grid">
         <div>
           <img :src="require('@/assets/images/'+img+'')" loading="lazy" alt="ben">
         </div>
