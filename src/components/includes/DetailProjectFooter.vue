@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="fx-col gap-8 p-30">
+        <div class="fx-col gap-16 p-30">
             <h3>Thank you for watching.</h3>
             <div>
                 <a href="/about" class="upper-case a-link fw-600">Get in touch</a>
@@ -9,7 +9,7 @@
         <div class="mt-50 p-30">
             <i >You may also like to see…</i>
         </div>
-        <div class="grid detailed-footer-grid">
+        <div class="fx detailed-footer-grid">
             <detailed-project-footer-list v-for="project in computedProjects" :key="project.id" v-bind:project="project"/>
         </div>
     </div>
@@ -37,12 +37,10 @@ h3{
 .footer{
     padding: 50px 0 100px 0;
 }
-.grid {
+.fx {
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 24px;
     overflow-x: auto;
-    padding: 20px 0;
     &::-webkit-scrollbar {
         display: none;
         -ms-overflow-style: none; 
