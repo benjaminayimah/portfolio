@@ -39,8 +39,9 @@ h3{
 }
 .fx {
     gap: 20px;
-    margin-top: 24px;
+    margin-top: 4px;
     overflow-x: auto;
+    padding: 20px 0;
     &::-webkit-scrollbar {
         display: none;
         -ms-overflow-style: none; 
