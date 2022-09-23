@@ -57,8 +57,8 @@
                                 </div>
                             </div>
                         </div>
-                        <detail-project-footer v-bind:id="getProject.project.id" />
                     </div>
+                    <detail-project-footer v-bind:id="getProject.project.id" />
                 </div>
             </div>
         </div>

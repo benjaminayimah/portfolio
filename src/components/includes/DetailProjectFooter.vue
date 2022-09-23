@@ -1,18 +1,17 @@
 <template>
     <div class="footer">
-        <div class="fx-col gap-8">
+        <div class="fx-col gap-8 p-30">
             <h3>Thank you for watching.</h3>
             <div>
                 <a href="/about" class="upper-case a-link fw-600">Get in touch</a>
             </div>
         </div>
-        <div class="mt-50">
-            <i >You may also like to view…</i>
+        <div class="mt-50 p-30">
+            <i >You may also like to see…</i>
         </div>
         <div class="grid detailed-footer-grid">
             <detailed-project-footer-list v-for="project in computedProjects" :key="project.id" v-bind:project="project"/>
         </div>
-        
     </div>
 </template>
 <script>
@@ -42,5 +41,15 @@ h3{
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 24px;
+    overflow-x: auto;
+    padding: 20px 0;
+    &::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+}
+.p-30{
+    padding: 0 30px;
 }
 </style>
