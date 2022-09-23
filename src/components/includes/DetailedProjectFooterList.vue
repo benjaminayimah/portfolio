@@ -17,7 +17,7 @@ export default {
     height: 150px;
     border-radius: 14px;
     transition: 0.3s ease;
-    border-bottom: unset;
+    border-bottom: unset !important;
 }
 a{
     color: unset;
