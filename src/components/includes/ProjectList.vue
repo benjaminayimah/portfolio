@@ -1,5 +1,5 @@
 <template>
-    <div :id="'proj_'+project.id" class="project-hold relative" @click.prevent="$store.commit('showProject', project.id)">
+    <a href="#" :id="'proj_'+project.id" class="project-hold relative" @click.prevent="$store.commit('showProject', project.id)">
         <div class="project-main-wrapper bg-secondary br-16" >
             <img :src="project.image" loading="lazy" alt="">
             <div class="caption fx-col gap-8">
@@ -7,7 +7,7 @@
                 <div class="description">{{ project.description }}</div>
             </div>
         </div>
-    </div>
+    </a>
 </template>
 <script>
 export default {
@@ -45,5 +45,8 @@ img{
 }
 .description{
     font-size: 1rem;
+}
+a{
+    text-decoration: unset;
 }
 </style>
