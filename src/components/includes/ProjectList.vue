@@ -48,5 +48,6 @@ img{
 }
 a{
     text-decoration: unset;
+    color: unset;
 }
 </style>
