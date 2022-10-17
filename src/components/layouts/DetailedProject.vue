@@ -321,10 +321,7 @@
                                 <a href="#">
                                     View the high-fidelity protoype here.
                                 </a>
-                                <video controls>
-                                    <source src="../../assets/videos/fsv.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <iframe height="416" src="https://www.youtube.com/embed/A5idbGOWRgk?loop=1" title="Flexsale prototype" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <h1>GOING FORWARD</h1>
                             <div id="takeaways" class="section">
@@ -427,7 +424,7 @@ export default {
         // top: 20px;
     }
 }
-video{
+iframe{
     width: 100%
 }
 .project-body{
