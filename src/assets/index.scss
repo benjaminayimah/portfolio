@@ -118,6 +118,9 @@ hr{
     border-right: unset;
     border-left: unset;
 }
+.w-100{
+    width: 100%;
+}
 .fx{
     display: flex;
 }
@@ -486,6 +489,10 @@ p{
         svg {
             transform: scale(1.01) rotate(165deg);
         }
+    }
+    .row{
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }
 .slide-enter-active, .slide-leave-active {

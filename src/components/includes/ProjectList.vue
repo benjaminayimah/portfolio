@@ -1,7 +1,7 @@
 <template>
     <a href="#" :id="'proj_'+project.id" class="project-hold relative" @click.prevent="$store.commit('showProject', project.id)">
         <div class="project-main-wrapper bg-secondary br-16" >
-            <img :src="project.image" loading="lazy" alt="">
+            <img :src="project.thumbnail" loading="lazy" alt="">
             <div class="caption fx-col gap-8">
                 <div class="title text-ellipsis">{{ project.title }}</div>
                 <div class="description">{{ project.description }}</div>
