@@ -3,7 +3,7 @@
         <div class="fx ai-c fx-js top-hold">
             <router-link to="/" id="logo">Benjamin Ayimah<span></span></router-link>
             <div class="fx gap-16 ai-c">
-                <nav v-if="!getMobile" class="fx">
+                <nav v-if="!getMobile" class="fx" id="mobile_navigation">
                     <nav-list v-for="menu in getMenus" :key="menu.id" v-bind:menu="menu" />
                 </nav>
                 <toggle-switch />

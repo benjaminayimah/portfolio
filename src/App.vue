@@ -54,6 +54,9 @@ export default {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   transition: $transition-time ease background-color, $transition-time linear color;
   // transition: $transition-time linear color;

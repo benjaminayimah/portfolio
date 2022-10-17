@@ -1,7 +1,7 @@
 <template>
     <li c>
         <a href="#" class="fx-col gap-8" @click.prevent="$store.commit('showProject', project.id)">
-            <div class="bg-img" :style="{ backgroundImage: 'url('+project.image+')'}"></div>
+            <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis">{{ project.title}}</span>
         </a>
     </li>

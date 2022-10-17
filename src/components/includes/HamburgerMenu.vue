@@ -1,5 +1,5 @@
 <template>
-    <button id="hamburger_menu" @click.prevent="$store.commit('toggleMenu')" :class="{'collapse': getShowMobMenu }">
+    <button id="hamburger_menu" arial-control="mobile_navigation" @click.prevent="$store.commit('toggleMenu')" :class="{'collapse': getShowMobMenu }">
         <div class="txt"></div>
         <div class="txt"></div>
     </button>
