@@ -106,6 +106,9 @@ p{
     }
   }
 }
+section{
+    margin: 60px 0;
+}
 .mob-view {
   section{
     margin-top: 30px;

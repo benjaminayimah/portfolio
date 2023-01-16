@@ -1,5 +1,5 @@
 <template>
-    <a href="#" :id="'proj_'+project.id" class="project-hold relative" @click.prevent="$store.commit('showProject', project.id)">
+    <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" :id="'proj_'+project.id" class="project-hold relative">
         <div class="project-main-wrapper bg-secondary br-16" >
             <img :src="project.thumbnail" loading="lazy" alt="">
             <div class="caption fx-col gap-8">
@@ -7,7 +7,7 @@
                 <div class="description">{{ project.description }}</div>
             </div>
         </div>
-    </a>
+    </router-link>
 </template>
 <script>
 export default {

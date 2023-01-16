@@ -1,5 +1,5 @@
 <template>
-    <li c>
+    <li>
         <a href="#" class="fx-col gap-8" @click.prevent="$store.commit('showProject', project.id)">
             <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis">{{ project.title}}</span>
@@ -27,7 +27,7 @@ a{
     }
 }
 li{
-    min-width: 233px;
+    min-width: 270px;
     &:hover {
         .bg-img{
             transform: scale(1.04);

@@ -17,4 +17,5 @@ export default {
     gap: 40px;
     grid-template-columns: 1fr 1fr;
 }
+
 </style>

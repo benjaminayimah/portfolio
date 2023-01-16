@@ -18,116 +18,81 @@
                 </div>
                 <div class="project-body">
                     <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.banner+')'}"></div>
+                    <img class="w-100" :src="getProject.project.banner_2" alt="Project image">
+
 
                     <!-- <nav class="fx tabs sticky-top v-scroll">
                         <li v-for="tab in tabs" :key="tab.id"><router-link :to="'#'+tab.url" class="fw-500">{{ tab.name}}</router-link></li>
                     </nav> -->
                     <div class="project-content">
                         <div id="overview" class="section">
-                            <h1>OVERVIEW</h1>
+                            <h1>Overview</h1>
                             <div>
-                                <img class="w-100" src="../../assets/images/flexsale_featured.png" alt="">
                                 <div class="inner-row">
                                     <h2>The problem</h2>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                    </div>
+                                    <div>{{ getProject.project.overview.problem }}</div>
                                 </div>
                                 <div class="inner-row">
                                     <h2>The product</h2>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                    </div>
+                                    <div>{{ getProject.project.overview.product }}</div>
                                 </div>
                                 <div class="inner-row">
                                     <h2>Goal</h2>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                    </div>
+                                    <div>{{ getProject.project.overview.goal }}</div>
                                 </div>
                                 <div class="inner-row">
                                     <h2>My role</h2>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                    </div>
+                                    <div>{{ getProject.project.overview.role }}</div>
                                 </div>
                                 <div class="inner-row">
                                     <h2>Project duration</h2>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                    </div>
+                                    <div>{{ getProject.project.overview.duration }}</div>
                                 </div>
                             </div>
                         </div>
                         <div id="empathy" class="section">
-                            <h1>EMPATHIZE WITH USERS</h1>
+                            <h1>Empathizing with the users</h1>
                             <div class="inner-row">
-                                <div>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate possimus voluptas ea. Mollitia possimus vel deleniti neque eos voluptatum est perspiciatis. Doloribus libero dolor minima eligendi optio officiis debitis sit!
-                                </div>
+                                <div>{{ getProject.project.empathize.overview }}</div>
                             </div>
                             <h2>User pain points</h2>
                             <div class="row grid col-3 gap-8">
-                                <div>
-                                    <span class="ellipse jc-c ai-c br-50">1</span>
-                                    <h3>Accessibility</h3>
-                                    <div>
-                                        Most tutorial website do a poor job in considering users with special needs such as hearing impediment.
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="ellipse jc-c ai-c br-50">2</span>
-                                    <h3>Credibility</h3>
-                                    <div>
-                                        Users need to know they are learning the right skills from a credible source.                                        </div>
-                                </div>
-                                <div>
-                                    <span class="ellipse jc-c ai-c br-50">3</span>
-                                    <h3>Time</h3>
-                                    <div>
-                                        Most professionals don’t have time to sign up to classroom or vigorous online courses.                                        </div>
+                                <div v-for="painpoints in getProject.project.empathize.pain_points" :key="painpoints.id">
+                                    <span class="ellipse jc-c ai-c br-50">{{ painpoints.id }}</span>
+                                    <h3>{{ painpoints.title }}</h3>
+                                    <div>{{ painpoints.description }}</div>
                                 </div>
                             </div>
                             <div id="persona" class="section">
                                 <h2>Persona & problem statement</h2>
-                                <h3>Alice</h3>
-                                <div>
-                                    Alice is a busy professional designer who needs to have access to quick design tutorials because he wants to keep up-to-date with the latest industry trends.
-                                </div>
-                                <img src="../../assets/images/favemeicom.png" alt="Alice">
-                                <div class="fx gap-8"><label class="fw-600">Age:</label><div>36</div></div>
-                                <div class="fx gap-8"><label class="fw-600">Education:</label><div>BSc Computer Science</div></div>
-                                <div class="fx gap-8"><label class="fw-600">Hometown:</label><div>Manchester, England</div></div>
-                                <div class="fx gap-8"><label class="fw-600">Family:</label><div>Married with 2 kids & a dog</div></div>
-                                <div class="fx gap-8"><label class="fw-600">Ocupation:</label><div>Designer</div></div>
-                                <h3 class="headline">Alice's headline</h3>
-                                <i>"Design is everything"</i>
+                                <h3>{{ getProject.project.empathize.person_name }}</h3>
+                                <div class="mb-32">{{ getProject.project.empathize.problem_statement }}</div>
+                                <img class="person-img mb-16" :src="getProject.project.empathize.persona_img" :alt="getProject.project.empathize.person_name">
+                                <div class="fx gap-8"><label class="fw-600">Age:</label><div>{{ getProject.project.empathize.age }}</div></div>
+                                <div class="fx gap-8"><label class="fw-600">Education:</label><div>{{ getProject.project.empathize.education }}</div></div>
+                                <div class="fx gap-8"><label class="fw-600">Hometown:</label><div>{{ getProject.project.empathize.hometown }}</div></div>
+                                <div class="fx gap-8"><label class="fw-600">Family:</label><div>{{ getProject.project.empathize.family }}</div></div>
+                                <div class="fx gap-8"><label class="fw-600">Ocupation:</label><div>{{ getProject.project.empathize.ocupation }}</div></div>
+                                <h3 class="headline">{{getProject.project.empathize.person_name }}'s headline</h3>
+                                <i>{{ getProject.project.empathize.headline }}</i>
                                 <div class="row grid col-2 gap-8">
                                     <div>
-                                        <h3>Goals</h3>
-                                        <li>Goal 1</li>
-                                        <li>Goal 2</li>
-                                        <li>Goal 3</li>
+                                        <h3 class="success">Goals</h3>
+                                        <li v-for="goal in getProject.project.empathize.goals" :key="goal.id">{{ goal }}</li>
                                     </div>
                                     <div>
-                                        <h3>Frustrations</h3>
-                                        <li>Frustration 1</li>
-                                        <li>Frustration 2</li>
-                                        <li>Frustration 3</li>
+                                        <h3 class="danger">Frustrations</h3>
+                                        <li v-for="frustration in getProject.project.empathize.frustrations" :key="frustration.id">{{ frustration }}</li>
                                     </div>
                                 </div>
                                 <h3 class="headline">Scenario</h3>
-                                <div>
-                                    Alice is a busy professional designer who needs to have access to quick design tutorials because he wants to keep up-to-date with the latest industry trends.
-                                </div>
+                                <div>{{ getProject.project.empathize.scenario }}</div>
                             </div>
                             <div id="competitive_audit" class="section">
                                 <h2>Competitive audit</h2>
+                                <div>{{ getProject.project.empathize.competitive_audit }}</div>
                                 <div>
-                                    An audit conducted on a few competitors revealed gabs that needs to be exploited in our design.
-                                </div>
-                                <div>
-                                    <img class="w-100" src="../../assets/images/competitive_audit.png" alt="">
+                                    <img class="w-100" :src="getProject.project.empathize.audit_img" alt="competitive audit">
                                 </div>
                             </div>
                             <div id="ideation">
@@ -135,24 +100,20 @@
                                     <h2>
                                         Ideation
                                     </h2>
+                                    <div>{{ getProject.project.empathize.ideation }}</div>
                                     <div>
-                                        I conducted a quick ideation exercise to come up with ideas on how to address gaps identified in the competitive audit.
-                                    </div>
-                                    <div>
-                                        <img class="w-100" src="../../assets/images/ideation.png" alt="">
+                                        <img class="w-100" :src="getProject.project.empathize.ideation_img" alt="ideation">
                                     </div>
                                 </div>
                             </div>
                             <div id="user_journey_map" class="section">
                                 <h2>User journey map</h2>
+                                <div>{{ getProject.project.empathize.user_journey_map }}</div>
                                 <div>
-                                    Mapping Alice’s user journey revealed how convenient it would be for users to easily find and view design tutorials.
-                                </div>
-                                <div>
-                                    <img class="w-100" src="../../assets/images/user_journey_map.png" alt="">
+                                    <img class="w-100" :src="getProject.project.empathize.user_journey_map_img" alt="user journey map">
                                 </div>
                             </div>
-                            <h1>STARTING THE DESIGN</h1>
+                            <h1>Starting The Design</h1>
                             <div id="site_map" class="section">
                                 <h2>Sitemap</h2>
                                 <div>
@@ -208,6 +169,9 @@
                                 </div>
                             </div>
                             <div id="useability_fidings" class="section">
+                                <h2>
+                                        Usability study
+                                    </h2>
                                 <div>
                                     These are the main findings uncovered by the usability study:
                                 </div>
@@ -232,7 +196,7 @@
                                    </div>
                                 </div>
                             </div>
-                            <h1>REFINING THE DESIGN</h1>
+                            <h1>Refining the design</h1>
                             <div id="mockups" class="section">
                                 <div class="inner-row">
                                     <h2>Mockups</h2>
@@ -318,12 +282,10 @@
                                 <div>
                                     The final high-fidelity prototype ensures a smooth user flow for finding and viewing of tutorials.
                                 </div>
-                                <a href="#">
-                                    View the high-fidelity protoype here.
-                                </a>
+                                <p>Click into the video below to watch the prototype.</p>
                                 <iframe height="416" src="https://www.youtube.com/embed/A5idbGOWRgk?loop=1" title="Flexsale prototype" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <h1>GOING FORWARD</h1>
+                            <h1>Going forward</h1>
                             <div id="takeaways" class="section">
                                 <h2>Takeaways</h2>
                                 <div class="row grid col-2 gap-8">
@@ -399,7 +361,7 @@ export default {
                 { id: 4, name: 'Refining the design', url: 'refining-the-design'},
                 { id: 5, name: 'Final design', url: 'final-design'},
                 { id: 6, name: 'Going forward', url: 'going-forward'}
-            ]
+            ],
         }
     }
     
@@ -453,17 +415,24 @@ iframe{
 .slide-leave-to {
   transform: translateY(900px);
 }
+
 .section{
     margin: 20px 0;
 }
 h1{
-    margin: 0 0 8px 0;
+    margin: 50px 0 8px 0;
     color: $primary-color;
     font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 900;
 }
 h2{
     margin: 16px 0 12px 0;
 }
+h3{
+    margin-bottom: 8px;
+}
+
 .inner-row{
     margin-bottom: 24px;
 }
@@ -512,6 +481,10 @@ h2{
 .refined-holder div{
     width: 300px;
     flex-shrink: 0;
+}
+.person-img{
+    height: 200px;
+    border-radius: 50%;
 }
 label{
     //
