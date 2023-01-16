@@ -56,6 +56,7 @@ export default {
 }
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 body {
   transition: $transition-time ease background-color, $transition-time linear color;

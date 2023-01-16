@@ -6,6 +6,8 @@ $white: #fff;
 $light: #F5F5F5;
 $light-txt: #fff;
 $gray: #707173;
+$danger: red;
+$success: green;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
 $transition-time: 0.6s;
 button{
@@ -29,6 +31,12 @@ nav a {
     path {
         transition: 0.3s fill;
     }
+}
+.fx-shrink-0{
+    flex-shrink: 0;
+}
+.fx-grow-1{
+    flex-grow: 1;
 }
 #about h3{
     position: relative;
@@ -90,13 +98,16 @@ nav a {
 .project-main-wrapper{
     cursor: pointer;
 }
-
+.danger {
+    color: $danger;
+}
+.success {
+    color: $success;
+}
 .icon-fill, .icon-stroke  {
     transition: $transition-time ease fill, $transition-time ease stroke;
 }
-section{
-    margin: 60px 0;
-}
+
 .fixed{
     position: fixed;
 }
@@ -236,7 +247,7 @@ p{
     .bg-plain, .opaque{
         background-color: #fff !important;
     }
-    nav a{
+    header nav a{
         color: $gray;
         &.router-link-active  {
             color: $black;
@@ -248,9 +259,12 @@ p{
                 fill: $black;
             }
         }
+        path{
+            fill: $gray;
+        }
     }
-    nav a path{
-        fill: $gray;
+    nav.vertical-nav a{
+        color: $black;
     }
     .txt{
         color: $black;
@@ -315,7 +329,7 @@ p{
     .txt {
         color: $light-txt;
     }
-    nav a{
+    header nav a{
         color: #838587;
         &:hover {
             color: $white;
@@ -327,9 +341,12 @@ p{
             color: $light-txt;
             font-weight: 500;
         }
+        path{
+            fill: #838587;
+        }
     }
-    nav a path{
-        fill: #838587;
+    nav.vertical-nav a{
+        color: #9c9d9f;
     }
     #logo span{
         background-color: #55565a;
@@ -398,9 +415,9 @@ p{
 .project-banner{
     height: 450px;
 }
-.project-content{
-    padding: 0 30px;
-}
+// .project-content{
+//     padding: 0 30px;
+// }
 //Desktop
 .desk-view {
     #project_hero_modal{

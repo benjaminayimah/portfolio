@@ -17,4 +17,7 @@ p{
     margin: 14px 0;
     font-size: 1.6rem;
 }
+section{
+    margin: 60px 0;
+}
 </style>

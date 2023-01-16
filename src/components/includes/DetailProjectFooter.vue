@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="mt-50 p-30">
-            <i >You may also like to see…</i>
+            <i >You may also like to check out...</i>
         </div>
         <div class="fx detailed-footer-grid">
             <detailed-project-footer-list v-for="project in computedProjects" :key="project.id" v-bind:project="project"/>
@@ -35,7 +35,7 @@ h3{
     color: $primary-color;
 }
 .footer{
-    padding: 50px 0 100px 0;
+    padding: 50px 0;
 }
 .fx {
     gap: 20px;
