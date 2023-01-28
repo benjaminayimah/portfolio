@@ -2,7 +2,7 @@
     <section>
     <div class="main-row" id="overview">
         <div class="section-wrapper">
-            <div class="fx gap-50">
+            <div class="fx gap-50 main-body-flx">
                 <div class="fx-shrink-0">
                     <nav class="sticky-top fx vertical-nav">
                         <ul>
@@ -15,7 +15,7 @@
                 <div id="detailed_body" class="fx-grow-1">
                     <div class="project-body">
                         <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.banner+')'}"></div>
-                        <img class="w-100" :src="getProject.project.banner_2" alt="Project image">
+                        <img v-if="getProject.project.banner_2" class="w-100" :src="getProject.project.banner_2" alt="Project image">
                         <!-- <nav class="fx tabs sticky-top v-scroll">
                             <li v-for="tab in tabs" :key="tab.id"><router-link :to="'#'+tab.url" class="fw-500">{{ tab.name}}</router-link></li>
                         </nav> -->
@@ -449,4 +449,29 @@ h3{
 .is-active{
     font-weight: 500;
 }
+@media screen and (max-width: 990px){
+    .main-body-flx{
+        flex-direction: column;
+        ul{
+            // position: fixed;
+            // top: 100px;
+            overflow-x: auto;
+            display: flex;
+            gap: 8px;
+            li a {
+                white-space: nowrap;
+                background-color: #EAEAEA;
+                &:hover {
+                    background-color: #EAEAEA;
+                }
+            }
+            &::-webkit-scrollbar {
+                display: none;
+                -ms-overflow-style: none; 
+                scrollbar-width: none; 
+            }
+        }
+    }
+}
+
 </style>
