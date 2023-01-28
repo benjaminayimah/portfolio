@@ -451,7 +451,11 @@ h3{
     font-weight: 500;
 }
 @media screen and (max-width: 990px){
+    section{
+        padding: 16px 0
+    }
     .main-body-flx{
+        gap: 16px;
         flex-direction: column;
             .fx-shrink-0 {
                 display: flex;
