@@ -451,7 +451,8 @@ p{
         cursor: unset;
     }
     .top-hold, .section-wrapper{
-        width: 90%;
+        width: 100%;
+        padding: 0 20px;
     }
     .project-grid, .about-grid{
         display: flex;

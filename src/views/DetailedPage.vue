@@ -370,6 +370,7 @@ ul{
 
     li {
         height: 55px;
+        display: flex;
         &:hover a{
             background-color: #EAEAEA;
         }
@@ -452,24 +453,40 @@ h3{
 @media screen and (max-width: 990px){
     .main-body-flx{
         flex-direction: column;
+            .fx-shrink-0 {
+                display: flex;
+                overflow-x: auto;
+                position: sticky;
+                top: 80px;
+                &::-webkit-scrollbar {
+                    display: none;
+                    -ms-overflow-style: none; 
+                    scrollbar-width: none; 
+                }
+            }
         ul{
             // position: fixed;
             // top: 100px;
-            overflow-x: auto;
+            // overflow-x: auto;
             display: flex;
             gap: 8px;
-            li a {
-                white-space: nowrap;
-                background-color: #EAEAEA;
-                &:hover {
+            margin: 0;
+            li {
+                height: 48px;
+                a {
+                    white-space: nowrap;
                     background-color: #EAEAEA;
+                    &:hover {
+                        background-color: #EAEAEA;
+                    }
+
                 }
             }
-            &::-webkit-scrollbar {
-                display: none;
-                -ms-overflow-style: none; 
-                scrollbar-width: none; 
-            }
+            // &::-webkit-scrollbar {
+            //     display: none;
+            //     -ms-overflow-style: none; 
+            //     scrollbar-width: none; 
+            // }
         }
     }
 }
