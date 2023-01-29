@@ -7,7 +7,7 @@
                     <nav class="sticky-top fx vertical-nav">
                         <ul>
                             <li v-for="tab in tabs" :key="tab.id">
-                                <a :id="'tab_'+tab.id" :href="tab.url" class="fx ai-c blur">{{ tab.name }}</a>
+                                <a :id="'tab_'+tab.id" :href="tab.url" class="fx ai-c blur blur-2">{{ tab.name }}</a>
                             </li>
                         </ul>
                     </nav>
