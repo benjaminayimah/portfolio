@@ -219,12 +219,7 @@ p{
 .bg-primary, .bg-secondary, .opaque{
     transition: $transition-time ease background-color
 }
-.tabs{
-    gap: 8px;
-    a {
-        transition: 0.3s all;
-    }
-}
+
 .control-btn-wrapper{
     // position: fixed;
     // z-index: 203;
@@ -305,21 +300,6 @@ p{
             fill: $gray;
         }
     }
-    .tabs {
-        a {
-            background-color: $light;
-            border-color: #dcdcdc;
-            color: $black;
-            &:hover {
-                border-color: #b8b8b8;
-            }
-            &.router-link-exact-active {
-                background-color: $black !important;
-                color: $white;
-                border-color: $black;
-            }
-        }
-    }
     .bg-img {
         border-bottom: 1px solid $light;
     }
@@ -396,22 +376,6 @@ p{
         color: #838587;
         path{
             fill: #838587;
-        }
-    }
-    .tabs {
-        a {
-            background-color: #4f5156;
-            border-color: #74757a;
-            color: $white;
-            &:hover {
-                border-color: #979ca2;
-            }
-            &.router-link-exact-active {
-                background-color: $white !important;
-                color: $black;
-                border-color: $white;
-
-            }
         }
     }
     .prod-delight{
@@ -493,9 +457,6 @@ p{
         display: flex;
         flex-direction: column;
     }
-    .tabs{
-        gap: 12px;
-    }
     .project-banner{
         height: 280px;
     }
@@ -507,15 +468,6 @@ p{
             }&:first-child{
                 margin-left: 16px;
             }
-        }
-    }
-    .tabs{
-        li {
-          &:last-child {
-              margin-right: 16px;
-          }&:first-child{
-              margin-left: 16px;
-          }
         }
     }
     .buttons-holdr{
