@@ -243,9 +243,15 @@ p{
     backdrop-filter: saturate(180%) blur(20px);
 }
 .light-mode {
-    .blur{
+    .blur-1{
         background-color: rgba(255, 255, 255, 0.8);
     }
+    .tab-view, .mob-view{
+        .blur-2{
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
     color: $black;
     background-color: $light;
     .bg-plain, .opaque{
@@ -291,6 +297,9 @@ p{
     .bg-secondary {
         background-color: $white;
     }
+    .mob-menu-wrapper a {
+        color: $black;
+    }
     .tabs {
         a {
             background-color: $light;
@@ -324,8 +333,13 @@ p{
 .dark-mode {
     background-color: #111112;
     color: $light-txt;
-    .blur{
+    .blur-1{
         background-color:rgba(17, 17, 18, 0.7);
+    }
+    .tab-view, .mob-view{
+        .blur-2{
+            background-color: rgba(35, 35, 36, 0.8);
+        }
     }
     .bg-plain, .opaque{
         background-color: #111112 !important;
@@ -369,6 +383,12 @@ p{
     }
     hr{
         border-color: #4f5156;
+    }
+    .mob-menu-wrapper a {
+        color: $light-txt;
+        path{
+            fill: $light-txt;
+        }
     }
     .tabs {
         a {
