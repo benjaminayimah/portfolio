@@ -34,10 +34,5 @@ li{
             box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.12);
         }
     }
-    // &:last-child {
-    //     margin-right: 30px;
-    // }&:first-child{
-    //     margin-left: 30px;
-    // }
 }
 </style>

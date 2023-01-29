@@ -443,6 +443,9 @@ p{
 }
 //Mobile
 .mob-view {
+    .ovf-hidden{
+        overflow-x: unset;
+    }
     header {
         height: 75px;
     }
