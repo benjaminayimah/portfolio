@@ -18,7 +18,10 @@ p{
     margin: 14px 0;
     font-size: 1.6rem;
 }
+i{
+    font-size: 1.3rem;
+}
 section{
-    margin: 60px 0;
+    margin: 60px 0 32px 0;
 }
 </style>
