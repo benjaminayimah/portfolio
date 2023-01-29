@@ -49,5 +49,7 @@ img{
 a{
     text-decoration: unset;
     color: unset;
+    overflow: hidden;
+    border-radius: 16px;
 }
 </style>
