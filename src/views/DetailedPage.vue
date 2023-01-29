@@ -12,7 +12,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div id="detailed_body" class="fx-grow-1">
+                <div id="detailed_body" class="fx-grow-1 ovf-hidden">
                     <div class="project-body">
                         <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.banner+')'}"></div>
                         <img v-if="getProject.project.banner_2" class="w-100" :src="getProject.project.banner_2" alt="Project image">

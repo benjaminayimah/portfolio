@@ -63,6 +63,9 @@ nav a {
         background-color: $primary-hover;
     }
 }
+.ovf-hidden{
+    overflow-x: hidden;
+}
 .a-link{
     position: relative;
     text-decoration: none;
