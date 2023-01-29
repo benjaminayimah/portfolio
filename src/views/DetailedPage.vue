@@ -460,6 +460,8 @@ h3{
                 overflow-x: auto;
                 position: sticky;
                 top: 80px;
+                margin: 0 -20px;
+                padding: 0 20px;
                 &::-webkit-scrollbar {
                     display: none;
                     -ms-overflow-style: none; 

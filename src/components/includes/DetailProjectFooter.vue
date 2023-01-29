@@ -1,12 +1,12 @@
 <template>
     <div class="footer">
-        <div class="fx-col gap-16 p-30">
+        <div class="fx-col gap-16">
             <h3>Thank you for watching.</h3>
             <div>
                 <a href="/about" class="upper-case a-link fw-600">Get in touch</a>
             </div>
         </div>
-        <div class="mt-50 p-30">
+        <div class="mt-50">
             <i >You may also like to check out...</i>
         </div>
         <div class="fx detailed-footer-grid">
@@ -41,7 +41,8 @@ h3{
     gap: 20px;
     margin-top: 4px;
     overflow-x: auto;
-    padding: 20px 0;
+    padding: 20px;
+    margin: 0 -20px;
     &::-webkit-scrollbar {
         display: none;
         -ms-overflow-style: none; 
