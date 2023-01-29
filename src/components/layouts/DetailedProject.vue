@@ -24,7 +24,7 @@
                     <!-- <nav class="fx tabs sticky-top v-scroll">
                         <li v-for="tab in tabs" :key="tab.id"><router-link :to="'#'+tab.url" class="fw-500">{{ tab.name}}</router-link></li>
                     </nav> -->
-                    <div class="project-content">
+                    <div>
                         <div id="overview" class="section">
                             <h1>Overview</h1>
                             <div>
