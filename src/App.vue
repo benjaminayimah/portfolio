@@ -55,7 +55,7 @@ export default {
   box-sizing: border-box;
 }
 html{
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
 body {
