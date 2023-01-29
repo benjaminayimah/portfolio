@@ -16,9 +16,7 @@
                     <div class="project-body">
                         <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.banner+')'}"></div>
                         <img v-if="getProject.project.banner_2" class="w-100" :src="getProject.project.banner_2" alt="Project image">
-                        <!-- <nav class="fx tabs sticky-top v-scroll">
-                            <li v-for="tab in tabs" :key="tab.id"><router-link :to="'#'+tab.url" class="fw-500">{{ tab.name}}</router-link></li>
-                        </nav> -->
+
                         <div>
                             <div class="section">
                                 <h1>Overview</h1>

@@ -2,9 +2,6 @@
   <div id="home" class="main-row">
     <div class="section-wrapper">
       <intro />
-      <!-- <nav class="fx tabs sticky-top" id="projects">
-        <li v-for="tab in tabs" :key="tab.id"><router-link :to="tab.url">{{ tab.name}}</router-link></li>
-      </nav> -->
       <home-tab-all />
       <div class="mt-50">
         <router-link to="/about" class="upper-case a-link fw-600">Get in touch</router-link>

@@ -14,10 +14,9 @@ import { mapGetters } from 'vuex';
 import Header from './components/includes/Header.vue';
 import Footer from './components/includes/Footer.vue';
 import MobileMenu from './components/includes/MobileMenu.vue';
-import DetailedProject from './components/layouts/DetailedProject.vue';
 import FloatAnimations from './components/includes/FloatAnimations.vue';
 export default {
-  components: { Header, Footer, MobileMenu, DetailedProject, FloatAnimations },
+  components: { Header, Footer, MobileMenu, FloatAnimations },
   name: "App",
   computed: {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
