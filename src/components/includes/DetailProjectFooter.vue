@@ -41,8 +41,7 @@ h3{
     gap: 20px;
     margin-top: 4px;
     overflow-x: auto;
-    padding: 20px;
-    margin: 0 -20px;
+    padding: 20px 5px;
     &::-webkit-scrollbar {
         display: none;
         -ms-overflow-style: none; 
