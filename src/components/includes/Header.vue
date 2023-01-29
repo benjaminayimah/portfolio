@@ -1,5 +1,5 @@
 <template>
-    <header class="fx jc-c sticky-top" id="header" :class="{ 'opaque': getShowMobMenu }" >
+    <header class="fx jc-c sticky-top blur" id="header" :class="{ 'opaque': getShowMobMenu }" >
         <div class="fx ai-c fx-js top-hold">
             <router-link to="/" id="logo">Benjamin Ayimah<span></span></router-link>
             <div class="fx gap-16 ai-c">
