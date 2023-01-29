@@ -1,6 +1,6 @@
 <template>
     <footer class="fx ai-c jc-c">
-        <div><span>Designed and developed by</span> Ben © 2022 All rights reserved.</div>
+        <div>Designed and developed by <span>Ben.</span> Copyright  © 2023 Benjamin Ayimah. All rights reserved.</div>
     </footer>
 </template>
 <style lang="scss" scoped>

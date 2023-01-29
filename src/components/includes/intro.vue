@@ -1,14 +1,15 @@
 <template>
     <section>
-        <div class="fx gap-16 h1 fw-500">Hi <span>👋🏽</span></div>
-        <div class="h1 fw-600">I'm Ben</div>
-        <p>I’m a UI/UX Designer who focuses on crafting a delightful digital experience for users. <br/> Needless to say, I advocate for the user 👩🏾‍💻👨🏽‍💻👨‍💻
-        </p>
+        <div class="fx gap-16 h1 fw-500">{{ intro.h1 }} <span>{{ intro.i1 }}</span></div>
+        <div class="h1 fw-600">{{ intro.h2 }}</div>
+        <p>{{ intro.p1 }}</p>
+        <p><i>{{ intro.p2 }}</i></p>
     </section>
 </template>
 <script>
 export default {
-    name: 'Intro'
+    name: 'Intro',
+    props: ['intro']
 }
 </script>
 <style lang="scss" scoped>

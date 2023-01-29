@@ -1,5 +1,6 @@
 export default {
     state: {
+        intro: {h1: 'Hi', i1: '👋🏽', i2: '👩🏾‍💻👨🏽‍💻👨‍💻', h2: 'I\'m Ben', p1: 'A UI/UX Designer who focuses on crafting delightful digital experience for all users.', p2: 'Here are few of my works...'},
         project: { active: false, project: {}},
         projects: [
             { id: 1, type: 'project', title: 'Flexsale', thumbnail: require('@/assets/images/flexsale.png'), banner: require('@/assets/images/flexsale-banner.png'), banner_2: '', description: 'A multi-platform point of sale and inventory management system.',
@@ -76,5 +77,6 @@ export default {
     getters: {
         getProject: (state) => state.project,
         getProjects: (state) => state.projects,
+        getIntro: (state) => state.intro
     },
 }
