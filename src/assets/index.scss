@@ -461,15 +461,15 @@ p{
         height: 280px;
     }
     
-    .detailed-footer-grid{
-        li {
-            &:last-child {
-                margin-right: 16px;
-            }&:first-child{
-                margin-left: 16px;
-            }
-        }
-    }
+    // .detailed-footer-grid{
+    //     li {
+    //         &:last-child {
+    //             margin-right: 16px;
+    //         }&:first-child{
+    //             margin-left: 16px;
+    //         }
+    //     }
+    // }
     .buttons-holdr{
         padding: 16px;
     }
