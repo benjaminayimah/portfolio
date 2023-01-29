@@ -259,15 +259,17 @@ p{
     }
     header nav a{
         color: $gray;
-        &.router-link-active  {
-            color: $black;
-            font-weight: 500;
-        }
         &:hover {
             color: $black;
             path {
                 fill: $black;
             }
+        }
+    }
+    nav a{
+        &.router-link-active  {
+            color: $black;
+            font-weight: 500;
         }
         path{
             fill: $gray;
@@ -298,7 +300,10 @@ p{
         background-color: $white;
     }
     .mob-menu-wrapper a {
-        color: $black;
+        color: $gray;
+        path {
+            fill: $gray;
+        }
     }
     .tabs {
         a {
@@ -356,6 +361,8 @@ p{
                 fill: $white;
             }
         }
+    }
+    nav a {
         &.router-link-active {
             color: $light-txt;
             font-weight: 500;
@@ -386,9 +393,9 @@ p{
         border-color: #4f5156;
     }
     .mob-menu-wrapper a {
-        color: $light-txt;
+        color: #838587;
         path{
-            fill: $light-txt;
+            fill: #838587;
         }
     }
     .tabs {
