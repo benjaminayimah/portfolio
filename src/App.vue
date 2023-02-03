@@ -6,7 +6,6 @@
       <router-view/>
       <Footer />
       <mobile-menu />
-      <detailed-project />
     </div>
 </template>
 <script>

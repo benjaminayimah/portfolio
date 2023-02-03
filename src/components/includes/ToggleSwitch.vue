@@ -48,20 +48,21 @@ button {
     border: 1px solid #3C3C3C;
     div {
         transform: translateX(26px);
-        background-color: #000;
+        background-color: #37383a;
     }
     &:hover {
+        background-color: #232324;
         // border-color: #acacac;
     }
 }
 .dark-inactive{
     border: 1px solid #E3E3E3;
-    background-color: #E3E3E3;
+    background-color: #ececec;
     div {
         background-color: #fff;
     }
     &:hover {
-        // border-color: #c2c2c2;
+        background-color: #E3E3E3;
     }
 }
 </style>
