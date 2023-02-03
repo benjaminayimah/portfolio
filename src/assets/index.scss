@@ -38,7 +38,9 @@ nav a {
 .fx-grow-1{
     flex-grow: 1;
 }
-
+.block{
+    display: block;
+}
 #about h3{
     position: relative;
     margin-bottom: 30px;
@@ -274,6 +276,10 @@ p{
             fill: $gray;
         }
     }
+    .tab-active{
+        background-color: $black !important;
+        color: $white !important;
+    }
     nav.vertical-nav a{
         color: $black;
     }
@@ -297,6 +303,10 @@ p{
     }
     .bg-secondary {
         background-color: $white;
+    }
+    .bg-alt{
+        background-color: $black;
+        color: $white !important;
     }
     .mob-menu-wrapper a {
         color: $gray;
@@ -358,6 +368,10 @@ p{
     nav.vertical-nav a{
         color: #9c9d9f;
     }
+    .tab-active{
+        background-color: $white !important;
+        color: $black !important;
+    }
     #logo span{
         background-color: #55565a;
     }
@@ -372,6 +386,10 @@ p{
     }
     .bg-secondary {
         background-color: #292A2D;
+    }
+    .bg-alt{
+        background-color: $white;
+        color: $black !important;
     }
     hr{
         border-color: #4f5156;
