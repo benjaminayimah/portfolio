@@ -7,7 +7,7 @@
                         <nav class="sticky-top fx vertical-nav">
                             <ul>
                                 <li v-for="tab in tabs" :key="tab.id">
-                                    <a :id="'tab_'+tab.id" :href="tab.url" class="fx ai-c blur blur-2">{{ tab.name }}</a>
+                                    <a :id="'tab_'+tab.id" :href="tab.url" :class="{ 'tab-active': tab.active}" class="fx ai-c blur blur-2">{{ tab.name }}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -668,7 +668,7 @@ export default {
     data() {
         return {
             tabs: [
-                { id: 1, name: 'Overview', url: '#overview'},
+                { id: 1, name: 'Overview', url: '#overview', active: true},
                 { id: 2, name: 'Empathizing with the user', url: '#empathy-with-the-user'},
                 { id: 3, name: 'Starting the design', url: '#starting-the-design'},
                 { id: 4, name: 'Useability study', url: '#useability-study'},
