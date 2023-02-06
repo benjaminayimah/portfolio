@@ -164,12 +164,12 @@
                                     </div>
                                 </div>
                             </section>
-                            <section id="useability-study">
+                            <section id="usability-study">
                                 <h1>Usability study</h1>
                                 <div class="sub-sec">
                                     <h2> Findings</h2>
                                     <div>
-                                        A useability study was conducted on potential users and the main findings uncovered during the study are as follows:
+                                        A usability study was conducted on potential users and the main findings uncovered during the study are as follows:
                                     </div>
                                     <div class="row grid col-3 gap-8">
                                         <div>
@@ -350,7 +350,7 @@ export default {
                 { id: 1, name: 'Overview', url: '#overview', active: true},
                 { id: 2, name: 'Empathizing with the user', url: '#empathy-with-the-user'},
                 { id: 3, name: 'Starting the design', url: '#starting-the-design'},
-                { id: 4, name: 'Useability study', url: '#useability-study'},
+                { id: 4, name: 'Usability study', url: '#usability-study'},
                 { id: 5, name: 'Refining the design', url: '#refining-the-design'},
                 { id: 6, name: 'Hi-Fi design', url: '#hi-fi-design'},
                 { id: 7, name: 'Hi-Fi prototype', url: '#hi-fi-prototype'},
@@ -432,9 +432,9 @@ section{
 }
 h1{
     padding: 50px 0 8px 0;
-    color: $primary-color;
+    // color: $primary-color;
     font-size: 1.8rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 900;
 }
 h2{
