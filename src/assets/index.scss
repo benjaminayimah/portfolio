@@ -343,7 +343,7 @@ p{
         color: $light-txt;
     }
     header nav a{
-        color: #838587;
+        color: #a2a3a4;
         &:hover {
             color: $white;
             path {
@@ -357,11 +357,11 @@ p{
             font-weight: 500;
         }
         path{
-            fill: #838587;
+            fill: #a2a3a4;
         }
     }
     nav.vertical-nav a{
-        color: #9c9d9f;
+        color: #a2a3a4;
     }
     .tab-active{
         background-color: rgba(255, 255, 255, 0.85) !important;
