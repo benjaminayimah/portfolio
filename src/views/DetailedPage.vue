@@ -50,7 +50,7 @@
                                     <h2>User pain points</h2>
                                     <div class="row grid col-3 gap-8">
                                         <div v-for="painpoints in getProject.project.empathize.pain_points" :key="painpoints.id">
-                                            <span class="ellipse jc-c ai-c br-50">{{ painpoints.id }}</span>
+                                            <span class="ellipse fx jc-c ai-c br-50 fw-600">{{ painpoints.id }}</span>
                                             <h3>{{ painpoints.title }}</h3>
                                             <div>{{ painpoints.description }}</div>
                                         </div>
@@ -343,6 +343,9 @@ export default {
     name: 'DetailPage',
     computed: {
         ...mapGetters(['getProject']),
+        color() {
+            return this.getProject.project.color
+        }
     },
     data() {
         return {
@@ -431,11 +434,19 @@ section{
     padding: 40px 0
 }
 h1{
-    padding: 50px 0 8px 0;
-    // color: $primary-color;
+    padding: 50px 0 4px 0;
     font-size: 1.8rem;
-    text-transform: uppercase;
     font-weight: 900;
+    margin: 0 0 16px 0;
+    position: relative;
+    display: inline-block;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 2px dotted v-bind(color);
+    }
 }
 h2{
     margin: 16px 0 12px 0;
@@ -453,10 +464,10 @@ h3{
     grid-template-columns: 1fr 1fr;
 }
 .ellipse{
-    display: flex;
     height: 50px;
     width: 50px;
-    background-color: $primary-color;
+    color: #fff;
+    background-color: v-bind(color);
 }
 .v-scroll{
   overflow-x: auto;
