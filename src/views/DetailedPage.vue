@@ -36,7 +36,11 @@
                                         <div>{{ getProject.project.overview.role }}</div>
                                     </div>
                                     <div class="inner-row">
-                                        <h2>Project duration</h2>
+                                        <h2>Responsibilities</h2>
+                                        <div>{{ getProject.project.overview.role }}</div>
+                                    </div>
+                                    <div class="inner-row">
+                                        <h2>Duration</h2>
                                         <div>{{ getProject.project.overview.duration }}</div>
                                     </div>
                                 </div>
@@ -47,12 +51,14 @@
                                     <div>{{ getProject.project.empathize.overview }}</div>
                                 </div>
                                 <div class="sub-sec">
-                                    <h2>User pain points</h2>
+                                    <h2>Insights</h2>
                                     <div class="row grid col-3 gap-8">
                                         <div v-for="painpoints in getProject.project.empathize.pain_points" :key="painpoints.id">
                                             <span class="ellipse fx jc-c ai-c br-50 fw-600">{{ painpoints.id }}</span>
-                                            <h3>{{ painpoints.title }}</h3>
+                                            <h3>Pain point: {{ painpoints.title }}</h3>
                                             <div>{{ painpoints.description }}</div>
+                                            <h3>Opportunity: {{ painpoints.title2 }}</h3>
+                                            <div>{{ painpoints.opportunity }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -71,24 +77,24 @@
                                     <div class="row grid col-2 gap-8">
                                         <div>
                                             <h3 class="success">Goals</h3>
-                                            <li v-for="goal in getProject.project.empathize.goals" :key="goal.id">{{ goal }}</li>
+                                            <li v-for="goal in getProject.project.empathize.goals" :key="goal.id">{{ goal.data }}</li>
                                         </div>
                                         <div>
                                             <h3 class="danger">Frustrations</h3>
-                                            <li v-for="frustration in getProject.project.empathize.frustrations" :key="frustration.id">{{ frustration }}</li>
+                                            <li v-for="frustration in getProject.project.empathize.frustrations" :key="frustration.id">{{ frustration.data }}</li>
                                         </div>
                                     </div>
-                                    <h3 class="headline">Scenario</h3>
-                                    <div>{{ getProject.project.empathize.scenario }}</div>
+                                    <h3 v-if="getProject.project.empathize.scenario" class="headline">Scenario</h3>
+                                    <div v-if="getProject.project.empathize.scenario">{{ getProject.project.empathize.scenario }}</div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.empathize.competitive_audit">
                                     <h2>Competitive audit</h2>
                                     <div>{{ getProject.project.empathize.competitive_audit }}</div>
                                     <div>
                                         <img class="w-100" :src="getProject.project.empathize.audit_img" alt="competitive audit">
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.empathize.ideation">
                                     <div class="inner-row">
                                         <h2>
                                             Ideation
@@ -99,7 +105,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.empathize.user_journey_map">
                                     <h2>User journey map</h2>
                                     <div>{{ getProject.project.empathize.user_journey_map }}</div>
                                     <div>
@@ -109,58 +115,50 @@
                             </section>
                             <section id="starting-the-design">
                                 <h1>Starting The Design</h1>
-                                <div class="sub-sec">
+                                <div v-if="getProject.project.starting_the_design.site_map" class="sub-sec">
                                     <h2>Sitemap</h2>
+                                    <div>{{ getProject.project.starting_the_design.site_map }}</div>
                                     <div>
-                                        I constructed a sitemap to ensure the information architecture of the website is clearly laid out. The structure I chose was designed to make things simple and easy.
-                                    </div>
-                                    <div>
-                                        <img class="w-100" src="../assets/images/sitemap.png" alt="Sitemap">
+                                        <img class="w-100" :src="getProject.project.starting_the_design.site_map_img" alt="Sitemap">
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div v-if="getProject.project.starting_the_design.paper_wireframe" class="sub-sec">
                                     <h2>Paper wireframes</h2>
                                     <div class="inner-row">
+                                        <div>{{ getProject.project.starting_the_design.paper_wireframe }}</div>
                                         <div>
-                                            Paper wireframes were made to ensure the element that made it to digital wireframes would better suit users pain points.
-                                        </div>
-                                        <div>
-                                            <img class="w-100" src="../assets/images/paper_wireframes.png" alt="">
+                                            <img class="w-100" :src="getProject.project.starting_the_design.paper_wireframe_img" alt="paper wireframe">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div v-if="getProject.project.starting_the_design.digital_wireframe" class="sub-sec">
                                     <h2>Digital wireframes</h2>
                                     <div class="inner-row">
-                                        <div>
-                                                Digital wireframes were made to ensure the element that made it to digital wireframes would better suit users pain points.
-                                            </div>
+                                        <div>{{ getProject.project.starting_the_design.digital_wireframe }}</div>
                                         <div>
                                             <h3>Wireframes</h3>
                                             <div>
-                                                <img class="w-100" src="../assets/images/paper_wireframes.png" alt="">
+                                                <img class="w-100" :src="getProject.project.starting_the_design.digital_wireframe_img" alt="digital wireframe">
                                             </div>
                                         </div>
-                                        <div>
+                                        <div v-if="getProject.project.starting_the_design.screen_variations">
                                             <h3>Screen size variations</h3>
                                             <div>
-                                                <img class="w-100" src="../assets/images/paper_wireframes.png" alt="">
+                                                <img class="w-100" src="../assets/images/paper_wireframes.png" alt="screen variations">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.starting_the_design.lofi_prototype">
                                     <div class="inner-row">
                                         <h2>
                                             Low-fidelity prototype
                                         </h2>
+                                        <div>{{ getProject.project.starting_the_design.lofi_prototype }}</div>
                                         <div>
-                                            The low-fidelity prototype connected the primary user flow of choosing a career and obtaining guidance from mentors. This would enable usability study to be conducted on the prototype.
+                                            <img class="w-100" :src="getProject.project.starting_the_design.lofi_prototype_img" alt="Low-fidelity prototype">
                                         </div>
-                                        <div>
-                                            <img class="w-100" src="../assets/images/lo-fi.png" alt="Low-fidelity prototype">
-                                        </div>
-                                        <a href="#">View the App's low-fidelity protoype here.</a>
+                                        <!-- <a href="#">View the App's low-fidelity protoype here.</a> -->
                                     </div>
                                 </div>
                             </section>
@@ -168,27 +166,11 @@
                                 <h1>Usability study</h1>
                                 <div class="sub-sec">
                                     <h2> Findings</h2>
-                                    <div>
-                                        A usability study was conducted on potential users and the main findings uncovered during the study are as follows:
-                                    </div>
+                                    <div>{{ getProject.project.starting_the_design.usability_study }}</div>
                                     <div class="row grid col-3 gap-8">
-                                        <div>
-                                            <h3>1. Learn new skills</h3>
-                                            <div>
-                                                Users want to quickly browse through careers and learn new skills.
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3>2. Trust</h3>
-                                            <div>
-                                                Users want to quickly browse through careers and learn new skills.
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3>3. Find job</h3>
-                                            <div>
-                                                Users want to quickly browse through careers and learn new skills.
-                                            </div>
+                                        <div v-for="usability in getProject.project.starting_the_design.usability_study_fidings" :key="usability.id">
+                                            <h3>{{ usability.id }}. {{ usability.title }}</h3>
+                                            <div>{{ usability.data }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -198,35 +180,21 @@
                                 <div class="sub-sec">
                                     <div class="inner-row">
                                         <h2>Mockups</h2>
-                                        <div>
-                                            Based on insights from the usability study, the search filter was enhanced with advanced filter system where users are given the option to filter based on their experience level and specific search parameters.
-                                        </div>
-                                        <div>
-                                            images here
+                                        <div class="grid col-2 gap-8 row">
+                                            <div v-for="before_after in getProject.project.refining_the_design.before_after" :key="before_after.id">
+                                                <div>{{ before_after.description }}</div>
+                                                <img class="w-100" :src="before_after.img" alt="before-after">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="sub-sec">
                                     <div class="inner-row">
                                         <h2>Accessibility considerations</h2>
-                                        <div class="row grid col-3 gap-8">
-                                            <div>
-                                                <h3>1. Close-captioning</h3>
-                                                <div>
-                                                    I provided close-caption controls for all tutorials for users with hearing impaired. This would enable them to follow through all videos.
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h3>2. Landmarks</h3>
-                                                <div>
-                                                    I provided close-caption controls for all tutorials for users with hearing impaired. This would enable them to follow through all videos.
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h3>3. Screen reader</h3>
-                                                <div>
-                                                    I provided close-caption controls for all tutorials for users with hearing impaired. This would enable them to follow through all videos.
-                                                </div>
+                                        <div class="row grid gap-8" :class="getProject.project.refining_the_design.accessibility_considerations.length == 2 ? 'col-2' : 'col-3'">
+                                            <div v-for="accessibility in getProject.project.refining_the_design.accessibility_considerations" :key="accessibility.id">
+                                                <h3>{{ accessibility.id }}. {{ accessibility.title }}</h3>
+                                                <div>{{ accessibility.description }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -236,44 +204,18 @@
                                 <div class="sub-sec">
                                     <div class="inner-row">
                                         <h1>Refined designs</h1>
-                                        <div class="v-scroll fx gap-8 refined-holder">
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-1.png" alt="">
+                                        <div class="mb-32">{{ getProject.project.refining_the_design.hifi }}</div>
+                                        <div class="gap-8 grid col-3">
+                                            <div v-for="hifi in getProject.project.refining_the_design.refined_designs" :key="hifi.id">
+                                                <img class="w-100" :src="hifi" alt="final mockup">
                                             </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-2.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-3.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-4.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-5.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-6.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-7.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-8.png" alt="">
-                                            </div>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/flexsale-refined-9.png" alt="">
-                                            </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.refining_the_design.screen_variations">
                                     <div class="inner-row">
                                         <h2>Screen size variations</h2>
-                                        <div>
-                                            I included considerations for additional screen sizes in my mockups based on my earlier wireframes. Because users browse from a variety of devices, I felt it was important to optimize the browsing experience for a range of device sizes, such as mobile and tablet so users have the smoothest experience possible.
-                                        </div>
+                                        <div>{{ getProject.project.refining_the_design.screen_variations }}</div>
                                     </div>
                                     <div>
                                         <img class="w-100" src="../assets/images/screen_variations.png" alt="Screen variations">
@@ -282,45 +224,29 @@
                             </section>
                             <section id="hi-fi-prototype">
                                 <h1>High fidelity prototype</h1>
-                                <div>
-                                    The final high-fidelity prototype ensures a smooth user flow for finding and viewing of tutorials.
-                                </div>
+                                <div>{{ getProject.project.refining_the_design.hifi_prototype }}</div>
                                 <p>Click into the video below to watch the prototype.</p>
-                                <iframe height="416" src="https://www.youtube.com/embed/A5idbGOWRgk?loop=1" title="Flexsale prototype" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe height="416" :src="getProject.project.refining_the_design.hifi_prototype_video" :title="getProject.project.refining_the_design.video_title" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </section>
                             <section id="going-forward">
                                 <h1>Going forward</h1>
                                 <div class="sub-sec">
                                     <h2>Takeaways</h2>
                                     <div class="row grid col-2 gap-8">
-                                        <div>
-                                            <h3>Impact:</h3>
-                                            <div>
-                                                Our target users reported that the design was intuitive to navigate through. They are relatively satisfied with the images and the engaging videos found on the site.
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3>What I learned:</h3>
-                                            <div>
-                                                Our target users reported that the design was intuitive to navigate through. They are relatively satisfied with the images and the engaging videos found on the site.
-                                            </div>
+                                        <div v-for="takeaways in getProject.project.going_forward.takeaways" :key="takeaways.id">
+                                            <h3>{{ takeaways.title }}:</h3>
+                                            <p v-if="takeaways.p1">{{ takeaways.p1 }}</p>
+                                            <p v-if="takeaways.p2">{{ takeaways.p2 }}</p>
+                                            <i v-if="takeaways.p3">{{ takeaways.p3 }}</i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="sub-sec">
                                     <h2>Next step:</h2>
                                     <div class="row grid col-2 gap-8">
-                                        <div>
-                                            <h3>1. Testing</h3>
-                                            <div>
-                                                Our target users reported that the design was intuitive to navigate through. They are relatively satisfied with the images and the engaging videos found on the site.
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3>2. User research</h3>
-                                            <div>
-                                                Our target users reported that the design was intuitive to navigate through. They are relatively satisfied with the images and the engaging videos found on the site.
-                                            </div>
+                                        <div v-for="next in getProject.project.going_forward.nextstep" :key="next.id">
+                                            <h3>{{ next.id }}. {{  next.title }}</h3>
+                                            <div>{{ next.description }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -345,6 +271,9 @@ export default {
         ...mapGetters(['getProject']),
         color() {
             return this.getProject.project.color
+        },
+        color2() {
+            return this.getProject.project.color2
         }
     },
     data() {
@@ -445,14 +374,19 @@ h1{
         position: absolute;
         bottom: 0;
         width: 100%;
-        border-bottom: 2px dotted v-bind(color);
+        border-bottom: 2px dotted v-bind(color2);
     }
+}
+.bg-img{
+    background-color: v-bind(color);
 }
 h2{
     margin: 16px 0 12px 0;
+    font-size: 24px;
 }
 h3{
     margin-bottom: 8px;
+    color: v-bind(color2);
 }
 .inner-row{
     margin-bottom: 24px;
@@ -467,7 +401,7 @@ h3{
     height: 50px;
     width: 50px;
     color: #fff;
-    background-color: v-bind(color);
+    background-color: v-bind(color2);
 }
 .v-scroll{
   overflow-x: auto;
