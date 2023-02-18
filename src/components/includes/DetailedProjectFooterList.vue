@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .bg-img{
     height: 150px;
-    border-radius: 14px;
+    border-radius: 10px;
     transition: 0.3s ease;
     border-bottom: unset !important;
 }
@@ -29,6 +29,7 @@ a{
 li{
     min-width: 270px;
     width: 270px;
+    list-style-type: none;
     &:hover {
         .bg-img{
             transform: scale(1.01);

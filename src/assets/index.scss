@@ -23,9 +23,7 @@ button{
 a {
     text-decoration: none;
 }
-li{
-    list-style-type: none;
-}
+
 nav a {
     transition: 0.3s color;
     path {
@@ -203,7 +201,6 @@ hr{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgb(163, 162, 162);
 }
 .fixed-body{
     overflow: hidden; overscroll-behavior-y: none;
