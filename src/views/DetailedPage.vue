@@ -26,6 +26,9 @@
                                     <div class="inner-row">
                                         <h2>The product</h2>
                                         <div>{{ getProject.project.overview.product }}</div>
+                                        <div v-if="getProject.project.overview.li">
+                                            <li v-for="list in getProject.project.overview.li" :key="list.id">{{ list.data }}</li>
+                                        </div>
                                     </div>
                                     <div class="inner-row">
                                         <h2>Goal</h2>
@@ -52,7 +55,7 @@
                                 </div>
                                 <div class="sub-sec">
                                     <h2>Insights</h2>
-                                    <div class="row grid col-3 gap-8">
+                                    <div class="row grid gap-8" :class="getProject.project.empathize.pain_points.length < 3 ? 'col-2' : 'col-3'">
                                         <div v-for="painpoints in getProject.project.empathize.pain_points" :key="painpoints.id">
                                             <span class="ellipse fx jc-c ai-c br-50 fw-600">{{ painpoints.id }}</span>
                                             <h3>Pain point: {{ painpoints.title }}</h3>
@@ -62,30 +65,30 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-for="persona in getProject.project.empathize.persona" :key="persona.id">
                                     <h2>Persona & problem statement</h2>
-                                    <h3>{{ getProject.project.empathize.person_name }}</h3>
-                                    <div class="mb-32">{{ getProject.project.empathize.problem_statement }}</div>
-                                    <img class="person-img mb-16" :src="getProject.project.empathize.persona_img" :alt="getProject.project.empathize.person_name">
-                                    <div class="fx gap-8"><label class="fw-600">Age:</label><div>{{ getProject.project.empathize.age }}</div></div>
-                                    <div class="fx gap-8"><label class="fw-600">Education:</label><div>{{ getProject.project.empathize.education }}</div></div>
-                                    <div class="fx gap-8"><label class="fw-600">Hometown:</label><div>{{ getProject.project.empathize.hometown }}</div></div>
-                                    <div class="fx gap-8"><label class="fw-600">Family:</label><div>{{ getProject.project.empathize.family }}</div></div>
-                                    <div class="fx gap-8"><label class="fw-600">Ocupation:</label><div>{{ getProject.project.empathize.ocupation }}</div></div>
-                                    <h3 class="headline">{{getProject.project.empathize.person_name }}'s headline</h3>
-                                    <i>{{ getProject.project.empathize.headline }}</i>
+                                    <h3>{{ persona.person_name }}</h3>
+                                    <div class="mb-32">{{ persona.problem_statement }}</div>
+                                    <img class="person-img mb-16" :src="persona.persona_img" :alt="persona.person_name">
+                                    <div class="fx gap-8"><label class="fw-600">Age:</label><div>{{ persona.age }}</div></div>
+                                    <div class="fx gap-8"><label class="fw-600">Education:</label><div>{{ persona.education }}</div></div>
+                                    <div class="fx gap-8"><label class="fw-600">Hometown:</label><div>{{ persona.hometown }}</div></div>
+                                    <div class="fx gap-8"><label class="fw-600">Family:</label><div>{{ persona.family }}</div></div>
+                                    <div class="fx gap-8"><label class="fw-600">Ocupation:</label><div>{{ persona.ocupation }}</div></div>
+                                    <h3 class="headline">{{ persona.person_name }}'s headline</h3>
+                                    <i>{{ persona.headline }}</i>
                                     <div class="row grid col-2 gap-8">
                                         <div>
                                             <h3 class="success">Goals</h3>
-                                            <li v-for="goal in getProject.project.empathize.goals" :key="goal.id">{{ goal.data }}</li>
+                                            <li v-for="goal in persona.goals" :key="goal.id">{{ goal.data }}</li>
                                         </div>
                                         <div>
                                             <h3 class="danger">Frustrations</h3>
-                                            <li v-for="frustration in getProject.project.empathize.frustrations" :key="frustration.id">{{ frustration.data }}</li>
+                                            <li v-for="frustration in persona.frustrations" :key="frustration.id">{{ frustration.data }}</li>
                                         </div>
                                     </div>
-                                    <h3 v-if="getProject.project.empathize.scenario" class="headline">Scenario</h3>
-                                    <div v-if="getProject.project.empathize.scenario">{{ getProject.project.empathize.scenario }}</div>
+                                    <h3 v-if="persona.scenario" class="headline">Scenario</h3>
+                                    <div v-if="persona.scenario">{{ persona.scenario }}</div>
                                 </div>
                                 <div class="sub-sec" v-if="getProject.project.empathize.competitive_audit">
                                     <h2>Competitive audit</h2>
@@ -125,7 +128,7 @@
                                 <div v-if="getProject.project.starting_the_design.paper_wireframe" class="sub-sec">
                                     <h2>Paper wireframes</h2>
                                     <div class="inner-row">
-                                        <div>{{ getProject.project.starting_the_design.paper_wireframe }}</div>
+                                        <div class="mb-32">{{ getProject.project.starting_the_design.paper_wireframe }}</div>
                                         <div>
                                             <img class="w-100" :src="getProject.project.starting_the_design.paper_wireframe_img" alt="paper wireframe">
                                         </div>
@@ -143,8 +146,10 @@
                                         </div>
                                         <div v-if="getProject.project.starting_the_design.screen_variations">
                                             <h3>Screen size variations</h3>
-                                            <div>
-                                                <img class="w-100" src="../assets/images/paper_wireframes.png" alt="screen variations">
+                                            <div class="gap-8 grid" :class="getProject.project.starting_the_design.screen_variations_imgs.length < 3 ? 'col-2' : 'col-3'">
+                                                <div v-for="img in getProject.project.starting_the_design.screen_variations_imgs" :key="img.id">
+                                                    <img class="w-100" :src="img" alt="screen variations">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +159,7 @@
                                         <h2>
                                             Low-fidelity prototype
                                         </h2>
-                                        <div>{{ getProject.project.starting_the_design.lofi_prototype }}</div>
+                                        <div class="mb-32">{{ getProject.project.starting_the_design.lofi_prototype }}</div>
                                         <div>
                                             <img class="w-100" :src="getProject.project.starting_the_design.lofi_prototype_img" alt="Low-fidelity prototype">
                                         </div>
@@ -162,12 +167,12 @@
                                     </div>
                                 </div>
                             </section>
-                            <section id="usability-study">
+                            <section id="usability-study" v-if="getProject.project.starting_the_design.usability_study">
                                 <h1>Usability study</h1>
                                 <div class="sub-sec">
                                     <h2> Findings</h2>
                                     <div>{{ getProject.project.starting_the_design.usability_study }}</div>
-                                    <div class="row grid col-3 gap-8">
+                                    <div class="row grid gap-8" :class="getProject.project.starting_the_design.usability_study_fidings.length < 3 ? 'col-2' : 'col-3'">
                                         <div v-for="usability in getProject.project.starting_the_design.usability_study_fidings" :key="usability.id">
                                             <h3>{{ usability.id }}. {{ usability.title }}</h3>
                                             <div>{{ usability.data }}</div>
@@ -177,12 +182,13 @@
                             </section>
                             <section id="refining-the-design">
                                 <h1>Refining the design</h1>
+                                <p v-if="getProject.project.refining_the_design.prelim">{{ getProject.project.refining_the_design.prelim }}</p>
                                 <div class="sub-sec">
                                     <div class="inner-row">
                                         <h2>Mockups</h2>
                                         <div class="grid col-2 gap-8 row">
                                             <div v-for="before_after in getProject.project.refining_the_design.before_after" :key="before_after.id">
-                                                <div>{{ before_after.description }}</div>
+                                                <div class="mb-32">{{ before_after.description }}</div>
                                                 <img class="w-100" :src="before_after.img" alt="before-after">
                                             </div>
                                         </div>
@@ -191,7 +197,7 @@
                                 <div class="sub-sec">
                                     <div class="inner-row">
                                         <h2>Accessibility considerations</h2>
-                                        <div class="row grid gap-8" :class="getProject.project.refining_the_design.accessibility_considerations.length == 2 ? 'col-2' : 'col-3'">
+                                        <div class="row grid gap-8" :class="getProject.project.refining_the_design.accessibility_considerations.length < 3 ? 'col-2' : 'col-3'">
                                             <div v-for="accessibility in getProject.project.refining_the_design.accessibility_considerations" :key="accessibility.id">
                                                 <h3>{{ accessibility.id }}. {{ accessibility.title }}</h3>
                                                 <div>{{ accessibility.description }}</div>
@@ -217,8 +223,10 @@
                                         <h2>Screen size variations</h2>
                                         <div>{{ getProject.project.refining_the_design.screen_variations }}</div>
                                     </div>
-                                    <div>
-                                        <img class="w-100" src="../assets/images/screen_variations.png" alt="Screen variations">
+                                    <div class="gap-8 grid col-3">
+                                        <div v-for="sv in getProject.project.refining_the_design.screen_variations_imgs" :key="sv.id">
+                                            <img class="w-100" :src="sv" alt="Screen variations">
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -230,7 +238,7 @@
                             </section>
                             <section id="going-forward">
                                 <h1>Going forward</h1>
-                                <div class="sub-sec">
+                                <div class="sub-sec" v-if="getProject.project.going_forward.takeaways.length > 0">
                                     <h2>Takeaways</h2>
                                     <div class="row grid col-2 gap-8">
                                         <div v-for="takeaways in getProject.project.going_forward.takeaways" :key="takeaways.id">
