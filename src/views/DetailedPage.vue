@@ -211,7 +211,7 @@
                                     <div class="inner-row">
                                         <h1>Refined designs</h1>
                                         <div class="mb-32">{{ getProject.project.refining_the_design.hifi }}</div>
-                                        <div class="gap-8 grid col-3">
+                                        <div class="gap-8 grid" :class="getProject.project.refining_the_design.dsk? 'col-1' : 'col-3' ">
                                             <div v-for="hifi in getProject.project.refining_the_design.refined_designs" :key="hifi.id">
                                                 <img class="w-100" :src="hifi" alt="final mockup">
                                             </div>
@@ -401,6 +401,9 @@ h3{
 }
 .col-3{
     grid-template-columns: 1fr 1fr 1fr;
+}
+.col-1{
+    grid-auto-columns: 1fr;
 }
 .col-2 {
     grid-template-columns: 1fr 1fr;
