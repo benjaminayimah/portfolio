@@ -211,7 +211,7 @@
                                     <div class="inner-row">
                                         <h1>Refined designs</h1>
                                         <div class="mb-32">{{ getProject.project.refining_the_design.hifi }}</div>
-                                        <div class="gap-8 grid col-3">
+                                        <div class="gap-8 grid" :class="getProject.project.refining_the_design.dsk? 'col-1' : 'col-3' ">
                                             <div v-for="hifi in getProject.project.refining_the_design.refined_designs" :key="hifi.id">
                                                 <img class="w-100" :src="hifi" alt="final mockup">
                                             </div>
@@ -302,6 +302,9 @@ export default {
         this.$store.commit('showProject', this.$route.params.id)
         document.addEventListener('scroll', this.spyScroll )
     },
+    updated() {
+        this.$store.commit('showProject', this.$route.params.id)
+    },
     unmounted() {
         document.removeEventListener('scroll', this.spyScroll )
     },
@@ -309,7 +312,6 @@ export default {
         spyScroll() {
         let section = document.querySelectorAll('section')
         let navLinks = document.querySelectorAll('nav a')
-
         section.forEach(sec => {
             let top = window.scrollY
             let offset = sec.offsetTop - 150
@@ -402,6 +404,9 @@ h3{
 .col-3{
     grid-template-columns: 1fr 1fr 1fr;
 }
+.col-1{
+    grid-auto-columns: 1fr;
+}
 .col-2 {
     grid-template-columns: 1fr 1fr;
 }
@@ -427,6 +432,10 @@ h3{
 @media screen and (max-width: 990px){
     .main-section{
         padding: 16px 0
+    }
+    h1{
+        padding-top: 25px;
+        margin-bottom: 8px;
     }
     .main-body-flx{
         gap: 16px;

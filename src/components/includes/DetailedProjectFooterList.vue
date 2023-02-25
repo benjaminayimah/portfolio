@@ -1,9 +1,10 @@
 <template>
     <li>
-        <a href="#" class="fx-col gap-8" @click.prevent="$store.commit('showProject', project.id)">
+        <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" class="fx-col gap-8">
             <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis block">{{ project.title}}</span>
-        </a>
+        </router-link>
+        <!-- @click.prevent="$store.commit('showProject', project.id)" -->
     </li>
 </template>
 <script>
