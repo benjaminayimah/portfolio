@@ -302,6 +302,9 @@ export default {
         this.$store.commit('showProject', this.$route.params.id)
         document.addEventListener('scroll', this.spyScroll )
     },
+    updated() {
+        this.$store.commit('showProject', this.$route.params.id)
+    },
     unmounted() {
         document.removeEventListener('scroll', this.spyScroll )
     },
@@ -309,7 +312,6 @@ export default {
         spyScroll() {
         let section = document.querySelectorAll('section')
         let navLinks = document.querySelectorAll('nav a')
-
         section.forEach(sec => {
             let top = window.scrollY
             let offset = sec.offsetTop - 150
@@ -430,6 +432,10 @@ h3{
 @media screen and (max-width: 990px){
     .main-section{
         padding: 16px 0
+    }
+    h1{
+        padding-top: 25px;
+        margin-bottom: 8px;
     }
     .main-body-flx{
         gap: 16px;
