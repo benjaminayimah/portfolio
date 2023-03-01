@@ -68,9 +68,9 @@ export default {
     return {
         img: 'ben.png',
         intro: 'Hi,  I\'m Ben.',
-        p1: 'I am a UI/UX designer and an Engineer. I am fueled by my passion to provide simple and yet efficient solutions to complex problems using visual design, rapid prototyping, and seamless interactions that are user-centered.',
-        p2: 'I\'ve helped organizations in crafting a compelling user experience for their products and solidify their brand identity by designing appealing style guide.',
-        p3: 'I love to design aesthetically pleasing products that are accessible by all users.',
+        p1: 'I am a UI/UX designer and an Engineer. I am fueled by my passion to provide simple yet efficient solutions to complex problems using visual design, rapid prototyping, and seamless interactions that are user-centered.',
+        p2: 'I\'ve helped organizations in crafting a compelling user experience for their products and solidify their brand identity by designing appealing style guides.',
+        p3: 'I love to design aesthetically pleasing products that are accessible to all users.',
         url: 'https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing',
       }
     },
