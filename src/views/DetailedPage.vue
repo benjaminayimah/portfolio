@@ -160,7 +160,7 @@
                                             Low-fidelity prototype
                                         </h2>
                                         <div class="mb-32">{{ getProject.project.starting_the_design.lofi_prototype }}</div>
-                                        <div>
+                                        <div v-if="getProject.project.starting_the_design.lofi_prototype_img">
                                             <img class="w-100" :src="getProject.project.starting_the_design.lofi_prototype_img" alt="Low-fidelity prototype">
                                         </div>
                                         <!-- <a href="#">View the App's low-fidelity protoype here.</a> -->
