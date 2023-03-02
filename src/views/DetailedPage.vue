@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="sub-sec" v-if="getProject.project.empathize.user_journey_map">
                                     <h2>User journey map</h2>
-                                    <div>{{ getProject.project.empathize.user_journey_map }}</div>
+                                    <div class="mb-32">{{ getProject.project.empathize.user_journey_map }}</div>
                                     <div>
                                         <img class="w-100" :src="getProject.project.empathize.user_journey_map_img" alt="user journey map">
                                     </div>
