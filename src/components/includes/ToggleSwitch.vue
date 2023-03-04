@@ -1,5 +1,5 @@
 <template>
-    <button @click.prevent="$store.commit('setDarkMode')" :class=" mode ? 'dark-active' : 'dark-inactive' ">
+    <button @click.prevent="$store.commit('setDarkMode')" :class=" mode ? 'dark-active' : 'dark-inactive'" class="clic">
         <div class="fx ai-c jc-c">
             <svg v-if="!getDarkMode" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path class="icon-fill" d="M10.571,5.928a4,4,0,1,0,4,4A4,4,0,0,0,10.571,5.928Zm0,6.5a2.483,2.483,0,0,1-2.563-2.5,2.544,2.544,0,0,1,2.563-2.5,2.5,2.5,0,0,1,0,5Zm0,2.5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1a1,1,0,0,1,1-1Zm0-10a1,1,0,0,1-1-1v-1a1,1,0,0,1,2,0v1A1,1,0,0,1,10.571,4.928Zm7,4a1,1,0,0,1,0,2h-1a1,1,0,0,1,0-2Zm-12,1a1,1,0,0,1-1,1h-1a1,1,0,0,1,0-2h1A1,1,0,0,1,5.571,9.928Zm9.95,3.536.707.707a1,1,0,0,1-1.414,1.414l-.707-.707a1,1,0,0,1,1.414-1.414Zm-9.9-7.071-.707-.707A1,1,0,0,1,6.328,4.271l.707.707A1,1,0,0,1,5.621,6.393Zm9.9,0a1,1,0,1,1-1.414-1.414l.707-.707a1,1,0,1,1,1.414,1.414Zm-9.9,7.071a1,1,0,1,1,1.414,1.414l-.707.707a1,1,0,0,1-1.414-1.414Z" transform="translate(-2.571 -1.928)"/>
