@@ -17,8 +17,8 @@ module.exports = {
     pwa: {
       name: 'Benjamin Ayimah | Portfolio',
       shortName: 'Benjamin Ayimah',
-      themeColor: '#ffffff',
-      msTileColor: '#000000',
+      themeColor: '#566FF4',
+      msTileColor: '#ffffff',
       appleMobileWebAppCapable: 'yes',
       appleMobileWebAppStatusBarStyle: 'black'
     }
