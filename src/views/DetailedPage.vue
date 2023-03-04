@@ -7,7 +7,7 @@
                         <nav class="sticky-top fx vertical-nav">
                             <ul class="fx">
                                 <li v-for="tab in tabs" :key="tab.id">
-                                    <a :id="'tab_'+tab.id" :href="tab.url" :class="{ 'tab-active': tab.active}" class="fx ai-c blur blur-2">{{ tab.name }}</a>
+                                    <a :id="'tab_'+tab.id" :href="tab.url" :class="{ 'tab-active': tab.active}" class="fx ai-c blur blur-2 clic">{{ tab.name }}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -346,7 +346,7 @@ ul{
             height: inherit;
             padding: 0 16px;
             border-radius: 32px;
-            transition: 0.2s linear;
+            transition: 0.1s linear;
         }
     }
 }
@@ -356,7 +356,6 @@ ul{
 nav{
     top: 120px !important;
 }
-
 .gap-50{
     gap: 50px;
 }
@@ -441,6 +440,7 @@ h3{
         gap: 16px;
         flex-direction: column;
             .fx-shrink-0 {
+                z-index: 9999;
                 display: flex;
                 overflow-x: auto;
                 position: sticky;
