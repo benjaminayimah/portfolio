@@ -33,13 +33,6 @@ export default {
         this.timer()
     },
     methods: {
-        // pauseRotate() {
-        //     this.$_('floats').classList.remove('do-rotate')
-        //     this.$_('floats').classList.add('do-pause')
-        // },
-        // resumeRotate() {
-        //     this.$_('floats').classList.add('do-rotate')
-        // },
         timer() {
             setInterval(() => {
                 if(this.count) {
@@ -89,10 +82,6 @@ export default {
     transform: rotate(165deg)
   }
 }
-// @keyframes rotate-floats {
-//   0%   {transform: rotate(0)}
-//   100% {transform: rotate(360deg)}
-// }
 .do-rotate .float-holder{
   animation-name: rotate-floats;
   animation-duration: 8s;

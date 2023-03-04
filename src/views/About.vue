@@ -41,10 +41,10 @@
                 <path d="M10.5,7.354a5.375,5.375,0,1,0,3.81,1.574A5.384,5.384,0,0,0,10.5,7.354Zm0,8.885a3.5,3.5,0,1,1,3.5-3.5,3.5,3.5,0,0,1-3.5,3.5Zm6.86-9.1a1.254,1.254,0,1,1-.367-.889,1.256,1.256,0,0,1,.367.889Zm3.566,1.275a6.215,6.215,0,0,0-1.7-4.4,6.256,6.256,0,0,0-4.4-1.7c-1.734-.1-6.93-.1-8.665,0A6.246,6.246,0,0,0,1.765,4a6.235,6.235,0,0,0-1.7,4.4c-.1,1.734-.1,6.93,0,8.665a6.215,6.215,0,0,0,1.7,4.4,6.264,6.264,0,0,0,4.4,1.7c1.734.1,6.93.1,8.665,0a6.215,6.215,0,0,0,4.4-1.7,6.256,6.256,0,0,0,1.7-4.4c.1-1.734.1-6.93,0-8.659Zm-2.243,10.52a3.544,3.544,0,0,1-2,2c-1.382.548-4.662.422-6.19.422s-4.812.122-6.19-.422a3.544,3.544,0,0,1-2-2c-.548-1.382-.422-4.662-.422-6.19s-.122-4.812.422-6.19a3.544,3.544,0,0,1,2-2C5.692,4,8.972,4.129,10.5,4.129s4.812-.122,6.19.422a3.544,3.544,0,0,1,1.993,2c.548,1.382.422,4.662.422,6.19S19.234,17.55,18.683,18.928Z" transform="translate(0.005 -2.238)"/>
               </svg>
             </a> -->
-            <div><a href="https://www.linkedin.com/in/benjamin-ayimah-88b8b1b2" target="_blank" aria-label="LinkedIn" class="a-link">Linkedin</a></div>
-            <div><a href="https://www.behance.net/benjaminayimah" target="_blank" aria-label="Behance" title="Behance" class="a-link">Behance</a></div>
-            <div><a href="https://www.instagram.com/ben.tekk/" target="_blank" aria-label="Instagram" title="Instagram" class="a-link">Instagram</a></div>
-            <div><a href="https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing" class="a-link" target="_blank">
+            <div class="clic"><a href="https://www.linkedin.com/in/benjamin-ayimah-88b8b1b2" target="_blank" aria-label="LinkedIn" class="a-link">Linkedin</a></div>
+            <div class="clic"><a href="https://www.behance.net/benjaminayimah" target="_blank" aria-label="Behance" title="Behance" class="a-link">Behance</a></div>
+            <div class="clic"><a href="https://www.instagram.com/ben.tekk/" target="_blank" aria-label="Instagram" title="Instagram" class="a-link">Instagram</a></div>
+            <div class="clic"><a href="https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing" class="a-link" target="_blank">
               Resume
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12.447 12.447">
                 <path d="M2182.482-198.786V-208l-9.732,9.732a.727.727,0,0,1-.517.215.732.732,0,0,1-.518-.215.732.732,0,0,1,0-1.036l9.733-9.732h-9.216a.732.732,0,0,1-.732-.732.732.732,0,0,1,.732-.732h10.982a.732.732,0,0,1,.732.732v10.982a.732.732,0,0,1-.732.732A.732.732,0,0,1,2182.482-198.786Z" transform="translate(-2171.5 210.501)"/>
@@ -52,7 +52,7 @@
             </a>
             </div>
           </div>
-          <div class="mt-24">Email: <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link">benjaminayimah@gmail.com</a></div>
+          <div class="mt-24">Email: <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a></div>
         </div>
       </div>      
     </div>

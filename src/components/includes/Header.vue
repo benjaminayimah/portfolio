@@ -1,7 +1,7 @@
 <template>
     <header class="fx jc-c sticky-top blur blur-1" id="header" :class="{ 'opaque': getShowMobMenu }" >
         <div class="fx ai-c fx-js top-hold">
-            <router-link to="/" id="logo">Benjamin Ayimah<span></span></router-link>
+            <router-link to="/" id="logo" class="clic">Benjamin Ayimah<span></span></router-link>
             <div class="fx gap-16 ai-c">
                 <nav v-if="!getMobile" class="fx" id="mobile_navigation">
                     <nav-list v-for="menu in getMenus" :key="menu.id" v-bind:menu="menu" />
@@ -31,6 +31,7 @@ export default {
     text-decoration: none;
     color: unset;
     position: relative;
+    transition: 0.1s transform;
     span {
         height: 12px;
         background-color: #8DFA9A;
