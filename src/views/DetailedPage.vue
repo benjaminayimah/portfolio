@@ -440,7 +440,7 @@ h3{
         gap: 16px;
         flex-direction: column;
             .fx-shrink-0 {
-                z-index: 9999;
+                z-index: 99;
                 display: flex;
                 overflow-x: auto;
                 position: sticky;
