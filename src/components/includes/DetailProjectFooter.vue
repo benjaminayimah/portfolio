@@ -3,7 +3,7 @@
         <div class="fx-col gap-16">
             <h3>Thank you for watching.</h3>
             <div>
-                <a href="/about" class="upper-case a-link fw-600">Get in touch</a>
+                <router-link to="/about" class="upper-case a-link fw-600">Get in touch</router-link>
             </div>
         </div>
         <div class="mt-50">
