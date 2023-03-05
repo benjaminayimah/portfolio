@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" :id="'proj_'+project.id" class="project-hold relativ br-16">
+    <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" :id="'proj_'+project.id" class="project-hold relativ br-16 clic2">
         <div class="project-main-wrapper bg-secondary br-16" >
             <img :src="project.thumbnail" loading="lazy" :alt="project.title">
             <div class="caption fx-col gap-8">

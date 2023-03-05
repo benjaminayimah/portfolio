@@ -19,6 +19,12 @@ button{
         transform: scale(0.96);
     }
 }
+.clic2 {
+    transition: 0.2s transform;
+    &:active {
+        transform: scale(0.98);
+    }
+}
 a {
     text-decoration: none;
 }
