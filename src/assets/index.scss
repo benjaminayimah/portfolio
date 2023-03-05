@@ -20,7 +20,7 @@ button{
     }
 }
 .clic2 {
-    transition: 0.2s transform;
+    transition: 0.1s transform;
     &:active {
         transform: scale(0.98);
     }
