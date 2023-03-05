@@ -1,7 +1,7 @@
 // import router from '@/router'
 export default {
     state: {
-        intro: {h1: 'Hi', i1: '👋🏽', i2: '👩🏾‍💻👨🏽‍💻👨‍💻', h2: 'I\'m Ben', p1: 'A UI/UX Designer who focuses on crafting delightful digital experience for all users.', p2: 'Here are few of my works...'},
+        intro: {h1: 'Hi', i1: '👋🏽', i2: '👩🏾‍💻👨🏽‍💻👨‍💻', h2: 'I\'m Ben', p1: 'A UI/UX Designer who focuses on crafting delightful digital experiences for all users.', p2: 'Here are few of my works...'},
         project: { active: false, project: {}},
         projects: [
             { id: 1, color: '#566FF4', color2: '#566FF4', type: 'project', title: 'Flexsale', thumbnail: require('@/assets/images/flexsale_thumbnail.png'), banner: require('@/assets/images/flexsale_banner.png'), banner_2: '', description: 'A multi-platform point of sale and inventory management system for retail shops.',
