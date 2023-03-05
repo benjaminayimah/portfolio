@@ -1,6 +1,6 @@
 <template>
     <li>
-        <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" class="fx-col gap-8">
+        <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" class="fx-col gap-8 clic2">
             <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis block">{{ project.title}}</span>
         </router-link>
