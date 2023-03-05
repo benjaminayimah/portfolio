@@ -4,7 +4,7 @@
       <intro v-bind:intro="getIntro" />
       <home-tab-all />
       <div class="mt-50">
-        <router-link to="/about" class="upper-case a-link fw-600">Get in touch</router-link>
+        <router-link to="/about" class="upper-case a-link fw-600 clic">Get in touch</router-link>
       </div>
     </div>
   </div>

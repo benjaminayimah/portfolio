@@ -75,6 +75,7 @@ nav a {
     transition: 0.3s all;
     font-weight: 500;
     color: unset;
+    display: inline-flex;
     &::before {
         content: '';
         height: 2px;
@@ -166,6 +167,9 @@ hr{
 .mt-24{
     margin-top: 24px;
 }
+.mt-18{
+    margin-top: 18px;
+}
 .gap-8{
     gap: 8px;
 }
@@ -186,6 +190,9 @@ hr{
 }
 .br-16 {
     border-radius: 16px;
+}
+.br-8 {
+    border-radius: 8px;
 }
 .br-50 {
     border-radius: 50%;
@@ -224,7 +231,7 @@ p{
 .mt-50 {
     margin-top: 50px;
 }
-.bg-primary, .bg-secondary, .opaque{
+.bg-primary, .bg-secondary, .opaque, .contact-wrapper{
     transition: $transition-time ease background-color
 }
 
@@ -418,6 +425,19 @@ p{
 
         }
        
+    }
+    .contact-wrapper{
+        border-color: #656464;
+        background-color: #292A2D;
+        a{
+            color: #c2c2c4;
+            &:hover {
+              color: $light-txt;
+              path {
+                fill: $light-txt;
+              }
+            }
+        }
     }
 }
 .main-row{
