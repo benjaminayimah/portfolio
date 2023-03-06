@@ -16,7 +16,7 @@
                         <div class="project-body">
                             <section id="overview">
                                 <div class="project-banner bg-img" :style="{ backgroundImage: 'url('+getProject.project.banner+')'}"></div>
-                                <img v-if="getProject.project.banner_2" class="w-100" :src="getProject.project.banner_2" alt="Project image"/>
+                                <img v-if="getProject.project.banner_2" class="w-100" :src="getProject.project.banner_2" alt="Project image" loading="lazy"/>
                                 <h1>Overview</h1>
                                 <div>
                                     <div class="inner-row">
@@ -69,7 +69,7 @@
                                     <h2>Persona & problem statement</h2>
                                     <h3>{{ persona.person_name }}</h3>
                                     <div class="mb-32">{{ persona.problem_statement }}</div>
-                                    <img class="person-img mb-16" :src="persona.persona_img" :alt="persona.person_name">
+                                    <img class="person-img mb-16" :src="persona.persona_img" :alt="persona.person_name" loading="lazy">
                                     <div class="fx gap-8"><label class="fw-600">Age:</label><div>{{ persona.age }}</div></div>
                                     <div class="fx gap-8"><label class="fw-600">Education:</label><div>{{ persona.education }}</div></div>
                                     <div class="fx gap-8"><label class="fw-600">Hometown:</label><div>{{ persona.hometown }}</div></div>
@@ -94,7 +94,7 @@
                                     <h2>Competitive audit</h2>
                                     <div>{{ getProject.project.empathize.competitive_audit }}</div>
                                     <div>
-                                        <img class="w-100" :src="getProject.project.empathize.audit_img" alt="competitive audit">
+                                        <img class="w-100" :src="getProject.project.empathize.audit_img" alt="competitive audit" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="sub-sec" v-if="getProject.project.empathize.ideation">
@@ -104,7 +104,7 @@
                                         </h2>
                                         <div>{{ getProject.project.empathize.ideation }}</div>
                                         <div>
-                                            <img class="w-100" :src="getProject.project.empathize.ideation_img" alt="ideation">
+                                            <img class="w-100" :src="getProject.project.empathize.ideation_img" alt="ideation" loading="lazy">
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                     <h2>User journey map</h2>
                                     <div class="mb-32">{{ getProject.project.empathize.user_journey_map }}</div>
                                     <div>
-                                        <img class="w-100" :src="getProject.project.empathize.user_journey_map_img" alt="user journey map">
+                                        <img class="w-100" :src="getProject.project.empathize.user_journey_map_img" alt="user journey map" loading="lazy">
                                     </div>
                                 </div>
                             </section>
@@ -122,7 +122,7 @@
                                     <h2>Sitemap</h2>
                                     <div>{{ getProject.project.starting_the_design.site_map }}</div>
                                     <div>
-                                        <img class="w-100" :src="getProject.project.starting_the_design.site_map_img" alt="Sitemap">
+                                        <img class="w-100" :src="getProject.project.starting_the_design.site_map_img" alt="Sitemap" loading="lazy">
                                     </div>
                                 </div>
                                 <div v-if="getProject.project.starting_the_design.paper_wireframe" class="sub-sec">
@@ -130,7 +130,7 @@
                                     <div class="inner-row">
                                         <div class="mb-32">{{ getProject.project.starting_the_design.paper_wireframe }}</div>
                                         <div>
-                                            <img class="w-100" :src="getProject.project.starting_the_design.paper_wireframe_img" alt="paper wireframe">
+                                            <img class="w-100" :src="getProject.project.starting_the_design.paper_wireframe_img" alt="paper wireframe" loading="lazy">
                                         </div>
                                     </div>
                                 </div>
@@ -141,14 +141,14 @@
                                         <div>
                                             <h3>Wireframes</h3>
                                             <div>
-                                                <img class="w-100" :src="getProject.project.starting_the_design.digital_wireframe_img" alt="digital wireframe">
+                                                <img class="w-100" :src="getProject.project.starting_the_design.digital_wireframe_img" alt="digital wireframe" loading="lazy">
                                             </div>
                                         </div>
                                         <div v-if="getProject.project.starting_the_design.screen_variations">
                                             <h3>Screen size variations</h3>
                                             <div class="gap-8 grid" :class="getProject.project.starting_the_design.screen_variations_imgs.length < 3 ? 'col-2' : 'col-3'">
                                                 <div v-for="img in getProject.project.starting_the_design.screen_variations_imgs" :key="img.id">
-                                                    <img class="w-100" :src="img" alt="screen variations">
+                                                    <img class="w-100" :src="img" alt="screen variations" loading="lazy">
                                                 </div>
                                             </div>
                                         </div>
@@ -161,7 +161,7 @@
                                         </h2>
                                         <div class="mb-32">{{ getProject.project.starting_the_design.lofi_prototype }}</div>
                                         <div v-if="getProject.project.starting_the_design.lofi_prototype_img">
-                                            <img class="w-100" :src="getProject.project.starting_the_design.lofi_prototype_img" alt="Low-fidelity prototype">
+                                            <img class="w-100" :src="getProject.project.starting_the_design.lofi_prototype_img" alt="Low-fidelity prototype" loading="lazy">
                                         </div>
                                         <!-- <a href="#">View the App's low-fidelity protoype here.</a> -->
                                     </div>
@@ -189,7 +189,7 @@
                                         <div class="grid col-2 gap-8 row">
                                             <div v-for="before_after in getProject.project.refining_the_design.before_after" :key="before_after.id">
                                                 <div class="mb-32">{{ before_after.description }}</div>
-                                                <img class="w-100" :src="before_after.img" alt="before-after">
+                                                <img class="w-100" :src="before_after.img" alt="before-after" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@
                                         <div class="mb-32">{{ getProject.project.refining_the_design.hifi }}</div>
                                         <div class="gap-8 grid" :class="getProject.project.refining_the_design.dsk? 'col-1' : 'col-3' ">
                                             <div v-for="hifi in getProject.project.refining_the_design.refined_designs" :key="hifi.id">
-                                                <img class="w-100" :src="hifi" alt="final mockup">
+                                                <img class="w-100" :src="hifi" alt="final mockup" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@
                                     </div>
                                     <div class="gap-8 grid col-3">
                                         <div v-for="sv in getProject.project.refining_the_design.screen_variations_imgs" :key="sv.id">
-                                            <img class="w-100" :src="sv" alt="Screen variations">
+                                            <img class="w-100" :src="sv" alt="Screen variations" loading="lazy">
                                         </div>
                                     </div>
                                 </div>
