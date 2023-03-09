@@ -14,9 +14,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// #control_left{
-//     left: 50px;
-// }
 .arrow-left {
     margin-right: 4px;
 }
