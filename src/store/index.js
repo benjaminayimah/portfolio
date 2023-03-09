@@ -100,7 +100,6 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
-
   },
   actions: {
   },

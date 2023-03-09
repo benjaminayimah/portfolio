@@ -4,7 +4,6 @@
             <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis block">{{ project.title}}</span>
         </router-link>
-        <!-- @click.prevent="$store.commit('showProject', project.id)" -->
     </li>
 </template>
 <script>
