@@ -21,11 +21,9 @@ export default {
     ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
   },
   created() {
-      // this.autoDark()
       this.$store.commit('computeWindow')
       this.$store.commit('getDarkMode')
       window.addEventListener('resize', this.windowSize)
-      // console.log(new Date().getHours())
   },
   unmounted() {
     window.removeEventListener('resize', this.windowSize)
