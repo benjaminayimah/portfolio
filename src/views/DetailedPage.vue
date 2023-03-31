@@ -313,20 +313,19 @@ export default {
         let section = document.querySelectorAll('section')
         let navLinks = document.querySelectorAll('nav a')
         section.forEach(sec => {
-            let top = window.scrollY
-            let offset = sec.offsetTop - 150
-            let height = sec.offsetHeight
-            let id = sec.getAttribute('id')
-            if( top >= offset && top < offset + height) {
-                navLinks.forEach(links => {
-                    links.classList.remove('tab-active')
-                    document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
-                })
-            }
-        })
+                let top = window.scrollY
+                let offset = sec.offsetTop - 150
+                let height = sec.offsetHeight
+                let id = sec.getAttribute('id')
+                if( top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('tab-active')
+                        document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
+                    })
+                }
+            })
         }
     }
-   
 }
 </script>
 

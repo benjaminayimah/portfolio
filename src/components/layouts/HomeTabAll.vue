@@ -1,5 +1,5 @@
 <template>
-    <div class="grid project-grid" id="projects">
+    <div class="grid project-grid gap-40" id="projects">
         <project-list v-for="project in getProjects" :key="project.id" v-bind:project="project" />
     </div>
 </template>
@@ -14,7 +14,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .grid {
-    gap: 40px;
     grid-template-columns: 1fr 1fr;
 }
 
