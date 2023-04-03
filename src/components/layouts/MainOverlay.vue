@@ -47,7 +47,7 @@ section{
 }
 @keyframes hide {
   100% {
-    transform: scale(0.8);
+    transform: scale(0.85);
     filter: blur(16px);
   }
 }
