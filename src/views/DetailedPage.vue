@@ -288,7 +288,7 @@ export default {
         return {
             tabs: [
                 { id: 1, name: 'Overview', url: '#overview', active: true},
-                { id: 2, name: 'Empathizing with the user', url: '#empathy-with-the-user'},
+                { id: 2, name: 'Empathizing with users', url: '#empathy-with-the-user'},
                 { id: 3, name: 'Starting the design', url: '#starting-the-design'},
                 { id: 4, name: 'Usability study', url: '#usability-study'},
                 { id: 5, name: 'Refining the design', url: '#refining-the-design'},
@@ -310,20 +310,20 @@ export default {
     },
     methods: {
         spyScroll() {
-        let section = document.querySelectorAll('section')
-        let navLinks = document.querySelectorAll('nav a')
-        section.forEach(sec => {
+            let section = document.querySelectorAll('section')
+            let navLinks = document.querySelectorAll('nav a')
+            section.forEach(sec => {
                 let top = window.scrollY
                 let offset = sec.offsetTop - 150
                 let height = sec.offsetHeight
                 let id = sec.getAttribute('id')
                 if( top >= offset && top < offset + height) {
                     navLinks.forEach(links => {
-                        links.classList.remove('tab-active')
-                        document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
-                    })
-                }
-            })
+                    links.classList.remove('tab-active')
+                    document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
+                })
+            }
+        })
         }
     }
 }
@@ -348,7 +348,7 @@ ul{
             height: inherit;
             padding: 0 16px;
             border-radius: 32px;
-            transition: 0.1s linear;
+            transition: 0.05s linear;
         }
     }
 }

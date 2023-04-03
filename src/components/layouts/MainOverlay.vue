@@ -123,14 +123,12 @@ span:nth-child(12) {
 button {
   animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
-
 @keyframes fade-in {
   100% {
     opacity: 1;
     filter: blur(0);
   }
 }
-
 button {
     background-color: #fff;
     line-height: 3.4;
@@ -139,6 +137,8 @@ button {
     font-size: 1.06rem;
     text-transform: capitalize;
     color: #000;
+    transition: 0.2s all;
+    box-shadow: 0px 0px 32px 0px rgba(6, 16, 37, 0.1);
     &:hover{
         text-decoration: underline;
     }
