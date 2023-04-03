@@ -8,13 +8,13 @@
                     <span>designer</span>
                     <span>and</span>
                     <span>an</span>
-                    <span>engineer</span>
+                    <span>engineer,</span>
                     <span>obsessed</span>
                     <span>with</span>
                     <span>creating</span>
                     <span>delightful</span>
                     <span>digital</span>
-                    <span>experience.</span>
+                    <span>experiences.</span>
                 </h1>
                 <button id="overlay_btn" @click="$store.commit('dismissOverlay')" class="fx clic">See my work</button>
             </div>
