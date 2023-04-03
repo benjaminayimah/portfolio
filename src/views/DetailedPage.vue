@@ -330,6 +330,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#overview{
+    margin-top: 0;
+}
 ul{
     padding: 0;
     margin: 0 0 0 -16px;

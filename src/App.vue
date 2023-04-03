@@ -1,5 +1,5 @@
 <template>
-  <a href="#projects" class="skip">Skip to project</a>
+    <a href="#projects" class="skip">Skip to project</a>
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <float-animations v-if="$route.path == '/'" />
       <Header />
@@ -7,6 +7,7 @@
       <Footer />
       <mobile-menu />
     </div>
+    <main-overlay v-if="getOverlay" />
 </template>
 <script>
 import { mapGetters } from 'vuex';
@@ -14,11 +15,12 @@ import Header from './components/includes/Header.vue';
 import Footer from './components/includes/Footer.vue';
 import MobileMenu from './components/includes/MobileMenu.vue';
 import FloatAnimations from './components/includes/FloatAnimations.vue';
+import MainOverlay from './components/layouts/MainOverlay.vue';
 export default {
-  components: { Header, Footer, MobileMenu, FloatAnimations },
+  components: { Header, Footer, MobileMenu, FloatAnimations, MainOverlay },
   name: "App",
   computed: {
-    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
+    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight', 'getOverlay'])
   },
   created() {
       this.$store.commit('computeWindow')

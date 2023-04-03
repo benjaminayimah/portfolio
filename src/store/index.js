@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 import data from './modules/data'
 export default createStore({
   state: {
+    overlay: true,
     mobile: false,
     tablet: false,
     desktop: false,
@@ -89,6 +90,13 @@ export default createStore({
     },
     getHtml() {
       return document.getElementsByTagName( 'html' )[0]
+    },
+    dismissOverlay(state) {
+      document.body.classList.add('hide')
+      setTimeout(() => {
+        state.overlay = false
+        document.body.classList.remove('fixed-body')
+      }, 500);
     }
   },
   getters: {
@@ -100,6 +108,8 @@ export default createStore({
     getDarkMode: (state) => state.darkMode,
     getShowMobMenu: (state) => state.showMenu,
     getMenus: (state) => state.menus,
+    getOverlay: (state) => state.overlay
+
   },
   actions: {
   },

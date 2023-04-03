@@ -75,11 +75,11 @@ export default {
             }else {
               this.commit('findIndex', length-1)
             }
-        },
+        }
     },
     getters: {
         getProject: (state) => state.project,
         getProjects: (state) => state.projects,
-        getIntro: (state) => state.intro
+        getIntro: (state) => state.intro,
     },
 }
