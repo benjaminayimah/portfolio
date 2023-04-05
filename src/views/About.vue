@@ -3,10 +3,10 @@
     <div id="about" class="main-row">
     <div class="section-wrapper">
       <div class="grid about-grid">
-        <div>
+        <div class="left">
           <img :src="require('@/assets/images/'+img+'')" loading="lazy" alt="ben">
         </div>
-        <div>
+        <div class="fx gap-40 right">
           <div class="">
             <h1 id="into">{{ intro }}</h1>
             <p class="p1">{{ p1 }}</p>
@@ -17,6 +17,7 @@
             <div class="fx gap-16 social-hold">
               <div class="clic"><a href="https://www.linkedin.com/in/benjamin-ayimah-88b8b1b2" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="a-link">Linkedin</a></div>
               <div class="clic"><a href="https://www.behance.net/benjaminayimah" target="_blank" aria-label="Behance" title="Behance" class="a-link">Behance</a></div>
+              <div class="clic"><a href="https://github.com/benjaminayimah" target="_blank" aria-label="GitHub" title="GitHub" class="a-link">GitHub</a></div>
               <div class="clic"><a href="https://www.instagram.com/ben.tekk/" target="_blank" aria-label="Instagram" title="Instagram" class="a-link">Instagram</a></div>
               <div class="clic"><a href="https://docs.google.com/document/d/1qKlos72NGqJiJzPnZopj777ASBBkSrBcbG_M-El_m3Y/edit?usp=sharing" class="a-link ai-c gap-8" target="_blank" title="Resume">
                 Resume
@@ -26,7 +27,7 @@
                 </a>
               </div>
             </div>
-            <div class="mt-18">Email: <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a></div>
+            <div class="mt-18"><label for="email">Email:</label> <a id="email" href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a></div>
           </div>
         </div>
       </div>      
@@ -77,10 +78,15 @@ h1{
 p{
     margin: 22px 0;
 }
+.right{
+  flex-direction: column;
+}
 .a-link{
   color: unset;
 }
 .social-hold{
+    flex-wrap: wrap;
+    row-gap: 8px;
   a{
     text-transform: uppercase;
     font-size: 0.95rem
@@ -93,12 +99,15 @@ section{
   section{
     margin-top: 30px;
   }
+  .right{
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
 }
 .contact-wrapper{
   border: 1px dashed #C5C7CB;
   padding: 16px;
   background-color: #EFEFEF;
-  margin-top: 40px;
   a{
     color: #2f2f30;
     &:hover {
