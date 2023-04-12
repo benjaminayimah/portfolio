@@ -20,7 +20,7 @@ export default {
   components: { Header, Footer, MobileMenu, FloatAnimations, MainOverlay },
   name: "App",
   computed: {
-    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight', 'getOverlay'])
+    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight', 'getOverlay']),
   },
   created() {
       this.$store.commit('computeWindow')
@@ -39,7 +39,6 @@ export default {
     autoDark() {
       if(new Date().getHours() > 19) {
         localStorage.setItem('darkMode', true)
-
       }
     }
   }

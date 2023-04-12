@@ -302,9 +302,9 @@ export default {
         this.$store.commit('showProject', this.$route.params.id)
         document.addEventListener('scroll', this.spyScroll )
     },
-    updated() {
-        this.$store.commit('showProject', this.$route.params.id)
-    },
+    // updated() {
+    //     this.$store.commit('showProject', this.$route.params.id)
+    // },
     unmounted() {
         document.removeEventListener('scroll', this.spyScroll )
     },

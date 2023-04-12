@@ -213,6 +213,10 @@ hr{
 .gap-70{
     gap: 70px;
 }
+.center{
+    display: grid;
+    place-items: center;
+}
 .h1{
     font-size: 5rem;
 }

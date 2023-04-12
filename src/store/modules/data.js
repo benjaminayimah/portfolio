@@ -1,4 +1,4 @@
-// import router from '@/router'
+import router from '@/router'
 export default {
     state: {
         intro: {h1: 'Hi', i1: '👋🏽', i2: '👩🏾‍💻👨🏽‍💻👨‍💻', h2: 'I\'m Ben', p1: 'A UI/UX Designer who focuses on crafting delightful digital experiences for all users.', p2: 'Here are few of my works...'},
@@ -75,6 +75,10 @@ export default {
             }else {
               this.commit('findIndex', length-1)
             }
+        },
+        goToClick(state, payload) {
+            this.commit('showProject', payload.id)
+            router.push({ name: 'DetailedPage',  params: { id: payload.id, name: payload.name } })
         }
     },
     getters: {
