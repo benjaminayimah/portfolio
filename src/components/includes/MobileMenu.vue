@@ -4,13 +4,9 @@
             <nav>
                 <span class="mb-16">Menu</span>
                 <mobile-nav-list v-for="menu in getMenus" :key="menu.id"  v-bind:menu="menu"/>
-                <span class="mt-24 mb-8">Get in touch</span>
+                <span class="mt-24 mb-8 text-ellipsis">Get in touch</span>
                 <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a>
             </nav>
-            <div class="fx gap-8">
-                <!-- <a href="appHostname">Login</a>
-                <a href="appHostname">Get Started</a> -->
-            </div>
         </div>
     </div>
 </template>
