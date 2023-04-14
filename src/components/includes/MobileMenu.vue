@@ -1,8 +1,11 @@
 <template>
     <div v-show="getMobile" id="mobile_menu" class="bg-plain" :class="{ 'show': getShowMobMenu }" :style="{ height: getWindowHeight-75 + 'px' }">
-        <div class="mob-menu-wrapper fx-js fx-col">
+        <div class="mob-menu-wrapper jc-c fx-col">
             <nav>
+                <span class="mb-16">Menu</span>
                 <mobile-nav-list v-for="menu in getMenus" :key="menu.id"  v-bind:menu="menu"/>
+                <span class="mt-24 mb-8">Get in touch</span>
+                <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a>
             </nav>
             <div class="fx gap-8">
                 <!-- <a href="appHostname">Login</a>
@@ -34,11 +37,18 @@ export default {
 .mob-menu-wrapper{
     height: 100%;
     padding: 20px 0;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 .show{
     visibility: visible !important;
     width: 100% !important
+}
+span{
+    color: $gray2;
+    display: block;
+}
+.dark-mode span{
+    color: $darkGray;
 }
 </style>

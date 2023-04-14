@@ -6,6 +6,8 @@ $white: #ffffff;
 $light: #F5F5F5;
 $light-txt: #ffffff;
 $gray: #707173;
+$gray2: #b3b4b6;
+$darkGray: #404041;
 $danger: red;
 $success: green;
 $myFont: Avenir, Helvetica, Arial, sans-serif;
@@ -179,6 +181,9 @@ hr{
 }
 .m-0{
     margin: 0;
+}
+.mb-8{
+    margin-bottom: 8px;
 }
 .mb-16{
     margin-bottom: 16px;
