@@ -5,7 +5,7 @@
                 <span class="mb-16">Menu</span>
                 <mobile-nav-list v-for="menu in getMenus" :key="menu.id"  v-bind:menu="menu"/>
                 <span class="mt-24 mb-8 text-ellipsis">Get in touch</span>
-                <a href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a>
+                <a @click="$store.commit('toggleMenu')" href="mailto:benjaminayimah@gmail.com" title="benjaminayimah@gmail.com" class="a-link clic">benjaminayimah@gmail.com</a>
             </nav>
         </div>
     </div>
