@@ -23,7 +23,7 @@ li{
     display: flex;
     height: 75px;
     a {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         flex-grow: 1;
         height: inherit;
         align-items: center;
