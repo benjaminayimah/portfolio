@@ -3,9 +3,6 @@
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <float-animations v-if="$route.path == '/'" />
       <Header />
-      <!-- <transition name="slide">
-        <router-view/>
-      </transition> -->
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
