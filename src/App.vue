@@ -3,7 +3,14 @@
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <float-animations v-if="$route.path == '/'" />
       <Header />
-      <router-view/>
+      <!-- <transition name="slide">
+        <router-view/>
+      </transition> -->
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
       <Footer />
       <mobile-menu />
     </div>
@@ -81,4 +88,9 @@ body {
     padding: 16px;
   }
 }
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(50px);
+}
+
 </style>
