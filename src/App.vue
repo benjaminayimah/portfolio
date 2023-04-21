@@ -1,12 +1,17 @@
 <template>
-  <a href="#projects" class="skip">Skip to project</a>
+    <a href="#projects" class="skip">Skip to project</a>
     <div id="home_wrapper" :class="[{ 'tab-view': getTablet }, {'desk-view': getDesktop }, {'mob-view': getMobile } ]">
       <float-animations v-if="$route.path == '/'" />
       <Header />
-      <router-view/>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
       <Footer />
       <mobile-menu />
     </div>
+    <main-overlay v-if="getOverlay" />
 </template>
 <script>
 import { mapGetters } from 'vuex';
@@ -14,11 +19,12 @@ import Header from './components/includes/Header.vue';
 import Footer from './components/includes/Footer.vue';
 import MobileMenu from './components/includes/MobileMenu.vue';
 import FloatAnimations from './components/includes/FloatAnimations.vue';
+import MainOverlay from './components/layouts/MainOverlay.vue';
 export default {
-  components: { Header, Footer, MobileMenu, FloatAnimations },
+  components: { Header, Footer, MobileMenu, FloatAnimations, MainOverlay },
   name: "App",
   computed: {
-    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight'])
+    ...mapGetters(['getTablet', 'getMobile', 'getDesktop', 'getWindowHeight', 'getOverlay']),
   },
   created() {
       this.$store.commit('computeWindow')
@@ -37,7 +43,6 @@ export default {
     autoDark() {
       if(new Date().getHours() > 19) {
         localStorage.setItem('darkMode', true)
-
       }
     }
   }
@@ -56,7 +61,6 @@ html{
 }
 body {
   transition: $transition-time ease background-color, $transition-time linear color;
-  // transition: $transition-time linear color;
   font-family: $myFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -80,4 +84,9 @@ body {
     padding: 16px;
   }
 }
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(50px);
+}
+
 </style>

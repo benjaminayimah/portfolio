@@ -1,10 +1,13 @@
 <template>
     <div class="main-section">
+        <teleport to="#main_home">
+            <back-button />
+        </teleport>
         <div class="main-row">
             <div class="section-wrapper">
                 <div class="fx gap-50 main-body-flx">
-                    <div class="fx-shrink-0">
-                        <nav class="sticky-top fx vertical-nav">
+                    <div class="fx-shrink-0 mob-sticky sticky-top">
+                        <nav class="desk-sticky fx vertical-nav sticky-top">
                             <ul class="fx">
                                 <li v-for="tab in tabs" :key="tab.id">
                                     <a :id="'tab_'+tab.id" :href="tab.url" :class="{ 'tab-active': tab.active}" class="fx ai-c blur blur-2 clic">{{ tab.name }}</a>
@@ -270,10 +273,11 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
+import BackButton from '../components/includes/BackButton.vue';
 import DetailProjectFooter from '../components/includes/DetailProjectFooter.vue';
 
 export default {
-  components: { DetailProjectFooter },
+  components: { DetailProjectFooter, BackButton },
     name: 'DetailPage',
     computed: {
         ...mapGetters(['getProject']),
@@ -288,7 +292,7 @@ export default {
         return {
             tabs: [
                 { id: 1, name: 'Overview', url: '#overview', active: true},
-                { id: 2, name: 'Empathizing with the user', url: '#empathy-with-the-user'},
+                { id: 2, name: 'Empathizing with users', url: '#empathy-with-the-user'},
                 { id: 3, name: 'Starting the design', url: '#starting-the-design'},
                 { id: 4, name: 'Usability study', url: '#usability-study'},
                 { id: 5, name: 'Refining the design', url: '#refining-the-design'},
@@ -302,34 +306,37 @@ export default {
         this.$store.commit('showProject', this.$route.params.id)
         document.addEventListener('scroll', this.spyScroll )
     },
-    updated() {
-        this.$store.commit('showProject', this.$route.params.id)
-    },
+    // updated() {
+    //     this.$store.commit('showProject', this.$route.params.id)
+    // },
     unmounted() {
         document.removeEventListener('scroll', this.spyScroll )
     },
     methods: {
         spyScroll() {
-        let section = document.querySelectorAll('section')
-        let navLinks = document.querySelectorAll('nav a')
-        section.forEach(sec => {
+            let section = document.querySelectorAll('section')
+            let navLinks = document.querySelectorAll('nav a')
+            section.forEach(sec => {
                 let top = window.scrollY
                 let offset = sec.offsetTop - 150
                 let height = sec.offsetHeight
                 let id = sec.getAttribute('id')
                 if( top >= offset && top < offset + height) {
                     navLinks.forEach(links => {
-                        links.classList.remove('tab-active')
-                        document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
-                    })
-                }
-            })
+                    links.classList.remove('tab-active')
+                    document.querySelector('nav a[href*=' + id + ']').classList.add('tab-active')
+                })
+            }
+        })
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+#overview{
+    margin-top: 0;
+}
 ul{
     padding: 0;
     margin: 0 0 0 -16px;
@@ -345,15 +352,12 @@ ul{
             height: inherit;
             padding: 0 16px;
             border-radius: 32px;
-            transition: 0.1s linear;
+            transition: 0.05s linear;
         }
     }
 }
 .dark-mode li:hover a{
     background-color: #292A2D;
-}
-nav{
-    top: 120px !important;
 }
 .gap-50{
     gap: 50px;
@@ -414,14 +418,6 @@ h3{
     color: #fff;
     background-color: v-bind(color2);
 }
-.v-scroll{
-  overflow-x: auto;
-  &::-webkit-scrollbar {
-        display: none;
-        -ms-overflow-style: none; 
-        scrollbar-width: none; 
-    }
-}
 .person-img{
     height: 170px;
     border-radius: 50%;
@@ -442,8 +438,6 @@ h3{
                 z-index: 99;
                 display: flex;
                 overflow-x: auto;
-                position: sticky;
-                top: 80px;
                 margin: 0 -20px;
                 padding: 0 20px;
                 &::-webkit-scrollbar {

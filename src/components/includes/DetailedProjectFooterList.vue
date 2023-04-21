@@ -1,15 +1,15 @@
 <template>
     <li>
-        <router-link :to="{ name: 'DetailedPage',params: { id: project.id , name: project.title} }" class="fx-col gap-8 clic2">
+        <a @click.prevent="$store.commit('goToClick', payload = {id: project.id, name: project.title})" href="#" class="fx-col gap-8 clic2">
             <div class="bg-img" :style="{ backgroundImage: 'url('+project.thumbnail+')'}"></div>
             <span class="text-ellipsis block">{{ project.title}}</span>
-        </router-link>
+        </a>
     </li>
 </template>
 <script>
 export default {
     name: 'DetailedProjectFooterList',
-    props: ['project']
+    props: ['project'],
 }
 </script>
 <style lang="scss" scoped>

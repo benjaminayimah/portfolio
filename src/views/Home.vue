@@ -1,5 +1,8 @@
 <template>
   <div id="home" class="main-row">
+    <teleport to="#main_home">
+      <router-link to="/" id="logo" class="clic">Benjamin Ayimah<span></span></router-link>
+    </teleport>
     <div class="section-wrapper">
       <intro v-bind:intro="getIntro" />
       <home-tab-all />
