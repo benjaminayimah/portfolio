@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/avenir');
 $primary-color: #3FD68A;
 $primary-hover: #25c977;
 $hover-color: rgb(116, 116, 116);
@@ -10,8 +11,56 @@ $gray2: #b3b4b6;
 $darkGray: #404041;
 $danger: red;
 $success: green;
-$myFont: Avenir, Helvetica, Arial, sans-serif;
+$myFont: 'Avenir', sans-serif, Arial;
 $transition-time: 0.6s;
+
+.no-show nav{
+    * {
+        transition: $transition-time all ease-in-out;
+    }
+    
+    span:nth-child(1) {
+        transform: translateX(50px);
+    }
+    li:nth-child(2) {
+        transform: translateX(100px);
+    }
+    li:nth-child(3) {
+        transform: translateX(150px);
+    }
+    li:nth-child(4) {
+        transform: translateX(200px);
+    }
+    span:nth-child(5) {
+        transform: translateX(250px);
+    }
+    a:nth-child(6) {
+        transform: translateX(300px);
+    }
+}
+.show nav{
+    li, span, a{
+        transform: translateX(0px);
+    }
+    span:nth-child(1) {
+        transition: $transition-time 0.05s all ease-in-out;
+    }
+    li:nth-child(2) {
+        transition: $transition-time 0.06s all ease-in-out;
+    }
+    li:nth-child(3) {
+        transition: $transition-time 0.07s all ease-in-out;
+    }
+    li:nth-child(4) {
+        transition: $transition-time 0.08s all ease-in-out;
+    }
+    span:nth-child(5) {
+        transition: $transition-time 0.09s all ease-in-out;
+    }
+    a:nth-child(6) {
+        transition: $transition-time 0.1s all ease-in-out;
+    }
+}
 
 :root {
     -webkit-tap-highlight-color: transparent;
@@ -33,14 +82,12 @@ button{
 }
 a {
     text-decoration: none;
-}
-
-nav a {
     transition: 0.3s color;
     path {
         transition: 0.3s fill;
     }
 }
+
 .fx-shrink-0{
     flex-shrink: 0;
 }
@@ -81,6 +128,10 @@ nav a {
 .ovf-hidden{
     overflow-x: hidden;
 }
+a{
+    color: unset;
+    text-decoration: unset;
+}
 .a-link{
     position: relative;
     text-decoration: none;
@@ -90,7 +141,7 @@ nav a {
     display: inline-flex;
     &::before {
         content: '';
-        height: 2px;
+        height: 1px;
         background-color: rgb(203, 205, 211);
         width: 100%;
         position: absolute;
@@ -98,7 +149,7 @@ nav a {
     }
     &::after {
         content: '';
-        height: 2px;
+        height: 1px;
         background-color: $primary-hover;
         width: 0%;
         position: absolute;
@@ -490,6 +541,25 @@ p{
 .project-banner{
     height: 450px;
 }
+#logo{
+    font-weight: 600;
+    font-size: 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: unset;
+    position: relative;
+    transition: 0.1s transform;
+    span {
+        height: 12px;
+        background-color: #8DFA9A;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        z-index: -1;
+        left: 0;
+
+    }
+}
 .desk-view {
     #project_hero_modal{
         left: 50%;
@@ -498,6 +568,9 @@ p{
     .top-hold, .section-wrapper{
         width: 70%;
         max-width: 1180px;
+    }
+    .desk-sticky {
+        top: 120px;
     }
 }
 //Tablet
@@ -514,6 +587,9 @@ p{
     }
     .gap-40 {
         gap: 20px;
+    }
+    .mob-sticky {
+        top: 95px;
     }
     
 }
@@ -560,14 +636,19 @@ p{
             width: 90px;
         }
         svg {
-            transform: scale(1.01) rotate(165deg);
+            transform: scale(1.03) rotate(165deg);
         }
     }
     .row{
         grid-template-columns: 1fr;
         gap: 32px;
     }
+    .mob-sticky {
+        top: 80px;
+    }
 }
+
+
 .slide-enter-active, .slide-leave-active {
     transition: all 0.3s ease-in;
 }

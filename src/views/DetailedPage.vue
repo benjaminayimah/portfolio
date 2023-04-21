@@ -1,10 +1,13 @@
 <template>
     <div class="main-section">
+        <teleport to="#main_home">
+            <back-button />
+        </teleport>
         <div class="main-row">
             <div class="section-wrapper">
                 <div class="fx gap-50 main-body-flx">
-                    <div class="fx-shrink-0">
-                        <nav class="sticky-top fx vertical-nav">
+                    <div class="fx-shrink-0 mob-sticky sticky-top">
+                        <nav class="desk-sticky fx vertical-nav sticky-top">
                             <ul class="fx">
                                 <li v-for="tab in tabs" :key="tab.id">
                                     <a :id="'tab_'+tab.id" :href="tab.url" :class="{ 'tab-active': tab.active}" class="fx ai-c blur blur-2 clic">{{ tab.name }}</a>
@@ -270,10 +273,11 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
+import BackButton from '../components/includes/BackButton.vue';
 import DetailProjectFooter from '../components/includes/DetailProjectFooter.vue';
 
 export default {
-  components: { DetailProjectFooter },
+  components: { DetailProjectFooter, BackButton },
     name: 'DetailPage',
     computed: {
         ...mapGetters(['getProject']),
@@ -355,9 +359,6 @@ ul{
 .dark-mode li:hover a{
     background-color: #292A2D;
 }
-nav{
-    top: 120px !important;
-}
 .gap-50{
     gap: 50px;
 }
@@ -417,14 +418,6 @@ h3{
     color: #fff;
     background-color: v-bind(color2);
 }
-.v-scroll{
-  overflow-x: auto;
-  &::-webkit-scrollbar {
-        display: none;
-        -ms-overflow-style: none; 
-        scrollbar-width: none; 
-    }
-}
 .person-img{
     height: 170px;
     border-radius: 50%;
@@ -445,8 +438,6 @@ h3{
                 z-index: 99;
                 display: flex;
                 overflow-x: auto;
-                position: sticky;
-                top: 80px;
                 margin: 0 -20px;
                 padding: 0 20px;
                 &::-webkit-scrollbar {

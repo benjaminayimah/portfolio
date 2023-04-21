@@ -1,5 +1,8 @@
 <template>
   <section>
+    <teleport to="#main_home">
+      <router-link to="/" id="logo" class="clic">Benjamin Ayimah<span></span></router-link>
+    </teleport>
     <div id="about" class="main-row">
     <div class="section-wrapper">
       <div class="grid about-grid">
@@ -15,7 +18,7 @@
           </div>
           <div class="contact-wrapper br-8">
             <div class="fx gap-16 social-hold">
-              <div class="clic"><a href="https://www.linkedin.com/in/benjamin-ayimah-88b8b1b2" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="a-link">Linkedin</a></div>
+              <div class="clic"><a href="https://www.linkedin.com/in/benjaminayimah" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="a-link">Linkedin</a></div>
               <div class="clic"><a href="https://www.behance.net/benjaminayimah" target="_blank" aria-label="Behance" title="Behance" class="a-link">Behance</a></div>
               <div class="clic"><a href="https://github.com/benjaminayimah" target="_blank" aria-label="GitHub" title="GitHub" class="a-link">GitHub</a></div>
               <div class="clic"><a href="https://www.instagram.com/ben.tekk/" target="_blank" aria-label="Instagram" title="Instagram" class="a-link">Instagram</a></div>

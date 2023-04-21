@@ -61,7 +61,6 @@ html{
 }
 body {
   transition: $transition-time ease background-color, $transition-time linear color;
-  // transition: $transition-time linear color;
   font-family: $myFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

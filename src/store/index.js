@@ -28,6 +28,7 @@ export default createStore({
         this.commit('setDesktop')
       }else{
         this.commit('setTablet')
+        state.showMenu ? this.commit('toggleMenu') : ''
       }
     },
     setMobile(state) {
